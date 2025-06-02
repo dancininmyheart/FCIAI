@@ -1,32 +1,21 @@
-import sys
-import pytesseract
-from PIL import Image
-import io
-import base64
-import numpy as np
-import cv2
-import win32com.client
-import pythoncom
-import os
+
 import time
 import json
-import threading
-import traceback
-from datetime import datetime
+
 import pytz
-from io import BytesIO
+
 
 from flask import Blueprint, render_template, redirect, url_for, flash, request, current_app, send_from_directory, \
     jsonify, session, send_file
 from flask_login import login_required, current_user
 from werkzeug.utils import secure_filename
-from sqlalchemy.exc import SQLAlchemyError
 
-from config import data_file
+
+
 from ..Ingredient_Search.Flask_app import search, download_files
 from ..function.adjust_text_size import set_textbox_autofit
 from ..function.ppt_translate import process_presentation, process_presentation_add_annotations
-from config import base_model_file
+
 from ..models import User, UploadRecord, Translation, StopWord
 from .. import db
 import os

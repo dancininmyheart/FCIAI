@@ -11154,3 +11154,87 @@ openai.InternalServerError: Error code: 503
 2025-06-03 00:05:17 - app - INFO - 任务处理器已启动
 2025-06-03 00:05:17 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
 2025-06-03 00:05:17 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 00:13:56 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:13:56 - app - INFO - 正在初始化应用...
+2025-06-03 00:13:56 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:13:56 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:13:56 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:13:56 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:13:56 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:13:58 - app - INFO - 数据库表已创建
+2025-06-03 00:13:58 - app - INFO - 任务处理器已启动
+2025-06-03 00:13:59 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 00:13:59 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 00:13:59 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:13:59 - app - INFO - 正在初始化应用...
+2025-06-03 00:13:59 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:13:59 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:13:59 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:13:59 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:13:59 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:14:02 - app - INFO - 数据库表已创建
+2025-06-03 00:14:02 - app - INFO - 任务处理器已启动
+2025-06-03 00:14:02 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 00:14:02 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 00:21:06 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:21:06 - app - INFO - 正在初始化应用...
+2025-06-03 00:21:06 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:21:06 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:21:06 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:21:06 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:21:06 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:21:09 - app - INFO - 数据库表已创建
+2025-06-03 00:21:09 - app - INFO - 任务处理器已启动
+2025-06-03 00:21:09 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 00:21:09 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 00:21:10 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:21:10 - app - INFO - 正在初始化应用...
+2025-06-03 00:21:10 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:21:10 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:21:10 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:21:10 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:21:10 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:21:12 - app - INFO - 数据库表已创建
+2025-06-03 00:21:12 - app - INFO - 任务处理器已启动
+2025-06-03 00:21:12 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 00:21:12 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 00:38:25 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:38:25 - app - INFO - 正在初始化应用...
+2025-06-03 00:38:25 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:38:25 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:38:25 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:38:25 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:38:25 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:39:49 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:39:49 - app - INFO - 正在初始化应用...
+2025-06-03 00:39:49 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:39:49 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:39:49 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:39:49 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:39:49 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:39:51 - app - INFO - 数据库表已创建
+2025-06-03 00:39:51 - app - INFO - 任务处理器已启动
+2025-06-03 00:39:51 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 00:39:51 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 00:40:33 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:40:33 - app - INFO - 正在初始化应用...
+2025-06-03 00:40:33 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:40:33 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:40:33 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:40:33 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:40:33 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:40:35 - app - INFO - 数据库表已创建
+2025-06-03 00:40:35 - app - INFO - 任务处理器已启动
+2025-06-03 00:40:35 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 00:40:35 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 00:40:35 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:40:35 - app - INFO - 正在初始化应用...
+2025-06-03 00:40:35 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:40:35 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:40:35 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:40:35 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:40:35 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:40:37 - app - INFO - 数据库表已创建
+2025-06-03 00:40:37 - app - INFO - 任务处理器已启动
+2025-06-03 00:40:38 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 00:40:38 - app - INFO - 应用已初始化 - 环境: development

@@ -13,7 +13,7 @@ from .config import config, app_config
 from .utils.logger import LogManager
 from .utils.thread_pool_executor import thread_pool
 from .utils.enhanced_task_queue import translation_queue
-from .utils.async_http_client import http_client
+from .utils.lazy_http_client import http_client
 
 # 创建扩展实例
 db = SQLAlchemy()
