@@ -1,20 +1,18 @@
-import json
-import sys
-import time
+
 import os
 
-# from mypy.messages import best_matches
+
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.text import MSO_AUTO_SIZE
 from pptx.util import Pt, Inches
-import re
+
 # English-to-Chinese
-# from LLa_translate import translate
+
 # 温馨提示: 使用pipeline推理及在线体验功能的时候，尽量输入单句文本，如果是多句长文本建议人工分句，否则可能出现漏译或未译等情况！！！
-# from modelscope.pipelines import pipeline
+
 import logging
-# from modelscope.utils.constant import Tasks
+
 import difflib
 import re
 

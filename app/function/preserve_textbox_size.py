@@ -7,7 +7,6 @@ import os
 import logging
 from pptx import Presentation
 from pptx.enum.text import MSO_AUTO_SIZE
-from pptx.util import Pt
 
 # 配置日志记录器
 logger = logging.getLogger(__name__)

@@ -6,10 +6,10 @@
 import re
 import logging
 import difflib
-import asyncio
+
 from typing import Dict, List, Tuple, Optional, Any
 from dataclasses import dataclass
-from pptx import Presentation
+
 from pptx.enum.text import MSO_AUTO_SIZE
 
 logger = logging.getLogger(__name__)

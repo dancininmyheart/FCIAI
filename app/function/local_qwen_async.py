@@ -3,13 +3,13 @@
 支持并发处理和高效的API调用
 """
 import json
-import random
+
 import logging
-import re
+
 import os
 import asyncio
-from typing import Dict, Any, List, Optional, Union, Callable
-import time
+from typing import Dict, List
+
 import socket
 import httpx
 from urllib.parse import urlparse
@@ -24,7 +24,6 @@ from ..utils.translation_utils import (
     clean_translation_text
 )
 
-# from ..utils.async_http_client import AsyncHttpClient
 try:
     from ..utils.network_diagnostics import diagnose_network_issue, quick_connectivity_check
 except ImportError:

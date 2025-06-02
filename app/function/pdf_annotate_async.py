@@ -5,7 +5,6 @@ PDF注释异步处理模块
 """
 import asyncio
 import logging
-import os
 import base64
 import io
 import json

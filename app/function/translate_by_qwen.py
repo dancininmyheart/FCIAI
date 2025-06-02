@@ -2,7 +2,7 @@
 阿里云翻译API（同步版本）
 使用新的阿里云API进行文本翻译
 """
-import json
+
 import logging
 import random
 from http import HTTPStatus
@@ -12,7 +12,6 @@ from dashscope import Generation
 from ..utils.translation_utils import (
     build_map,
     parse_formatted_text,
-    re_parse_formatted_text,
     clean_translation_text
 )
 

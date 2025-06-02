@@ -3,7 +3,7 @@
 提供日志查看和管理的API接口
 """
 from datetime import datetime
-from typing import Optional
+
 
 from flask import Blueprint, request, jsonify, abort
 from flask_login import login_required, current_user

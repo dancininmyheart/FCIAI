@@ -2,8 +2,6 @@ from flask import Flask, request, jsonify, send_file
 import os
 import win32com.client
 from flask_cors import CORS
-from pptx.enum.text import MSO_AUTO_SIZE
-from pptx.util import Inches
 import pythoncom  # COM 库的初始化模块
 from werkzeug.utils import secure_filename
 import subprocess

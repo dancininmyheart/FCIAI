@@ -11122,3 +11122,35 @@ openai.InternalServerError: Error code: 503
 2025-06-02 23:18:25 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
 2025-06-02 23:18:25 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
 2025-06-02 23:18:25 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-02 23:58:58 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-02 23:58:58 - app - INFO - 正在初始化应用...
+2025-06-02 23:58:58 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-02 23:58:58 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-02 23:58:58 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-02 23:58:58 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-02 23:58:58 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:00:04 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:00:04 - app - INFO - 正在初始化应用...
+2025-06-03 00:00:04 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:00:04 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:00:04 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:00:04 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:00:04 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:02:46 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:02:46 - app - INFO - 正在初始化应用...
+2025-06-03 00:02:46 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:02:46 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:02:46 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:02:46 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:02:46 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:05:14 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 00:05:14 - app - INFO - 正在初始化应用...
+2025-06-03 00:05:14 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 00:05:14 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 00:05:14 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 00:05:14 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 00:05:14 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 00:05:17 - app - INFO - 数据库表已创建
+2025-06-03 00:05:17 - app - INFO - 任务处理器已启动
+2025-06-03 00:05:17 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 00:05:17 - app - INFO - 应用已初始化 - 环境: development

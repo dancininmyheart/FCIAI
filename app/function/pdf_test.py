@@ -1,7 +1,6 @@
 import fitz  # PyMuPDF
 from pdf2image import convert_from_path
 import pytesseract
-from PIL import Image
 
 pdf_file = r"C:\Users\48846\Documents\pdf\FINAL_Role of HMOs in Preterm Nutrition Presentation_2.pdf"
 

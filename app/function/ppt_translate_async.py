@@ -4,15 +4,15 @@
 保持与原始功能的完全兼容性，包括表格处理、样式保持等
 """
 import os
-import sys
+
 import time
 import asyncio
 import logging
 import re
-import json
+
 import platform
-from typing import Dict, List, Any, Optional, Union, Tuple
-import concurrent.futures
+from typing import Dict, List
+
 from pptx import Presentation
 from pptx.enum.text import MSO_AUTO_SIZE
 from pptx.dml.color import RGBColor
@@ -20,23 +20,15 @@ from pptx.util import Pt, Inches
 import difflib
 
 # 导入异步API客户端
-from .local_qwen_async import translate_async, batch_translate_async, get_field_async
-from ..utils.thread_pool_executor import thread_pool, TaskType
-from ..utils.enhanced_task_queue import translation_queue
+from .local_qwen_async import  get_field_async
+
 
 # 导入基于页面的翻译机制
-from .page_based_translation import translate_slide_by_page, get_translation_statistics
+from .page_based_translation import translate_slide_by_page
 
 # 导入复杂形状处理函数和内容检测函数
 from .ppt_translate import (
-    detect_complex_shape_type,
-    save_complex_shape_properties,
-    restore_complex_shape_properties,
-    has_shape_deformed,
-    safe_set_autofit_with_size_preservation,
-    has_meaningful_text_content,
-    should_adjust_textbox_layout,
-    get_textbox_content_summary,
+
     safe_set_autofit_with_content_check
 )
 
