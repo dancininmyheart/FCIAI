@@ -1,0 +1,6 @@
+2025-06-01 22:57:44 - app.test - ERROR - 这是一条测试错误
+2025-06-01 22:57:47 - app - ERROR - 应用启动成功 - ERROR级别测试
+2025-06-01 22:57:47 - app.main - ERROR - 用户登录 - ERROR级别测试
+2025-06-01 22:57:47 - app.auth - ERROR - 开始翻译任务 - ERROR级别测试
+2025-06-01 22:57:47 - app.translation - ERROR - 翻译完成 - ERROR级别测试
+2025-06-01 22:57:47 - app.tasks.cleanup - ERROR - 清理临时文件 - ERROR级别测试

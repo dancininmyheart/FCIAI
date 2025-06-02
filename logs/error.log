@@ -1,0 +1,2882 @@
+2025-05-25 01:16:22 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\project\system\app\views\main.py", line 58, in index
+    return render_template('main/index.html', user=current_user)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "D:\app\conda\envs\ppt\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "D:\app\conda\envs\ppt\lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\project\system\app\templates\main\index.html", line 1, in top-level template code
+    {% extends "main/base_layout.html" %}
+  File "D:\project\system\app\templates\main\base_layout.html", line 47, in top-level template code
+    <a href="{{ url_for('monitor.monitor_page') }}" class="nav-link {% if request.endpoint == 'monitor.monitor_page' %}active{% endif %}">
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "D:\app\conda\envs\ppt\lib\site-packages\werkzeug\routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'monitor.monitor_page'. Did you mean 'main.index_page' instead?
+2025-05-25 01:20:54 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\project\system\app\views\main.py", line 58, in index
+    return render_template('main/index.html', user=current_user)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "D:\app\conda\envs\ppt\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "D:\app\conda\envs\ppt\lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\project\system\app\templates\main\index.html", line 1, in top-level template code
+    {% extends "main/base_layout.html" %}
+  File "D:\project\system\app\templates\main\base_layout.html", line 48, in top-level template code
+    <a href="{{ url_for('monitor.monitor_page') }}" class="nav-link {% if request.endpoint == 'monitor.monitor_page' %}active{% endif %}">
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "D:\app\conda\envs\ppt\lib\site-packages\werkzeug\routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'monitor.monitor_page'. Did you mean 'main.index_page' instead?
+2025-05-25 01:23:55 - app.utils.enhanced_task_queue.queue - ERROR - 提交任务失败 - ID: task_1748107435_1, 错误: Task.__init__() got an unexpected keyword argument 'priority'
+2025-05-25 01:23:56 - app.utils.enhanced_task_queue.queue - ERROR - 提交任务失败 - ID: task_1748107435_1, 错误: Task.__init__() got an unexpected keyword argument 'priority'
+2025-05-25 01:23:57 - app.utils.enhanced_task_queue.queue - ERROR - 提交任务失败 - ID: task_1748107435_1, 错误: Task.__init__() got an unexpected keyword argument 'priority'
+2025-05-25 01:23:57 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748107435_1, 重试次数已达上限: 3
+2025-05-25 01:25:07 - app.utils.enhanced_task_queue.queue - ERROR - 提交任务失败 - ID: task_1748107507_1, 错误: Task.__init__() got an unexpected keyword argument 'priority'
+2025-05-25 01:25:08 - app.utils.enhanced_task_queue.queue - ERROR - 提交任务失败 - ID: task_1748107507_1, 错误: Task.__init__() got an unexpected keyword argument 'priority'
+2025-05-25 01:25:09 - app.utils.enhanced_task_queue.queue - ERROR - 提交任务失败 - ID: task_1748107507_1, 错误: Task.__init__() got an unexpected keyword argument 'priority'
+2025-05-25 01:25:09 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748107507_1, 重试次数已达上限: 3
+2025-05-25 01:39:32 - app.utils.thread_pool_executor - ERROR - 任务执行错误 - ID: task_1748108372_1, 错误: 'Event' object has no attribute 'time'
+2025-05-25 01:42:15 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\ca4d2b1214384f209dde74a985a7013b.pptx, 错误: No module named 'nest_asyncio'
+2025-05-25 01:42:15 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 637, in run_async_in_thread
+    import nest_asyncio
+ModuleNotFoundError: No module named 'nest_asyncio'
+
+2025-05-25 01:42:15 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748108535_1, 错误: 翻译处理失败
+2025-05-25 01:42:15 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\ca4d2b1214384f209dde74a985a7013b.pptx, 错误: No module named 'nest_asyncio'
+2025-05-25 01:42:15 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 637, in run_async_in_thread
+    import nest_asyncio
+ModuleNotFoundError: No module named 'nest_asyncio'
+
+2025-05-25 01:42:15 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748108535_1, 错误: 翻译处理失败
+2025-05-25 01:42:15 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\ca4d2b1214384f209dde74a985a7013b.pptx, 错误: No module named 'nest_asyncio'
+2025-05-25 01:42:15 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 637, in run_async_in_thread
+    import nest_asyncio
+ModuleNotFoundError: No module named 'nest_asyncio'
+
+2025-05-25 01:42:15 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748108535_1, 错误: 翻译处理失败
+2025-05-25 01:42:15 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748108535_1, 重试次数已达上限: 3
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 198, in get_field_async
+    async with AsyncQwenClient() as client:
+  File "D:\project\system\app\function\local_qwen_async.py", line 54, in __init__
+    self.http_client = AsyncHttpClient(
+TypeError: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\5969d8861a87432997f8925e38719838.pptx, 错误: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 198, in get_field_async
+    async with AsyncQwenClient() as client:
+  File "D:\project\system\app\function\local_qwen_async.py", line 54, in __init__
+    self.http_client = AsyncHttpClient(
+TypeError: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+
+2025-05-25 01:43:36 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748108616_1, 错误: 翻译处理失败
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 198, in get_field_async
+    async with AsyncQwenClient() as client:
+  File "D:\project\system\app\function\local_qwen_async.py", line 54, in __init__
+    self.http_client = AsyncHttpClient(
+TypeError: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\5969d8861a87432997f8925e38719838.pptx, 错误: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 198, in get_field_async
+    async with AsyncQwenClient() as client:
+  File "D:\project\system\app\function\local_qwen_async.py", line 54, in __init__
+    self.http_client = AsyncHttpClient(
+TypeError: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+
+2025-05-25 01:43:36 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748108616_1, 错误: 翻译处理失败
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 198, in get_field_async
+    async with AsyncQwenClient() as client:
+  File "D:\project\system\app\function\local_qwen_async.py", line 54, in __init__
+    self.http_client = AsyncHttpClient(
+TypeError: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\5969d8861a87432997f8925e38719838.pptx, 错误: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+2025-05-25 01:43:36 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 232, in __step
+    result = coro.send(None)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 198, in get_field_async
+    async with AsyncQwenClient() as client:
+  File "D:\project\system\app\function\local_qwen_async.py", line 54, in __init__
+    self.http_client = AsyncHttpClient(
+TypeError: AsyncHttpClient.__init__() got an unexpected keyword argument 'base_url'
+
+2025-05-25 01:43:36 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748108616_1, 错误: 翻译处理失败
+2025-05-25 01:43:36 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748108616_1, 重试次数已达上限: 3
+2025-05-25 02:02:56 - app.utils.async_http_client.client - ERROR - 请求失败，重试次数已达上限 - URL: http://yangdian.yangdian.inesa-gzy.svc:18081/v1/chat/completions, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:02:56 - app.function.local_qwen_async - ERROR - Qwen API请求失败，耗时: 3.11秒，错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:02:56 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:02:56 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 02:02:56 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\26902fbbd9134f7e9236bb76ca385529.pptx, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:02:56 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 02:02:56 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748109773_1, 错误: 翻译处理失败
+2025-05-25 02:02:59 - app.utils.async_http_client.client - ERROR - 请求失败，重试次数已达上限 - URL: http://yangdian.yangdian.inesa-gzy.svc:18081/v1/chat/completions, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:02:59 - app.function.local_qwen_async - ERROR - Qwen API请求失败，耗时: 3.04秒，错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:02:59 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:02:59 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 02:02:59 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\26902fbbd9134f7e9236bb76ca385529.pptx, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:02:59 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 02:02:59 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748109773_1, 错误: 翻译处理失败
+2025-05-25 02:03:02 - app.utils.async_http_client.client - ERROR - 请求失败，重试次数已达上限 - URL: http://yangdian.yangdian.inesa-gzy.svc:18081/v1/chat/completions, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:03:02 - app.function.local_qwen_async - ERROR - Qwen API请求失败，耗时: 3.04秒，错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:03:02 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:03:02 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 02:03:03 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\26902fbbd9134f7e9236bb76ca385529.pptx, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 02:03:03 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 02:03:03 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748109773_1, 错误: 翻译处理失败
+2025-05-25 02:03:03 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748109773_1, 重试次数已达上限: 3
+2025-05-25 16:03:16 - app.utils.async_http_client.client - ERROR - 请求失败，重试次数已达上限 - URL: http://yangdian.yangdian.inesa-gzy.svc:18081/v1/chat/completions, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:16 - app.function.local_qwen_async - ERROR - Qwen API请求失败，耗时: 3.14秒，错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:16 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:16 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 16:03:16 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\854b306315ef4ff7b54b0878954b1c63.pptx, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:16 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 16:03:16 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748160193_1, 错误: 翻译处理失败
+2025-05-25 16:03:19 - app.utils.async_http_client.client - ERROR - 请求失败，重试次数已达上限 - URL: http://yangdian.yangdian.inesa-gzy.svc:18081/v1/chat/completions, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:19 - app.function.local_qwen_async - ERROR - Qwen API请求失败，耗时: 3.06秒，错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:19 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:19 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 16:03:19 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\854b306315ef4ff7b54b0878954b1c63.pptx, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:20 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 16:03:20 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748160193_1, 错误: 翻译处理失败
+2025-05-25 16:03:23 - app.utils.async_http_client.client - ERROR - 请求失败，重试次数已达上限 - URL: http://yangdian.yangdian.inesa-gzy.svc:18081/v1/chat/completions, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:23 - app.function.local_qwen_async - ERROR - Qwen API请求失败，耗时: 3.03秒，错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:23 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:23 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 16:03:23 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\854b306315ef4ff7b54b0878954b1c63.pptx, 错误: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+2025-05-25 16:03:23 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1203, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 880, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 917, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "D:\app\conda\envs\ppt\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\app\conda\envs\ppt\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 221, in get_field_async
+    return await client.chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen_async.py", line 115, in chat_completion
+    response = await self.http_client.post(
+  File "D:\project\system\app\utils\async_http_client.py", line 179, in post
+    return await self._request(
+  File "D:\project\system\app\utils\async_http_client.py", line 238, in _request
+    raise last_error
+  File "D:\project\system\app\utils\async_http_client.py", line 213, in _request
+    async with self._session.request(method, url, **kwargs) as response:
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\client.py", line 581, in _request
+    conn = await self._connector.connect(
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "D:\app\conda\envs\ppt\lib\site-packages\aiohttp\connector.py", line 1209, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host yangdian.yangdian.inesa-gzy.svc:18081 ssl:default [getaddrinfo failed]
+
+2025-05-25 16:03:23 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748160193_1, 错误: 翻译处理失败
+2025-05-25 16:03:23 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748160193_1, 重试次数已达上限: 3
+2025-05-26 02:41:23 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-26 02:41:23 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-26 02:41:23 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 85, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 57, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:41:23 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\56ac07b9aa5a41b68cfb496e747f91f4.pptx, 错误: Connection error.
+2025-05-26 02:41:23 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 85, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 57, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:41:23 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748198480_1, 错误: 翻译处理失败
+2025-05-26 02:41:24 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-26 02:41:24 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-26 02:41:24 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 85, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 57, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:41:24 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\56ac07b9aa5a41b68cfb496e747f91f4.pptx, 错误: Connection error.
+2025-05-26 02:41:24 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 85, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 57, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:41:24 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748198480_1, 错误: 翻译处理失败
+2025-05-26 02:41:26 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-26 02:41:26 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-26 02:41:26 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 85, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 57, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:41:26 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\56ac07b9aa5a41b68cfb496e747f91f4.pptx, 错误: Connection error.
+2025-05-26 02:41:26 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 85, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 57, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:41:26 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748198480_1, 错误: 翻译处理失败
+2025-05-26 02:41:26 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748198480_1, 重试次数已达上限: 3
+2025-05-26 02:54:58 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-26 02:54:58 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-26 02:54:58 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:54:58 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\d2d11d26c9234c84ac0daefbdbdfbdd8.pptx, 错误: Connection error.
+2025-05-26 02:54:58 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:54:59 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748199296_1, 错误: 翻译处理失败
+2025-05-26 02:55:00 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-26 02:55:00 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-26 02:55:00 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:55:00 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\d2d11d26c9234c84ac0daefbdbdfbdd8.pptx, 错误: Connection error.
+2025-05-26 02:55:00 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:55:00 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748199296_1, 错误: 翻译处理失败
+2025-05-26 02:55:01 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-26 02:55:01 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-26 02:55:01 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:55:01 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\d2d11d26c9234c84ac0daefbdbdfbdd8.pptx, 错误: Connection error.
+2025-05-26 02:55:01 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-26 02:55:01 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748199296_1, 错误: 翻译处理失败
+2025-05-26 02:55:01 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748199296_1, 重试次数已达上限: 3
+2025-05-27 10:14:24 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-27 10:14:24 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-27 10:14:24 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-27 10:14:24 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\021eaecd065e40d0b4fee5a4e6d1d862.pptx, 错误: Connection error.
+2025-05-27 10:14:24 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-27 10:14:24 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748312062_1, 错误: 翻译处理失败
+2025-05-27 10:14:26 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-27 10:14:26 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-27 10:14:26 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-27 10:14:26 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\021eaecd065e40d0b4fee5a4e6d1d862.pptx, 错误: Connection error.
+2025-05-27 10:14:26 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-27 10:14:26 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748312062_1, 错误: 翻译处理失败
+2025-05-27 10:14:27 - app.function.local_qwen_async - ERROR - 获取领域失败: Connection error.
+2025-05-27 10:14:27 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: Connection error.
+2025-05-27 10:14:27 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-27 10:14:27 - app.function.ppt_translate_async - ERROR - 处理演示文稿失败: uploads\user_1\021eaecd065e40d0b4fee5a4e6d1d862.pptx, 错误: Connection error.
+2025-05-27 10:14:27 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 72, in map_httpcore_exceptions
+    yield
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 236, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\http_proxy.py", line 289, in handle_request
+    connect_response = self._connection.handle_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 99, in handle_request
+    raise exc
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 76, in handle_request
+    stream = self._connect(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_sync\connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_backends\sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 955, in _request
+    response = self._client.send(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 926, in send
+    response = self._send_handling_auth(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 954, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 991, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_client.py", line 1027, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 235, in handle_request
+    with map_httpcore_exceptions():
+  File "D:\app\conda\envs\ppt\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\app\conda\envs\ppt\lib\site-packages\httpx\_transports\default.py", line 89, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 685, in process_presentation
+    result = run_async_in_thread(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 651, in run_async_in_thread
+    return loop.run_until_complete(func(*args, **kwargs))
+  File "D:\app\conda\envs\ppt\lib\site-packages\nest_asyncio.py", line 98, in run_until_complete
+    return f.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 234, in __step
+    result = coro.throw(exc)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 342, in process_presentation_async
+    translations = await batch_process_texts(
+  File "D:\project\system\app\function\ppt_translate_async.py", line 148, in batch_process_texts
+    field = await get_field_async(sample_text)
+  File "D:\project\system\app\function\local_qwen_async.py", line 87, in get_field_async
+    return await loop.run_in_executor(None, _get_field)
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 285, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "D:\app\conda\envs\ppt\lib\asyncio\tasks.py", line 304, in __wakeup
+    future.result()
+  File "D:\app\conda\envs\ppt\lib\asyncio\futures.py", line 201, in result
+    raise self._exception.with_traceback(self._exception_tb)
+  File "D:\app\conda\envs\ppt\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\project\system\app\function\local_qwen_async.py", line 59, in _get_field
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 979, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 989, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+2025-05-27 10:14:27 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748312062_1, 错误: 翻译处理失败
+2025-05-27 10:14:27 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748312062_1, 重试次数已达上限: 3
+2025-05-27 10:50:18 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'Future' object has no attribute 'replace'
+2025-05-27 10:50:18 - app.utils.enhanced_task_queue.queue - ERROR - 更新数据库记录时出错: No application found. Either work inside a view function or push an application context. See http://flask-sqlalchemy.pocoo.org/contexts/.
+2025-05-27 10:50:23 - app.function.local_qwen_async - ERROR - 获取领域信息失败: Connection error.
+2025-05-27 10:50:23 - app.function.local_qwen_async - ERROR - 翻译文本失败: Connection error.
+2025-05-27 10:59:51 - app.function.local_qwen_async - ERROR - 获取领域信息失败: Connection error.
+2025-05-27 11:00:00 - app.function.local_qwen_async - ERROR - 获取领域信息失败: Connection error.
+2025-05-27 11:00:06 - app.function.local_qwen_async - ERROR - 获取领域信息失败: Connection error.
+2025-05-27 11:00:18 - app.function.local_qwen_async - ERROR - 获取领域信息失败: Connection error.
+2025-05-27 11:00:18 - app.function.local_qwen_async - ERROR - 重试次数已达上限，最后一次错误: Connection error.
+2025-05-27 11:00:18 - app.function.local_qwen_async - ERROR - 无法获取领域信息，使用默认值: Connection error.
+2025-05-27 11:00:21 - app.function.local_qwen_async - ERROR - 翻译文本失败: Connection error.
+2025-05-27 11:00:30 - app.function.local_qwen_async - ERROR - 翻译文本失败: Connection error.
+2025-05-27 11:06:48 - app.utils.enhanced_task_queue.queue - ERROR - 更新数据库记录时出错: cannot join current thread
+2025-05-27 14:27:43 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748327263_1, 错误: process_presentation() got an unexpected keyword argument 'stop_words'
+2025-05-27 14:27:43 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748327263_1, 错误: process_presentation() got an unexpected keyword argument 'stop_words'
+2025-05-27 14:27:43 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748327263_1, 错误: process_presentation() got an unexpected keyword argument 'stop_words'
+2025-05-27 14:27:43 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748327263_1, 重试次数已达上限: 3
+2025-05-27 14:39:17 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:17 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:17 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:17 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:17 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:17 - app.function.ppt_translate_async - ERROR - 处理演示文稿时出错: expected string or bytes-like object
+2025-05-27 14:39:17 - app.function.ppt_translate_async - ERROR - Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 786, in run_async_in_thread
+    current_loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 516, in process_presentation_async
+    await asyncio.gather(*slide_tasks)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 382, in process_single_slide_async
+    await process_slide_async(slide, slide_index, translations, bilingual_translation)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 272, in process_slide_async
+    clean_text2 = re.sub(r'[^\w]', '', translations[new_text])
+  File "D:\app\conda\envs\ppt\lib\re.py", line 209, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+
+2025-05-27 14:39:17 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748327954_1, 错误: 翻译处理失败
+2025-05-27 14:39:18 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:18 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:18 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:18 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:18 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:18 - app.function.ppt_translate_async - ERROR - 处理演示文稿时出错: expected string or bytes-like object
+2025-05-27 14:39:18 - app.function.ppt_translate_async - ERROR - Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 786, in run_async_in_thread
+    current_loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 516, in process_presentation_async
+    await asyncio.gather(*slide_tasks)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 382, in process_single_slide_async
+    await process_slide_async(slide, slide_index, translations, bilingual_translation)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 272, in process_slide_async
+    clean_text2 = re.sub(r'[^\w]', '', translations[new_text])
+  File "D:\app\conda\envs\ppt\lib\re.py", line 209, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+
+2025-05-27 14:39:18 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748327954_1, 错误: 翻译处理失败
+2025-05-27 14:39:19 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:19 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:19 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:19 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:19 - app.function.local_qwen_async - ERROR - 翻译过程中出错: 'str' object has no attribute 'items'
+2025-05-27 14:39:19 - app.function.ppt_translate_async - ERROR - 处理演示文稿时出错: expected string or bytes-like object
+2025-05-27 14:39:19 - app.function.ppt_translate_async - ERROR - Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 786, in run_async_in_thread
+    current_loop = asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 516, in process_presentation_async
+    await asyncio.gather(*slide_tasks)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 382, in process_single_slide_async
+    await process_slide_async(slide, slide_index, translations, bilingual_translation)
+  File "D:\project\system\app\function\ppt_translate_async.py", line 272, in process_slide_async
+    clean_text2 = re.sub(r'[^\w]', '', translations[new_text])
+  File "D:\app\conda\envs\ppt\lib\re.py", line 209, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+
+2025-05-27 14:39:19 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748327954_1, 错误: 翻译处理失败
+2025-05-27 14:39:19 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748327954_1, 重试次数已达上限: 3
+2025-05-28 14:26:20 - app.function.ppt_translate_async - ERROR - COM操作失败: (-2147352567, '发生意外。', (0, 'Microsoft PowerPoint', 'Application.Visible : Invalid request.  Hiding the application window is not allowed.', '', 0, -2147188160), None)
+2025-06-01 00:29:44 - app.views.main - ERROR - OCR error: Object of type int32 is not JSON serializable
+2025-06-01 01:12:17 - app.function.pdf_annotate_async - ERROR - 处理注释 1 时出错: 'Annot' object has no attribute 'set_content'
+2025-06-01 03:00:00 - app.tasks.cleanup - ERROR - 清理过期文件时出错: No application found. Either work inside a view function or push an application context. See http://flask-sqlalchemy.pocoo.org/contexts/.
+2025-06-01 22:57:47 - app - ERROR - 应用启动成功 - ERROR级别测试
+2025-06-01 22:57:47 - app - ERROR - 应用启动成功 - ERROR级别测试
+2025-06-01 22:57:47 - app.main - ERROR - 用户登录 - ERROR级别测试
+2025-06-01 22:57:47 - app.main - ERROR - 用户登录 - ERROR级别测试
+2025-06-01 22:57:47 - app.auth - ERROR - 开始翻译任务 - ERROR级别测试
+2025-06-01 22:57:47 - app.auth - ERROR - 开始翻译任务 - ERROR级别测试
+2025-06-01 22:57:47 - app.translation - ERROR - 翻译完成 - ERROR级别测试
+2025-06-01 22:57:47 - app.translation - ERROR - 翻译完成 - ERROR级别测试
+2025-06-01 22:57:47 - app.tasks.cleanup - ERROR - 清理临时文件 - ERROR级别测试
+2025-06-01 22:57:47 - app.tasks.cleanup - ERROR - 清理临时文件 - ERROR级别测试
+2025-06-01 23:12:39 - app.test - ERROR - 这是一个测试错误 - 23:12:39
+2025-06-01 23:41:31 - app.test.time_0 - ERROR - 时间过滤测试日志 - ERROR - 21:41:31
+2025-06-01 23:41:31 - app.test.time_1 - ERROR - 时间过滤测试日志 - ERROR - 22:41:31
+2025-06-01 23:41:31 - app.test.time_2 - ERROR - 时间过滤测试日志 - ERROR - 23:11:31
+2025-06-01 23:41:31 - app.test.time_3 - ERROR - 时间过滤测试日志 - ERROR - 23:31:31
+2025-06-01 23:41:31 - app.test.time_4 - ERROR - 时间过滤测试日志 - ERROR - 23:36:31
+2025-06-01 23:41:31 - app.test.time_5 - ERROR - 时间过滤测试日志 - ERROR - 23:41:31
+2025-06-02 20:40:15 - app.function.ppt_translate_async - ERROR - 应用注释时出错: Error code: 503
+2025-06-02 20:40:15 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 785, in _apply_annotations
+    field = str(get_field(all_text))
+  File "D:\project\system\app\function\local_qwen.py", line 87, in get_field
+    return chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen.py", line 28, in chat_completion
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1008, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1008, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1023, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503
+
+2025-06-02 20:40:15 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748868010_1, 错误: ppt_translate 处理失败
+2025-06-02 20:40:21 - app.function.ppt_translate_async - ERROR - 应用注释时出错: Error code: 503
+2025-06-02 20:40:21 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 785, in _apply_annotations
+    field = str(get_field(all_text))
+  File "D:\project\system\app\function\local_qwen.py", line 87, in get_field
+    return chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen.py", line 28, in chat_completion
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1008, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1008, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1023, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503
+
+2025-06-02 20:40:21 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748868010_1, 错误: ppt_translate 处理失败
+2025-06-02 20:40:26 - app.function.ppt_translate_async - ERROR - 应用注释时出错: Error code: 503
+2025-06-02 20:40:26 - app.function.ppt_translate_async - ERROR - 错误详情: Traceback (most recent call last):
+  File "D:\project\system\app\function\ppt_translate_async.py", line 785, in _apply_annotations
+    field = str(get_field(all_text))
+  File "D:\project\system\app\function\local_qwen.py", line 87, in get_field
+    return chat_completion(messages)
+  File "D:\project\system\app\function\local_qwen.py", line 28, in chat_completion
+    response = client.chat.completions.create(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\resources\chat\completions\completions.py", line 914, in create
+    return self._post(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 919, in request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1008, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1008, in _request
+    return self._retry_request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1057, in _retry_request
+    return self._request(
+  File "D:\app\conda\envs\ppt\lib\site-packages\openai\_base_client.py", line 1023, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503
+
+2025-06-02 20:40:26 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748868010_1, 错误: ppt_translate 处理失败
+2025-06-02 20:40:26 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748868010_1, 重试次数已达上限: 3

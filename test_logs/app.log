@@ -1,0 +1,32 @@
+2025-06-01 22:57:44 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: test_logs, 最大文件大小: 10.0MB
+2025-06-01 22:57:44 - app.test - INFO - 这是一条测试信息
+2025-06-01 22:57:44 - app.test - WARNING - 这是一条测试警告
+2025-06-01 22:57:44 - app.test - ERROR - 这是一条测试错误
+2025-06-01 22:57:44 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\.\logs, 最大文件大小: 10.0MB
+2025-06-01 22:57:44 - app - INFO - 正在初始化应用...
+2025-06-01 22:57:44 - app - INFO - 日志过滤器已配置 - SQL:True, HTTP:True, Static:True
+2025-06-01 22:57:44 - app - INFO - 白名单模式: ['ERROR', 'WARNING', '翻译', '任务', '上传', '处理', '失败', '成功']
+2025-06-01 22:57:44 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-01 22:57:44 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-01 22:57:44 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-01 22:57:44 - app.utils.async_http_client.client - INFO - HTTP 客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-01 22:57:47 - app - INFO - 数据库表已创建
+2025-06-01 22:57:47 - app - INFO - 任务处理器已启动
+2025-06-01 22:57:47 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-01 22:57:47 - app - INFO - 应用已初始化 - 环境: testing
+2025-06-01 22:57:47 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: logs, 最大文件大小: 10.0MB
+2025-06-01 22:57:47 - app - INFO - 应用启动成功 - INFO级别测试
+2025-06-01 22:57:47 - app - WARNING - 应用启动成功 - WARNING级别测试
+2025-06-01 22:57:47 - app - ERROR - 应用启动成功 - ERROR级别测试
+2025-06-01 22:57:47 - app.main - INFO - 用户登录 - INFO级别测试
+2025-06-01 22:57:47 - app.main - WARNING - 用户登录 - WARNING级别测试
+2025-06-01 22:57:47 - app.main - ERROR - 用户登录 - ERROR级别测试
+2025-06-01 22:57:47 - app.auth - INFO - 开始翻译任务 - INFO级别测试
+2025-06-01 22:57:47 - app.auth - WARNING - 开始翻译任务 - WARNING级别测试
+2025-06-01 22:57:47 - app.auth - ERROR - 开始翻译任务 - ERROR级别测试
+2025-06-01 22:57:47 - app.translation - INFO - 翻译完成 - INFO级别测试
+2025-06-01 22:57:47 - app.translation - WARNING - 翻译完成 - WARNING级别测试
+2025-06-01 22:57:47 - app.translation - ERROR - 翻译完成 - ERROR级别测试
+2025-06-01 22:57:47 - app.tasks.cleanup - INFO - 清理临时文件 - INFO级别测试
+2025-06-01 22:57:47 - app.tasks.cleanup - WARNING - 清理临时文件 - WARNING级别测试
+2025-06-01 22:57:47 - app.tasks.cleanup - ERROR - 清理临时文件 - ERROR级别测试

@@ -1,0 +1,68 @@
+[
+  {
+    "type": "rectangle",
+    "page": 2,
+    "coords": {
+      "left": 300,
+      "top": 265.65409622886864,
+      "width": 169,
+      "height": 51.9323797139142
+    },
+    "text": " "
+  },
+  {
+    "type": "rectangle",
+    "page": 3,
+    "coords": {
+      "left": 45,
+      "top": 162.78803641092327,
+      "width": 268,
+      "height": 71.90637191157347
+    },
+    "text": " "
+  },
+  {
+    "type": "rectangle",
+    "page": 4,
+    "coords": {
+      "left": 426,
+      "top": 163.78673602080625,
+      "width": 102,
+      "height": 22.9700910273082
+    },
+    "text": " "
+  },
+  {
+    "type": "rectangle",
+    "page": 5,
+    "coords": {
+      "left": 510,
+      "top": 157.79453836150844,
+      "width": 146,
+      "height": 31.958387516254902
+    },
+    "text": " "
+  },
+  {
+    "type": "rectangle",
+    "page": 6,
+    "coords": {
+      "left": 309,
+      "top": 321.5812743823147,
+      "width": 160,
+      "height": 31.958387516254902
+    },
+    "text": " "
+  },
+  {
+    "type": "rectangle",
+    "page": 7,
+    "coords": {
+      "left": 282,
+      "top": 128.83224967490247,
+      "width": 207,
+      "height": 26.96488946684005
+    },
+    "text": " "
+  }
+]

@@ -1,0 +1,1064 @@
+{% extends "main/base_layout.html" %}
+
+{% block title %}PDF注释{% endblock %}
+
+{% block styles %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.css" rel="stylesheet">
+<style>
+.pdf-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 100px);
+}
+
+.pdf-viewer {
+    flex: 1;
+    position: relative;
+    background: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-area {
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background: #f8f9fa;
+}
+
+.upload-area.drag-over {
+    border-color: var(--primary-color);
+    background: #e3f2fd;
+}
+
+.upload-area i {
+    font-size: 48px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.upload-area p {
+    margin: 0;
+    color: #666;
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+#canvas-container {
+    background: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 70vh; /* 确保有足够的高度 */
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.canvas-wrapper {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    max-width: calc(100vw - 320px); /* 减去侧边栏和工具栏宽度 */
+    max-height: calc(100vh - 200px); /* 减去头部和底部空间 */
+    /* 确保内容完整显示 */
+    overflow: visible;
+    margin: auto;
+    /* 添加边框以便调试 */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#pdf-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 优化高分辨率显示 */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    /* 确保高质量缩放 */
+    transform-origin: top left;
+}
+
+#fabric-canvas {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: all !important;
+}
+
+.toolbar {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tool-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tool-btn:hover {
+    background: #0091ea;
+}
+
+.tool-btn.active {
+    background: #0277bd;
+}
+
+.annotations-list {
+    width: 250px;
+    background: rgba(0, 168, 255, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.annotation-item {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.annotation-item:hover {
+    background: #f5f5f5;
+}
+
+.annotation-text {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.annotation-page {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* OCR状态样式 */
+.status-text {
+    margin: 10px 0;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 2px solid #2196F3;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a !important; /* 深黑色，确保高对比度 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: none;
+}
+
+/* 注释列表样式 */
+.annotation-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.annotation-item:hover {
+    background-color: #f5f5f5;
+}
+
+.annotation-content {
+    flex: 1;
+    cursor: pointer;
+}
+
+.annotation-actions {
+    display: flex;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.btn-edit, .btn-delete {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.btn-edit:hover {
+    background-color: #e3f2fd;
+}
+
+.btn-delete:hover {
+    background-color: #ffebee;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+    <h1><i class="bi bi-file-pdf"></i> PDF注释工具</h1>
+    <div style="display: flex; gap: 1rem;">
+        <a href="{{ url_for('main.index') }}" class="btn btn-secondary" style="text-decoration: none; padding: 0.5rem 1rem; border-radius: 5px; background: rgba(0, 168, 255, 0.2); color: var(--text-color); border: 1px solid var(--primary-color); transition: all 0.3s ease;">
+            <i class="bi bi-translate"></i> PPT翻译工具
+        </a>
+        <a href="{{ url_for('auth.logout') }}" class="btn btn-outline" style="text-decoration: none; padding: 0.5rem 1rem; border-radius: 5px; background: rgba(255, 0, 0, 0.1); color: #ff6b6b; border: 1px solid #ff6b6b; transition: all 0.3s ease;">
+            <i class="bi bi-box-arrow-right"></i> 退出登录
+        </a>
+    </div>
+</div>
+
+<div class="pdf-container">
+    <div class="pdf-viewer">
+        <div id="upload-area" class="upload-area">
+            <input type="file" id="pdf-upload" accept=".pdf">
+            <i class="bi bi-cloud-upload"></i>
+            <p>点击或拖拽PDF文件到此处上传</p>
+        </div>
+        <div id="canvas-container" style="display: none;">
+            <div class="canvas-wrapper">
+                <canvas id="pdf-canvas"></canvas>
+                <canvas id="fabric-canvas"></canvas>
+            </div>
+        </div>
+        <div class="loading-overlay" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <button class="tool-btn" id="rectangle-tool">
+            <i class="bi bi-square"></i> 矩形标注
+        </button>
+        <button class="tool-btn" id="select-tool">
+            <i class="bi bi-cursor"></i> 选择
+        </button>
+        <button class="tool-btn" id="prev-page">
+            <i class="bi bi-chevron-left"></i> 上一页
+        </button>
+        <button class="tool-btn" id="next-page">
+            <i class="bi bi-chevron-right"></i> 下一页
+        </button>
+        <button class="tool-btn" id="save-annotations">
+            <i class="bi bi-save"></i> 保存注释
+        </button>
+    </div>
+
+    <div class="annotations-list">
+        <h3>注释列表</h3>
+        <div id="annotations-container"></div>
+
+        <!-- OCR状态显示区域 -->
+        <div id="ocr-status-container" style="margin-top: 15px;">
+            <h4>OCR状态</h4>
+            <div id="ocr-status" class="status-text">检查中...</div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+<script>
+// 设置PDF.js worker路径
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+let pdfDoc = null;
+let pageNum = 1;
+let fabricCanvas = null;
+let pdfCanvas = null;
+let currentTool = 'select';
+let annotations = [];
+
+// 初始化函数
+function initCanvas() {
+    if (fabricCanvas) {
+        fabricCanvas.dispose();
+    }
+
+    pdfCanvas = document.getElementById('pdf-canvas');
+    const fabricCanvasEl = document.getElementById('fabric-canvas');
+
+    fabricCanvas = new fabric.Canvas('fabric-canvas', {
+        isDrawingMode: false,
+        selection: true,
+        backgroundColor: null,
+        preserveObjectStacking: true,
+        interactive: true
+    });
+
+    // 确保fabric canvas在最上层并可以接收事件
+    fabricCanvas.wrapperEl.style.zIndex = '2';
+
+    // 设置画布事件监听器
+    setupCanvasEventListeners();
+
+    // 添加窗口大小改变事件监听器
+    window.addEventListener('resize', debounce(() => {
+        if (pdfDoc) {
+            renderPage(pageNum);
+        }
+    }, 250));
+}
+
+// 初始化工具按钮事件
+document.getElementById('rectangle-tool').addEventListener('click', () => {
+    currentTool = 'rectangle';
+    fabricCanvas.isDrawingMode = false;
+    updateToolbarState();
+});
+
+document.getElementById('select-tool').addEventListener('click', () => {
+    currentTool = 'select';
+    fabricCanvas.isDrawingMode = false;
+    updateToolbarState();
+});
+
+document.getElementById('prev-page').addEventListener('click', () => {
+    if (pageNum <= 1) return;
+    pageNum--;
+    renderPage(pageNum);
+});
+
+document.getElementById('next-page').addEventListener('click', () => {
+    if (pageNum >= pdfDoc.numPages) return;
+    pageNum++;
+    renderPage(pageNum);
+});
+
+document.getElementById('save-annotations').addEventListener('click', saveAnnotations);
+
+// 更新工具栏状态
+function updateToolbarState() {
+    document.querySelectorAll('.tool-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    if (currentTool === 'rectangle') {
+        document.getElementById('rectangle-tool').classList.add('active');
+    } else if (currentTool === 'select') {
+        document.getElementById('select-tool').classList.add('active');
+    }
+}
+
+// 文件上传相关功能
+const uploadArea = document.getElementById('upload-area');
+const fileInput = document.getElementById('pdf-upload');
+const canvasContainer = document.getElementById('canvas-container');
+
+uploadArea.addEventListener('click', () => {
+    fileInput.click();
+});
+
+uploadArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    uploadArea.classList.add('drag-over');
+});
+
+uploadArea.addEventListener('dragleave', () => {
+    uploadArea.classList.remove('drag-over');
+});
+
+uploadArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    uploadArea.classList.remove('drag-over');
+    const file = e.dataTransfer.files[0];
+    if (file && file.type === 'application/pdf') {
+        handleFileUpload(file);
+    } else {
+        showToast('请上传PDF文件', 'error');
+    }
+});
+
+fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+        handleFileUpload(file);
+    }
+});
+
+async function handleFileUpload(file) {
+    try {
+        showLoading();
+        const formData = new FormData();
+        formData.append('file', file);
+
+        const response = await fetch('/upload_pdf', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error('上传失败');
+        }
+
+        const data = await response.json();
+        uploadArea.style.display = 'none';
+        canvasContainer.style.display = 'block';
+
+        // 保存PDF路径到全局变量
+        window.currentPdfPath = data.file_path;
+        window.currentPdfUrl = data.file_url;
+
+        // 清空之前的注释
+        annotations = [];
+
+        // 初始化画布
+        initCanvas();
+
+        // 加载新上传的PDF
+        await loadPDF(data.file_url);
+        showToast('PDF文件上传成功');
+
+    } catch (error) {
+        console.error('Upload error:', error);
+        showToast('上传PDF文件失败: ' + error.message, 'error');
+    } finally {
+        hideLoading();
+    }
+}
+
+async function loadPDF(url) {
+    try {
+        console.log('开始加载PDF:', url);
+        showLoading();
+
+        // 确保URL是绝对路径
+        const absoluteUrl = url.startsWith('http') ? url : window.location.origin + url;
+        console.log('处理后的PDF URL:', absoluteUrl);
+
+        // 先检查URL是否可访问
+        const checkResponse = await fetch(absoluteUrl);
+        if (!checkResponse.ok) {
+            throw new Error(`PDF文件不可访问: ${checkResponse.status} ${checkResponse.statusText}`);
+        }
+
+        // 获取文件内容
+        const pdfData = await checkResponse.arrayBuffer();
+        console.log('PDF文件获取成功，大小:', pdfData.byteLength);
+
+        const loadingTask = pdfjsLib.getDocument({data: pdfData});
+        console.log('PDF加载任务创建成功');
+
+        pdfDoc = await loadingTask.promise;
+        console.log('PDF加载成功，总页数:', pdfDoc.numPages);
+
+        pageNum = 1;
+        await renderPage(pageNum);
+
+        // 更新页面导航按钮状态
+        updatePageNavigation();
+        hideLoading();
+    } catch (error) {
+        console.error('PDF加载错误:', error);
+        hideLoading();
+        showToast(`加载PDF文件失败: ${error.message}`, 'error');
+
+        // 显示上传区域
+        uploadArea.style.display = 'block';
+        canvasContainer.style.display = 'none';
+    }
+}
+
+async function renderPage(num) {
+    try {
+        showLoading();
+        const page = await pdfDoc.getPage(num);
+
+        // 高清晰度渲染设置（最优化版）
+        const container = document.querySelector('#canvas-container');
+
+        // 获取可用的显示区域
+        const availableWidth = Math.min(
+            container.clientWidth - 40, // 减去padding
+            window.innerWidth - 320     // 减去侧边栏和工具栏
+        );
+        const availableHeight = Math.min(
+            container.clientHeight - 40, // 减去padding
+            window.innerHeight - 200     // 减去头部和底部
+        );
+
+        // 计算适合容器的基础缩放比例
+        const pageViewport = page.getViewport({ scale: 1 });
+        const scaleX = availableWidth / pageViewport.width;
+        const scaleY = availableHeight / pageViewport.height;
+        const baseScale = Math.min(scaleX, scaleY);
+
+        // 显示缩放（用户看到的大小）- 尽可能大但确保完整显示
+        const displayScale = Math.max(0.5, baseScale * 0.85); // 至少0.5倍，最多85%可用空间
+
+        // 提高渲染质量：使用更高的内部渲染分辨率
+        const devicePixelRatio = window.devicePixelRatio || 1;
+        const qualityMultiplier = 2.0; // 降低到2.0避免过大
+        const renderScale = displayScale * devicePixelRatio * qualityMultiplier;
+
+        // 渲染viewport（高分辨率，用于内部渲染）
+        const renderViewport = page.getViewport({ scale: renderScale });
+        // 显示viewport（用户界面大小，确保完整显示）
+        const displayViewport = page.getViewport({ scale: displayScale });
+
+        // 设置canvas的实际渲染尺寸（高分辨率）
+        pdfCanvas.width = renderViewport.width;
+        pdfCanvas.height = renderViewport.height;
+
+        // 设置canvas的显示尺寸（用户界面大小）
+        pdfCanvas.style.width = `${displayViewport.width}px`;
+        pdfCanvas.style.height = `${displayViewport.height}px`;
+
+        // 设置fabric canvas尺寸（与显示尺寸一致）
+        fabricCanvas.setWidth(displayViewport.width);
+        fabricCanvas.setHeight(displayViewport.height);
+
+        // 设置canvas-wrapper尺寸（确保容器能容纳完整内容）
+        const wrapper = document.querySelector('.canvas-wrapper');
+        wrapper.style.width = `${displayViewport.width}px`;
+        wrapper.style.height = `${displayViewport.height}px`;
+
+        // 获取高分辨率渲染上下文
+        const ctx = pdfCanvas.getContext('2d');
+
+        // 清除之前的变换
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+        // 设置高质量渲染选项
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+
+        // 渲染PDF页面到pdfCanvas（高分辨率）
+        const renderContext = {
+            canvasContext: ctx,
+            viewport: renderViewport,
+            // 添加渲染选项以提高质量
+            intent: 'display',
+            renderInteractiveForms: false
+        };
+
+        await page.render(renderContext).promise;
+        console.log(`页面渲染完成:`);
+        console.log(`- 可用区域: ${availableWidth}x${availableHeight}`);
+        console.log(`- PDF原始尺寸: ${pageViewport.width}x${pageViewport.height}`);
+        console.log(`- 基础缩放: ${baseScale.toFixed(3)}`);
+        console.log(`- 显示缩放: ${displayScale.toFixed(3)}`);
+        console.log(`- 渲染分辨率: ${renderViewport.width}x${renderViewport.height}`);
+        console.log(`- 显示分辨率: ${displayViewport.width}x${displayViewport.height}`);
+
+        // 清除之前的内容
+        fabricCanvas.clear();
+
+        // 加载该页面的注释
+        loadPageAnnotations(num);
+
+        // 更新页面导航状态
+        updatePageNavigation();
+        hideLoading();
+    } catch (error) {
+        console.error('Error rendering page:', error);
+        hideLoading();
+        showToast('渲染页面失败: ' + error.message, 'error');
+    }
+}
+
+// 设置画布事件监听器
+function setupCanvasEventListeners() {
+    let isDrawing = false;
+    let startX, startY;
+    let rect;
+
+    fabricCanvas.on('mouse:down', function(options) {
+        if (currentTool !== 'rectangle') return;
+
+        isDrawing = true;
+        const pointer = fabricCanvas.getPointer(options.e);
+        startX = pointer.x;
+        startY = pointer.y;
+
+        rect = new fabric.Rect({
+            left: startX,
+            top: startY,
+            width: 0,
+            height: 0,
+            fill: 'rgba(255, 255, 0, 0.3)',
+            stroke: '#FFD700',
+            strokeWidth: 2,
+            selectable: true,
+            evented: true
+        });
+
+        fabricCanvas.add(rect);
+        fabricCanvas.renderAll();
+    });
+
+    fabricCanvas.on('mouse:move', function(options) {
+        if (!isDrawing) return;
+
+        const pointer = fabricCanvas.getPointer(options.e);
+        const width = pointer.x - startX;
+        const height = pointer.y - startY;
+
+        rect.set({
+            width: width,
+            height: height
+        });
+
+        fabricCanvas.renderAll();
+    });
+
+    fabricCanvas.on('mouse:up', async function() {
+        if (!isDrawing) return;
+        isDrawing = false;
+
+        if (rect.width < 10 || rect.height < 10) {
+            fabricCanvas.remove(rect);
+            fabricCanvas.renderAll();
+            return;
+        }
+
+        try {
+            // 获取标注区域的图像数据
+            const imageData = await getRegionImageData(rect);
+
+            // 发送到后端进行OCR识别
+            const response = await fetch('/ocr_region', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    imageData: imageData
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('OCR请求失败');
+            }
+
+            const result = await response.json();
+            if (!result.success) {
+                throw new Error(result.error || 'OCR识别失败');
+            }
+
+            // 创建注释对象
+            const annotation = {
+                type: 'rectangle',
+                page: pageNum,
+                coords: {
+                    left: rect.left,
+                    top: rect.top,
+                    width: rect.width,
+                    height: rect.height
+                },
+                text: result.text,
+                ocrResult: result.text,  // 保存OCR识别结果
+                confidence: result.confidence || 0,  // 保存置信度
+                details: result.details || []  // 保存详细识别结果
+            };
+
+            annotations.push(annotation);
+            updateAnnotationsList();
+
+            // 显示更详细的成功信息
+            const confidenceText = result.confidence ? ` (置信度: ${(result.confidence * 100).toFixed(1)}%)` : '';
+            showToast(`EasyOCR识别完成${confidenceText}`);
+
+        } catch (error) {
+            console.error('OCR error:', error);
+            showToast('OCR识别失败: ' + error.message, 'error');
+            fabricCanvas.remove(rect);
+        }
+
+        fabricCanvas.renderAll();
+    });
+}
+
+// 获取标注区域的图像数据（修复版高分辨率）
+async function getRegionImageData(rect) {
+    // 创建一个新的canvas来获取区域图像
+    const tempCanvas = document.createElement('canvas');
+    const ctx = tempCanvas.getContext('2d');
+
+    // 计算高分辨率缩放比例（与渲染时保持一致）
+    const devicePixelRatio = window.devicePixelRatio || 1;
+    const qualityMultiplier = 2.0; // 与渲染时使用的相同倍数
+    const totalScale = devicePixelRatio * qualityMultiplier;
+
+    // 计算在高分辨率canvas上的实际坐标
+    const actualLeft = rect.left * totalScale;
+    const actualTop = rect.top * totalScale;
+    const actualWidth = Math.abs(rect.width * totalScale);
+    const actualHeight = Math.abs(rect.height * totalScale);
+
+    // 设置临时canvas为高分辨率大小
+    tempCanvas.width = actualWidth;
+    tempCanvas.height = actualHeight;
+
+    // 设置高质量渲染选项
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+
+    try {
+        // 从高分辨率PDF canvas复制区域图像
+        ctx.drawImage(
+            pdfCanvas,
+            actualLeft,
+            actualTop,
+            actualWidth,
+            actualHeight,
+            0,
+            0,
+            actualWidth,
+            actualHeight
+        );
+    } catch (error) {
+        console.warn('高分辨率图像提取失败，使用标准分辨率:', error);
+
+        // 降级到标准分辨率提取
+        tempCanvas.width = Math.abs(rect.width);
+        tempCanvas.height = Math.abs(rect.height);
+
+        ctx.drawImage(
+            pdfCanvas,
+            rect.left,
+            rect.top,
+            rect.width,
+            rect.height,
+            0,
+            0,
+            rect.width,
+            rect.height
+        );
+    }
+
+    // 返回高质量的base64格式图像数据
+    return tempCanvas.toDataURL('image/png', 0.95); // 使用高质量PNG
+}
+
+// 更新注释列表
+function updateAnnotationsList() {
+    const container = document.getElementById('annotations-container');
+    container.innerHTML = '';
+
+    const pageAnnotations = annotations.filter(a => a.page === pageNum);
+
+    pageAnnotations.forEach((annotation, index) => {
+        const div = document.createElement('div');
+        div.className = 'annotation-item';
+
+        // 构建置信度显示
+        const confidenceText = annotation.confidence ?
+            ` <span style="color: #666; font-size: 0.8em;">(${(annotation.confidence * 100).toFixed(1)}%)</span>` : '';
+
+        // 获取全局索引
+        const globalIndex = annotations.indexOf(annotation);
+
+        div.innerHTML = `
+            <div class="annotation-content">
+                <div class="annotation-text" id="text-${globalIndex}">${annotation.ocrResult || '无识别文本'}${confidenceText}</div>
+                <div class="annotation-page">第 ${annotation.page} 页</div>
+            </div>
+            <div class="annotation-actions">
+                <button class="btn-edit" onclick="editAnnotation(${globalIndex})" title="编辑">✏️</button>
+                <button class="btn-delete" onclick="deleteAnnotation(${globalIndex})" title="删除">🗑️</button>
+            </div>
+        `;
+
+        // 点击注释内容区域高亮显示
+        div.querySelector('.annotation-content').onclick = () => highlightAnnotation(index);
+        container.appendChild(div);
+    });
+}
+
+// 编辑注释
+function editAnnotation(globalIndex) {
+    const annotation = annotations[globalIndex];
+    if (!annotation) return;
+
+    const newText = prompt('编辑注释文本:', annotation.ocrResult || annotation.text || '');
+    if (newText !== null && newText.trim() !== '') {
+        // 更新注释文本
+        annotation.text = newText.trim();
+        annotation.ocrResult = newText.trim();
+
+        // 更新显示
+        updateAnnotationsList();
+
+        // 如果当前页面包含这个注释，重新加载页面注释
+        if (annotation.page === pageNum) {
+            loadPageAnnotations(pageNum);
+        }
+
+        showToast('注释已更新');
+    }
+}
+
+// 删除注释
+function deleteAnnotation(globalIndex) {
+    const annotation = annotations[globalIndex];
+    if (!annotation) return;
+
+    if (confirm('确定要删除这个注释吗？')) {
+        // 从数组中移除注释
+        annotations.splice(globalIndex, 1);
+
+        // 更新显示
+        updateAnnotationsList();
+
+        // 如果当前页面包含这个注释，重新加载页面注释
+        if (annotation.page === pageNum) {
+            loadPageAnnotations(pageNum);
+        }
+
+        showToast('注释已删除');
+    }
+}
+
+// 高亮显示选中的注释
+function highlightAnnotation(index) {
+    const pageAnnotations = annotations.filter(a => a.page === pageNum);
+    const annotation = pageAnnotations[index];
+
+    if (!annotation) return;
+
+    if (annotation.page !== pageNum) {
+        pageNum = annotation.page;
+        renderPage(pageNum);
+    }
+
+    // 找到对应的矩形对象并选中它
+    fabricCanvas.getObjects().forEach(obj => {
+        if (obj.left === annotation.coords.left &&
+            obj.top === annotation.coords.top) {
+            fabricCanvas.setActiveObject(obj);
+            fabricCanvas.renderAll();
+        }
+    });
+}
+
+// 保存注释
+async function saveAnnotations() {
+    try {
+        const response = await fetch('/save_annotations', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                annotations: annotations
+            })
+        });
+
+        if (response.ok) {
+            showToast('注释保存成功');
+        } else {
+            throw new Error('保存失败');
+        }
+    } catch (error) {
+        console.error('Error saving annotations:', error);
+        showToast('保存注释失败', 'error');
+    }
+}
+
+// 加载页面注释
+function loadPageAnnotations(pageNum) {
+    fabricCanvas.clear();
+
+    const pageAnnotations = annotations.filter(a => a.page === pageNum);
+    pageAnnotations.forEach(annotation => {
+        const rect = new fabric.Rect({
+            left: annotation.coords.left,
+            top: annotation.coords.top,
+            width: annotation.coords.width,
+            height: annotation.coords.height,
+            fill: 'rgba(255, 255, 0, 0.3)',
+            stroke: '#FFD700',
+            strokeWidth: 2
+        });
+        fabricCanvas.add(rect);
+    });
+
+    updateAnnotationsList();
+}
+
+
+
+
+
+
+
+// 获取当前PDF路径
+function getCurrentPdfPath() {
+    // 从上传时保存的信息中获取PDF路径
+    return window.currentPdfPath || null;
+}
+
+// 从URL提取文件路径
+function extractPathFromUrl(url) {
+    try {
+        // 从URL中提取文件名
+        const urlParts = url.split('/');
+        const filename = urlParts[urlParts.length - 1];
+
+        // 构建服务器端文件路径
+        // 这里需要根据实际的服务器端路径结构来调整
+        return `/uploads/${getCurrentUsername()}_pdfs/${filename}`;
+    } catch (error) {
+        console.error('Error extracting path from URL:', error);
+        return null;
+    }
+}
+
+// 获取当前用户名
+function getCurrentUsername() {
+    // 从Flask模板变量获取用户名
+    return '{{ current_user.username if current_user.is_authenticated else "anonymous" }}';
+}
+
+function showLoading() {
+    document.querySelector('.loading-overlay').style.display = 'flex';
+}
+
+function hideLoading() {
+    document.querySelector('.loading-overlay').style.display = 'none';
+}
+
+// 添加页面导航状态更新函数
+function updatePageNavigation() {
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+
+    prevBtn.disabled = pageNum <= 1;
+    nextBtn.disabled = pageNum >= pdfDoc.numPages;
+}
+
+// 添加防抖函数
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// 检查OCR状态
+async function checkOCRStatus() {
+    try {
+        const response = await fetch('/ocr_status');
+        if (!response.ok) {
+            throw new Error('获取OCR状态失败');
+        }
+
+        const result = await response.json();
+        if (!result.success) {
+            throw new Error(result.error || 'OCR状态检查失败');
+        }
+
+        const ocrInfo = result.ocr_info;
+        const statusElement = document.getElementById('ocr-status');
+
+        if (ocrInfo.status === 'ready') {
+            const languages = Array.isArray(ocrInfo.languages) ? ocrInfo.languages.join(', ') : ocrInfo.languages;
+            const gpuText = ocrInfo.gpu_enabled ? ' (GPU加速)' : ' (CPU模式)';
+            statusElement.innerHTML = `✅ EasyOCR就绪 - 支持语言: ${languages}${gpuText}`;
+            statusElement.style.color = '#1a1a1a'; /* 深黑色，确保高对比度 */
+            statusElement.style.fontWeight = '600'; /* 加粗字体 */
+        } else if (ocrInfo.status === 'not_initialized') {
+            statusElement.innerHTML = '⏳ EasyOCR初始化中...';
+            statusElement.style.color = '#1a1a1a'; /* 深黑色，确保高对比度 */
+            statusElement.style.fontWeight = '600'; /* 加粗字体 */
+            // 5秒后重新检查
+            setTimeout(checkOCRStatus, 5000);
+        } else {
+            statusElement.innerHTML = `❌ EasyOCR错误: ${ocrInfo.error || '未知错误'}`;
+            statusElement.style.color = '#1a1a1a'; /* 深黑色，确保高对比度 */
+            statusElement.style.fontWeight = '600'; /* 加粗字体 */
+        }
+
+    } catch (error) {
+        console.error('OCR status check error:', error);
+        const statusElement = document.getElementById('ocr-status');
+        statusElement.innerHTML = `❌ 无法获取OCR状态: ${error.message}`;
+        statusElement.style.color = '#1a1a1a'; /* 深黑色，确保高对比度 */
+        statusElement.style.fontWeight = '600'; /* 加粗字体 */
+    }
+}
+
+// 页面加载时检查OCR状态
+document.addEventListener('DOMContentLoaded', function() {
+    checkOCRStatus();
+});
+
+// 初始化时加载示例PDF（实际使用时应该通过上传或选择文件来加载）
+// loadPDF('/path/to/sample.pdf');
+</script>
+{% endblock %}

@@ -1,0 +1,183 @@
+{
+  "timestamp": "2025-06-02 20:14:07",
+  "user": "admin",
+  "annotations": [
+    {
+      "type": "rectangle",
+      "page": 1,
+      "coords": {
+        "left": 28.49600074839796,
+        "top": 231.3209429961332,
+        "width": 166.97656578885824,
+        "height": 72.84520394162408
+      },
+      "text": "Biotis@Gut health。 Solutions for a good gut feeling。",
+      "ocrResult": "Biotis@Gut health。 Solutions for a good gut feeling。",
+      "confidence": 0.7670778921194134,
+      "details": [
+        {
+          "bbox": [
+            [
+              32,
+              16
+            ],
+            [
+              276,
+              16
+            ],
+            [
+              276,
+              48
+            ],
+            [
+              32,
+              48
+            ]
+          ],
+          "confidence": 0.7264651861030175,
+          "text": "Biotis@Gut health。"
+        },
+        {
+          "bbox": [
+            [
+              28,
+              49
+            ],
+            [
+              304,
+              49
+            ],
+            [
+              304,
+              88
+            ],
+            [
+              28,
+              88
+            ]
+          ],
+          "confidence": 0.790878630737705,
+          "text": "Solutions for a good"
+        },
+        {
+          "bbox": [
+            [
+              29,
+              85
+            ],
+            [
+              189,
+              85
+            ],
+            [
+              189,
+              124
+            ],
+            [
+              29,
+              124
+            ]
+          ],
+          "confidence": 0.7838898595175176,
+          "text": "gut feeling。"
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "page": 3,
+      "coords": {
+        "left": 202.4715842649329,
+        "top": 190.4078832480978,
+        "width": 205.97109312877123,
+        "height": 16.963951602843963
+      },
+      "text": "Ihave health problems and need supplements",
+      "ocrResult": "Ihave health problems and need supplements",
+      "confidence": 0.8296242098702593,
+      "details": [
+        {
+          "bbox": [
+            [
+              4,
+              4
+            ],
+            [
+              240,
+              4
+            ],
+            [
+              240,
+              30
+            ],
+            [
+              4,
+              30
+            ]
+          ],
+          "confidence": 0.6719545980158838,
+          "text": "Ihave health problems and"
+        },
+        {
+          "bbox": [
+            [
+              252,
+              6
+            ],
+            [
+              411,
+              6
+            ],
+            [
+              411,
+              30
+            ],
+            [
+              252,
+              30
+            ]
+          ],
+          "confidence": 0.9872938217246349,
+          "text": "need supplements"
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "page": 3,
+      "coords": {
+        "left": 265.1602725012655,
+        "top": 149.68067392034328,
+        "width": 143.97843844836416,
+        "height": 17.9616808704412
+      },
+      "text": "It helps me to be energized/alert",
+      "ocrResult": "It helps me to be energized/alert",
+      "confidence": 0.6336169908162648,
+      "details": [
+        {
+          "bbox": [
+            [
+              4,
+              12
+            ],
+            [
+              359,
+              12
+            ],
+            [
+              359,
+              40
+            ],
+            [
+              4,
+              40
+            ]
+          ],
+          "confidence": 0.6336169908162648,
+          "text": "It helps me to be energized/alert"
+        }
+      ]
+    }
+  ]
+}

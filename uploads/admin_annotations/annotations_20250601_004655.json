@@ -1,0 +1,345 @@
+{
+  "timestamp": "2025-06-01 00:46:55",
+  "user": "admin",
+  "annotations": [
+    {
+      "type": "rectangle",
+      "page": 1,
+      "coords": {
+        "left": 50.67055943230605,
+        "top": 155.6309537827609,
+        "width": 259.0023229283994,
+        "height": 133.82896735238165
+      },
+      "text": "Role of HMOs in Preterm Nutrition",
+      "ocrResult": "Role of HMOs in Preterm Nutrition",
+      "confidence": 0.7600247253074853,
+      "details": [
+        {
+          "bbox": [
+            [
+              9,
+              13
+            ],
+            [
+              245,
+              13
+            ],
+            [
+              245,
+              49
+            ],
+            [
+              9,
+              49
+            ]
+          ],
+          "confidence": 0.6203812404951276,
+          "text": "Role of HMOs"
+        },
+        {
+          "bbox": [
+            [
+              7,
+              51
+            ],
+            [
+              189,
+              51
+            ],
+            [
+              189,
+              87
+            ],
+            [
+              7,
+              87
+            ]
+          ],
+          "confidence": 0.6771294084809434,
+          "text": "in Preterm"
+        },
+        {
+          "bbox": [
+            [
+              9,
+              89
+            ],
+            [
+              161,
+              89
+            ],
+            [
+              161,
+              125
+            ],
+            [
+              9,
+              125
+            ]
+          ],
+          "confidence": 0.9825635269463853,
+          "text": "Nutrition"
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "page": 3,
+      "coords": {
+        "left": 37.6704428374443,
+        "top": 166.6169137892997,
+        "width": 275.0024664297677,
+        "height": 67.91320731314892
+      },
+      "text": "Prematurity and Related Health Risks",
+      "ocrResult": "Prematurity and Related Health Risks",
+      "confidence": 0.8402601893665075,
+      "details": [
+        {
+          "bbox": [
+            [
+              10,
+              6
+            ],
+            [
+              212,
+              6
+            ],
+            [
+              212,
+              38
+            ],
+            [
+              10,
+              38
+            ]
+          ],
+          "confidence": 0.7041057925582139,
+          "text": "Prematurity and"
+        },
+        {
+          "bbox": [
+            [
+              10,
+              32
+            ],
+            [
+              270,
+              32
+            ],
+            [
+              270,
+              62
+            ],
+            [
+              10,
+              62
+            ]
+          ],
+          "confidence": 0.976414586174801,
+          "text": "Related Health Risks"
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "page": 4,
+      "coords": {
+        "left": 99.67099890524648,
+        "top": 112.6858373935638,
+        "width": 587.0052647064496,
+        "height": 36.952774567448685
+      },
+      "text": "Prelemm birth: when babyis bomn too early belore 37 weeks Ofpregnancy have been completedi",
+      "ocrResult": "Prelemm birth: when babyis bomn too early belore 37 weeks Ofpregnancy have been completedi",
+      "confidence": 0.3912787493391211,
+      "details": [
+        {
+          "bbox": [
+            [
+              9,
+              11
+            ],
+            [
+              131,
+              11
+            ],
+            [
+              131,
+              27
+            ],
+            [
+              9,
+              27
+            ]
+          ],
+          "confidence": 0.5178972263287764,
+          "text": "Prelemm birth: when"
+        },
+        {
+          "bbox": [
+            [
+              139,
+              9
+            ],
+            [
+              577,
+              9
+            ],
+            [
+              577,
+              29
+            ],
+            [
+              139,
+              29
+            ]
+          ],
+          "confidence": 0.2646602723494658,
+          "text": "babyis bomn too early belore 37 weeks Ofpregnancy have been completedi"
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "page": 5,
+      "coords": {
+        "left": 45.670514588128455,
+        "top": 23.799433704295378,
+        "width": 544.0048790465223,
+        "height": 62.91958912835854
+      },
+      "text": "Preterm babies face specific health risks related to their immaturity | developmental needs 1.2",
+      "ocrResult": "Preterm babies face specific health risks related to their immaturity | developmental needs 1.2",
+      "confidence": 0.5702230582248651,
+      "details": [
+        {
+          "bbox": [
+            [
+              10,
+              8
+            ],
+            [
+              530,
+              8
+            ],
+            [
+              530,
+              38
+            ],
+            [
+              10,
+              38
+            ]
+          ],
+          "confidence": 0.9302850438857212,
+          "text": "Preterm babies face specific health risks related"
+        },
+        {
+          "bbox": [
+            [
+              8,
+              33
+            ],
+            [
+              460,
+              33
+            ],
+            [
+              460,
+              62
+            ],
+            [
+              8,
+              62
+            ]
+          ],
+          "confidence": 0.4754443257285849,
+          "text": "to their immaturity | developmental needs"
+        },
+        {
+          "bbox": [
+            [
+              452.6546544120074,
+              36.520119853208115
+            ],
+            [
+              480.5136460155383,
+              32.69276025930782
+            ],
+            [
+              482.3453455879926,
+              50.479880146791885
+            ],
+            [
+              455.4863539844617,
+              54.30723974069218
+            ]
+          ],
+          "confidence": 0.3049398050602891,
+          "text": "1.2"
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "page": 6,
+      "coords": {
+        "left": 47.67053252579949,
+        "top": 18.805815519505014,
+        "width": 463.00415257084524,
+        "height": 67.9132073131489
+      },
+      "text": "An immature GI system leads to specific health risks in preterm infants 1-5",
+      "ocrResult": "An immature GI system leads to specific health risks in preterm infants 1-5",
+      "confidence": 0.6867335524190343,
+      "details": [
+        {
+          "bbox": [
+            [
+              10,
+              13
+            ],
+            [
+              447,
+              13
+            ],
+            [
+              447,
+              45
+            ],
+            [
+              10,
+              45
+            ]
+          ],
+          "confidence": 0.6192231444910558,
+          "text": "An immature GI system leads to specific"
+        },
+        {
+          "bbox": [
+            [
+              8,
+              36
+            ],
+            [
+              358,
+              36
+            ],
+            [
+              358,
+              66
+            ],
+            [
+              8,
+              66
+            ]
+          ],
+          "confidence": 0.7542439603470128,
+          "text": "health risks in preterm infants 1-5"
+        }
+      ]
+    }
+  ]
+}
