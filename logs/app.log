@@ -13556,3 +13556,66 @@ WHERE users.id = %(param_1)s]
 2025-06-06 10:45:17 - app.services.user_service - INFO - 更新SSO用户信息: ch488460324@gmail.com
 2025-06-06 10:45:18 - app.services.user_service - INFO - SSO用户登录成功: ch488460324@gmail.com
 2025-06-06 10:45:18 - app.views.sso_auth - INFO - SSO用户认证成功: ch488460324@gmail.com
+2025-06-06 12:07:30 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-06 12:07:30 - app - INFO - 正在初始化应用...
+2025-06-06 12:07:30 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-06 12:07:30 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-06 12:07:30 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-06 12:07:30 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-06 12:07:30 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-06 20:23:07 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-06 20:23:07 - app - INFO - 正在初始化应用...
+2025-06-06 20:23:07 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-06 20:23:07 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-06 20:23:07 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-06 20:23:07 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-06 20:23:07 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-06 20:23:47 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-06 20:23:47 - app - INFO - 正在初始化应用...
+2025-06-06 20:23:47 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-06 20:23:47 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-06 20:23:47 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-06 20:23:47 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-06 20:23:47 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-06 20:23:49 - app - INFO - 数据库表已创建
+2025-06-06 20:23:49 - app - INFO - 任务处理器已启动
+2025-06-06 20:23:49 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-06 20:23:49 - app - INFO - 应用已初始化 - 环境: development
+2025-06-06 20:24:11 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-06 20:24:11 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-06 20:24:17 - app.services.user_service - INFO - 处理SSO用户登出: ch488460324@gmail.com
+2025-06-06 20:24:17 - app.services.authing_provider - INFO - 生成Authing登出URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/session/end?post_logout_redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Flogin
+2025-06-06 20:35:04 - app.services.authing_provider - WARNING - 开发环境中State参数验证失败，但继续处理
+2025-06-06 20:35:04 - app.services.authing_provider - WARNING - 接收到的state: Sj6ZfLHBWnqaLxa3Q4y9DPccOvfPtid3uuxoUZc0LOk
+2025-06-06 20:35:04 - app.services.authing_provider - WARNING - 存储的state: None
+2025-06-06 20:35:04 - app.services.authing_provider - INFO - 收到Authing授权码: 98E7Jt2I7q...
+2025-06-06 20:35:04 - app.services.authing_provider - INFO - 向Authing请求访问令牌: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/token
+2025-06-06 20:35:05 - app.services.authing_provider - INFO - 成功获取Authing访问令牌
+2025-06-06 20:35:05 - app.services.authing_provider - INFO - 向Authing请求用户信息: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/me
+2025-06-06 20:35:06 - app.services.authing_provider - INFO - 成功获取Authing用户信息: 6825af9abc8437a9ad09f6ce
+2025-06-06 20:35:06 - app.services.sso_service - INFO - 用户属性映射完成: ch488460324@gmail.com
+2025-06-06 20:35:06 - app.services.user_service - INFO - 更新SSO用户信息: ch488460324@gmail.com
+2025-06-06 20:35:06 - app.services.user_service - INFO - SSO用户登录成功: ch488460324@gmail.com
+2025-06-06 20:35:06 - app.views.sso_auth - INFO - SSO用户认证成功: ch488460324@gmail.com
+2025-06-06 20:44:29 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-06 20:44:29 - app - INFO - 正在初始化应用...
+2025-06-06 20:44:29 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-06 20:44:29 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-06 20:44:29 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-06 20:44:29 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-06 20:44:29 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-06 20:44:32 - app - INFO - 数据库表已创建
+2025-06-06 20:44:32 - app - INFO - 任务处理器已启动
+2025-06-06 20:44:32 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-06 20:44:32 - app - INFO - 应用已初始化 - 环境: development
+2025-06-06 20:44:33 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-06 20:44:33 - app - INFO - 正在初始化应用...
+2025-06-06 20:44:33 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-06 20:44:33 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-06 20:44:33 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-06 20:44:33 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-06 20:44:33 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-06 20:44:35 - app - INFO - 数据库表已创建
+2025-06-06 20:44:35 - app - INFO - 任务处理器已启动
+2025-06-06 20:44:35 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-06 20:44:35 - app - INFO - 应用已初始化 - 环境: development

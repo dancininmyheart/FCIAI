@@ -401,7 +401,7 @@ def download_file(record_id):
         print(f"Downloading file: {file_path}")
         print(f"Original filename: {record.filename}")
         file_path = os.path.abspath(file_path)
-        return send_file(file_path, as_attachment=True, attachment_filename=record.filename)
+        return send_file(file_path, as_attachment=True, download_name=record.filename)
     except Exception as e:
         print(f"Download error: {str(e)}")
         return jsonify({'error': f'下载失败: {str(e)}'}), 500
