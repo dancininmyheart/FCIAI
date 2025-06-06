@@ -1,0 +1,606 @@
+{% extends "main/base_layout.html" %}
+
+{% block title %}SSO管理{% endblock %}
+
+{% block content %}
+<div class="sso-management">
+    <div class="page-header">
+        <h1><i class="fas fa-shield-alt"></i> SSO单点登录管理</h1>
+        <p class="page-description">配置和管理单点登录(SSO)设置</p>
+    </div>
+
+    <!-- SSO状态卡片 -->
+    <div class="status-cards">
+        <div class="status-card" id="sso-status-card">
+            <div class="card-icon">
+                <i class="fas fa-power-off"></i>
+            </div>
+            <div class="card-content">
+                <h3>SSO状态</h3>
+                <p id="sso-status-text">检查中...</p>
+                <span class="status-badge" id="sso-status-badge">未知</span>
+            </div>
+        </div>
+
+        <div class="status-card" id="provider-card">
+            <div class="card-icon">
+                <i class="fas fa-plug"></i>
+            </div>
+            <div class="card-content">
+                <h3>提供者类型</h3>
+                <p id="provider-type">-</p>
+                <span class="provider-badge" id="provider-badge">未配置</span>
+            </div>
+        </div>
+
+        <div class="status-card" id="users-card">
+            <div class="card-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="card-content">
+                <h3>SSO用户</h3>
+                <p id="sso-users-count">0</p>
+                <span class="info-text">已注册用户</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SSO配置面板 -->
+    <div class="config-panel">
+        <div class="panel-header">
+            <h2><i class="fas fa-cog"></i> SSO配置</h2>
+            <button class="btn btn-primary" id="refresh-config-btn">
+                <i class="fas fa-sync-alt"></i> 刷新配置
+            </button>
+        </div>
+
+        <div class="config-content" id="config-content">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>加载配置中...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SSO用户列表 -->
+    <div class="users-panel">
+        <div class="panel-header">
+            <h2><i class="fas fa-user-shield"></i> SSO用户管理</h2>
+            <div class="panel-actions">
+                <button class="btn btn-secondary" id="export-users-btn">
+                    <i class="fas fa-download"></i> 导出用户
+                </button>
+                <button class="btn btn-primary" id="refresh-users-btn">
+                    <i class="fas fa-sync-alt"></i> 刷新列表
+                </button>
+            </div>
+        </div>
+
+        <div class="users-content">
+            <div class="search-bar">
+                <input type="text" id="user-search" placeholder="搜索用户..." class="search-input">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <div class="users-table-container">
+                <table class="users-table" id="sso-users-table">
+                    <thead>
+                        <tr>
+                            <th>用户名</th>
+                            <th>显示名称</th>
+                            <th>邮箱</th>
+                            <th>SSO提供者</th>
+                            <th>最后登录</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-table-body">
+                        <tr>
+                            <td colspan="7" class="loading-row">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <span>加载用户列表中...</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 测试连接面板 -->
+    <div class="test-panel">
+        <div class="panel-header">
+            <h2><i class="fas fa-vial"></i> 连接测试</h2>
+        </div>
+
+        <div class="test-content">
+            <div class="test-actions">
+                <button class="btn btn-info" id="test-connection-btn">
+                    <i class="fas fa-plug"></i> 测试SSO连接
+                </button>
+                <button class="btn btn-warning" id="test-login-btn">
+                    <i class="fas fa-sign-in-alt"></i> 测试登录流程
+                </button>
+            </div>
+
+            <div class="test-results" id="test-results" style="display: none;">
+                <h3>测试结果</h3>
+                <div class="result-content" id="result-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.sso-management {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.page-description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.status-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.status-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.status-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 168, 255, 0.1);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    width: 60px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.card-content p {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.status-badge, .provider-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-badge.enabled {
+    background: var(--success-color);
+    color: white;
+}
+
+.status-badge.disabled {
+    background: var(--error-color);
+    color: white;
+}
+
+.provider-badge.oauth2 {
+    background: #4285f4;
+    color: white;
+}
+
+.provider-badge.saml {
+    background: #ff6b35;
+    color: white;
+}
+
+.info-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.config-panel, .users-panel, .test-panel {
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.panel-header {
+    background: var(--header-bg);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header h2 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.panel-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.config-content, .users-content, .test-content {
+    padding: 1.5rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+}
+
+.loading i {
+    margin-right: 0.5rem;
+}
+
+.search-bar {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+}
+
+.search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.users-table-container {
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.users-table th,
+.users-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.users-table th {
+    background: var(--header-bg);
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.users-table td {
+    color: var(--text-primary);
+}
+
+.loading-row {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+}
+
+.test-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.test-results {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.result-content {
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: var(--text-primary);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #212529;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+</style>
+
+<script>
+// SSO管理JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    loadSSOStatus();
+    loadSSOConfig();
+    loadSSOUsers();
+    
+    // 事件监听器
+    document.getElementById('refresh-config-btn').addEventListener('click', loadSSOConfig);
+    document.getElementById('refresh-users-btn').addEventListener('click', loadSSOUsers);
+    document.getElementById('test-connection-btn').addEventListener('click', testConnection);
+    document.getElementById('test-login-btn').addEventListener('click', testLogin);
+    document.getElementById('user-search').addEventListener('input', filterUsers);
+});
+
+async function loadSSOStatus() {
+    try {
+        const response = await fetch('/auth/sso/status');
+        const data = await response.json();
+        
+        updateStatusCard(data);
+    } catch (error) {
+        console.error('加载SSO状态失败:', error);
+        showError('加载SSO状态失败');
+    }
+}
+
+async function loadSSOConfig() {
+    try {
+        const response = await fetch('/auth/sso/config');
+        const data = await response.json();
+        
+        updateConfigPanel(data);
+    } catch (error) {
+        console.error('加载SSO配置失败:', error);
+        showError('加载SSO配置失败');
+    }
+}
+
+async function loadSSOUsers() {
+    try {
+        const response = await fetch('/api/users/sso');
+        const data = await response.json();
+        
+        updateUsersTable(data);
+    } catch (error) {
+        console.error('加载SSO用户失败:', error);
+        showError('加载SSO用户失败');
+    }
+}
+
+function updateStatusCard(data) {
+    const statusText = document.getElementById('sso-status-text');
+    const statusBadge = document.getElementById('sso-status-badge');
+    const providerType = document.getElementById('provider-type');
+    const providerBadge = document.getElementById('provider-badge');
+    
+    if (data.enabled) {
+        statusText.textContent = 'SSO已启用';
+        statusBadge.textContent = '已启用';
+        statusBadge.className = 'status-badge enabled';
+    } else {
+        statusText.textContent = 'SSO未启用';
+        statusBadge.textContent = '未启用';
+        statusBadge.className = 'status-badge disabled';
+    }
+    
+    if (data.provider) {
+        providerType.textContent = data.provider.toUpperCase();
+        providerBadge.textContent = data.provider.toUpperCase();
+        providerBadge.className = `provider-badge ${data.provider}`;
+    }
+}
+
+function updateConfigPanel(data) {
+    const configContent = document.getElementById('config-content');
+    
+    if (data.error) {
+        configContent.innerHTML = `
+            <div class="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>配置加载失败: ${data.error}</span>
+            </div>
+        `;
+        return;
+    }
+    
+    const configHtml = `
+        <div class="config-grid">
+            <div class="config-section">
+                <h3>基础配置</h3>
+                <div class="config-item">
+                    <label>启用状态:</label>
+                    <span class="config-value">${data.enabled ? '已启用' : '未启用'}</span>
+                </div>
+                <div class="config-item">
+                    <label>提供者类型:</label>
+                    <span class="config-value">${data.provider || '未配置'}</span>
+                </div>
+                <div class="config-item">
+                    <label>自动创建用户:</label>
+                    <span class="config-value">${data.auto_create_user ? '是' : '否'}</span>
+                </div>
+                <div class="config-item">
+                    <label>默认角色:</label>
+                    <span class="config-value">${data.default_role || '未设置'}</span>
+                </div>
+            </div>
+            
+            ${data.provider === 'oauth2' ? `
+            <div class="config-section">
+                <h3>OAuth2配置</h3>
+                <div class="config-item">
+                    <label>客户端ID:</label>
+                    <span class="config-value">${data.oauth2.client_id || '未配置'}</span>
+                </div>
+                <div class="config-item">
+                    <label>授权URL:</label>
+                    <span class="config-value">${data.oauth2.authorization_url || '未配置'}</span>
+                </div>
+                <div class="config-item">
+                    <label>令牌URL:</label>
+                    <span class="config-value">${data.oauth2.token_url || '未配置'}</span>
+                </div>
+                <div class="config-item">
+                    <label>用户信息URL:</label>
+                    <span class="config-value">${data.oauth2.userinfo_url || '未配置'}</span>
+                </div>
+            </div>
+            ` : ''}
+        </div>
+    `;
+    
+    configContent.innerHTML = configHtml;
+}
+
+function updateUsersTable(users) {
+    const tbody = document.getElementById('users-table-body');
+    
+    if (!users || users.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="7" class="no-data">暂无SSO用户</td>
+            </tr>
+        `;
+        return;
+    }
+    
+    const usersHtml = users.map(user => `
+        <tr>
+            <td>${user.username}</td>
+            <td>${user.display_name || '-'}</td>
+            <td>${user.email || '-'}</td>
+            <td><span class="provider-badge ${user.sso_provider}">${user.sso_provider.toUpperCase()}</span></td>
+            <td>${user.last_login || '-'}</td>
+            <td><span class="status-badge ${user.status}">${user.status}</span></td>
+            <td>
+                <button class="btn btn-sm btn-info" onclick="viewUser('${user.id}')">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </td>
+        </tr>
+    `).join('');
+    
+    tbody.innerHTML = usersHtml;
+    
+    // 更新用户计数
+    document.getElementById('sso-users-count').textContent = users.length;
+}
+
+async function testConnection() {
+    const btn = document.getElementById('test-connection-btn');
+    const results = document.getElementById('test-results');
+    const content = document.getElementById('result-content');
+    
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 测试中...';
+    
+    try {
+        const response = await fetch('/auth/sso/test-connection', {
+            method: 'POST'
+        });
+        const data = await response.json();
+        
+        content.textContent = JSON.stringify(data, null, 2);
+        results.style.display = 'block';
+    } catch (error) {
+        content.textContent = `测试失败: ${error.message}`;
+        results.style.display = 'block';
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-plug"></i> 测试SSO连接';
+    }
+}
+
+function testLogin() {
+    // 在新窗口中打开SSO登录测试
+    window.open('/auth/sso/login?test=1', 'sso_test', 'width=600,height=700');
+}
+
+function filterUsers() {
+    const searchTerm = document.getElementById('user-search').value.toLowerCase();
+    const rows = document.querySelectorAll('#users-table-body tr');
+    
+    rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(searchTerm) ? '' : 'none';
+    });
+}
+
+function viewUser(userId) {
+    // 实现用户详情查看
+    console.log('查看用户:', userId);
+}
+
+function showError(message) {
+    // 实现错误提示
+    console.error(message);
+}
+</script>
+{% endblock %}

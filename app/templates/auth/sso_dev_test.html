@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发环境SSO测试 - FCI AI翻译助手</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #333;
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+        
+        .header p {
+            color: #666;
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        
+        .test-section h3 {
+            color: #333;
+            margin: 0 0 15px 0;
+            font-size: 20px;
+        }
+        
+        .test-section p {
+            color: #666;
+            margin: 0 0 20px 0;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #1e7e34;
+            transform: translateY(-2px);
+        }
+        
+        .btn-warning {
+            background: #ffc107;
+            color: #212529;
+        }
+        
+        .btn-warning:hover {
+            background: #e0a800;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #545b62;
+            transform: translateY(-2px);
+        }
+        
+        .status-info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .status-info h4 {
+            color: #0c5460;
+            margin: 0 0 10px 0;
+        }
+        
+        .status-info ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #0c5460;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e5e9;
+        }
+        
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 开发环境SSO测试</h1>
+            <p>FCI AI翻译助手 - 单点登录功能测试</p>
+        </div>
+        
+        <div class="status-info">
+            <h4>📊 当前SSO状态</h4>
+            <ul>
+                <li>SSO启用状态: <strong>{{ sso_enabled }}</strong></li>
+                <li>SSO提供者: <strong>{{ sso_provider }}</strong></li>
+                <li>环境: <strong>开发环境</strong></li>
+                <li>回调URL: <strong>http://localhost:5000/auth/sso/callback</strong></li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h3>🎯 真实SSO测试</h3>
+            <p>
+                使用真实的Authing配置进行SSO登录测试。
+                <strong>注意：</strong>由于是开发环境，可能会遇到state验证失败的问题，这是正常的。
+            </p>
+            <a href="{{ url_for('sso.sso_login') }}" class="btn btn-primary">
+                🔗 真实SSO登录
+            </a>
+        </div>
+        
+        <div class="test-section">
+            <h3>🎭 模拟SSO测试</h3>
+            <p>
+                使用模拟用户数据进行SSO登录测试，跳过真实的Authing认证流程。
+                这个选项可以让您在开发环境中完整测试SSO用户创建和登录流程。
+            </p>
+            <a href="{{ url_for('sso.sso_dev_callback') }}" class="btn btn-success">
+                ✨ 模拟SSO登录
+            </a>
+        </div>
+        
+        <div class="test-section">
+            <h3>📋 SSO状态检查</h3>
+            <p>
+                查看详细的SSO配置和状态信息，用于调试和验证配置。
+            </p>
+            <a href="{{ url_for('sso.sso_status') }}" class="btn btn-warning" target="_blank">
+                📊 查看SSO状态
+            </a>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ 开发环境说明：</strong>
+            <ul>
+                <li>真实SSO登录可能因为state验证失败而无法完成</li>
+                <li>模拟SSO登录会创建一个测试用户并直接登录</li>
+                <li>此页面仅在开发环境中可用</li>
+                <li>生产环境部署时请确保正确配置回调URL</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <a href="{{ url_for('auth.login') }}" class="btn btn-secondary">
+                ← 返回登录页面
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -8,6 +8,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 from datetime import timedelta
 
+# 加载环境变量
+load_dotenv()
+
 class Config:
     """基础配置"""
     
@@ -69,6 +72,41 @@ class Config:
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER')
+
+    # SSO配置
+    SSO_ENABLED = os.environ.get('SSO_ENABLED', 'false').lower() == 'true'
+    SSO_PROVIDER = os.environ.get('SSO_PROVIDER', 'oauth2')  # oauth2, saml, oidc
+    SSO_AUTO_CREATE_USER = os.environ.get('SSO_AUTO_CREATE_USER', 'true').lower() == 'true'
+    SSO_DEFAULT_ROLE = os.environ.get('SSO_DEFAULT_ROLE', 'user')
+
+    # OAuth2/OIDC配置
+    OAUTH2_CLIENT_ID = os.environ.get('OAUTH2_CLIENT_ID', '')
+    OAUTH2_CLIENT_SECRET = os.environ.get('OAUTH2_CLIENT_SECRET', '')
+    OAUTH2_AUTHORIZATION_URL = os.environ.get('OAUTH2_AUTHORIZATION_URL', '')
+    OAUTH2_TOKEN_URL = os.environ.get('OAUTH2_TOKEN_URL', '')
+    OAUTH2_USERINFO_URL = os.environ.get('OAUTH2_USERINFO_URL', '')
+    OAUTH2_LOGOUT_URL = os.environ.get('OAUTH2_LOGOUT_URL', '')
+    OAUTH2_SCOPE = os.environ.get('OAUTH2_SCOPE', 'openid profile email')
+    OAUTH2_REDIRECT_URI = os.environ.get('OAUTH2_REDIRECT_URI', 'http://localhost:5000/auth/sso/callback')
+
+    # SAML配置
+    SAML_SP_ENTITY_ID = os.environ.get('SAML_SP_ENTITY_ID', 'http://localhost:5000')
+    SAML_SP_ACS_URL = os.environ.get('SAML_SP_ACS_URL', 'http://localhost:5000/auth/sso/saml/acs')
+    SAML_SP_SLS_URL = os.environ.get('SAML_SP_SLS_URL', 'http://localhost:5000/auth/sso/saml/sls')
+    SAML_IDP_ENTITY_ID = os.environ.get('SAML_IDP_ENTITY_ID', '')
+    SAML_IDP_SSO_URL = os.environ.get('SAML_IDP_SSO_URL', '')
+    SAML_IDP_SLS_URL = os.environ.get('SAML_IDP_SLS_URL', '')
+    SAML_IDP_X509_CERT = os.environ.get('SAML_IDP_X509_CERT', '')
+
+    # 用户属性映射配置
+    SSO_USER_MAPPING = {
+        'username': os.environ.get('SSO_ATTR_USERNAME', 'preferred_username'),
+        'email': os.environ.get('SSO_ATTR_EMAIL', 'email'),
+        'first_name': os.environ.get('SSO_ATTR_FIRST_NAME', 'given_name'),
+        'last_name': os.environ.get('SSO_ATTR_LAST_NAME', 'family_name'),
+        'display_name': os.environ.get('SSO_ATTR_DISPLAY_NAME', 'name'),
+        'groups': os.environ.get('SSO_ATTR_GROUPS', 'groups')
+    }
     
     # 直接设置数据库URI字符串，而不是使用属性
     SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://root:password@localhost:3306/app"

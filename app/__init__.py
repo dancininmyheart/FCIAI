@@ -97,11 +97,15 @@ def create_app(config_name='development'):
     from .views.main import main as main_bp
     from .views.auth import bp as auth_bp
     from .views.upload import bp as upload_bp
+    from .views.sso_auth import sso_bp
     from .routes.log_management import router as log_management_bp
+    from .routes.stop_words import bp as stop_words_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp, url_prefix='/auth')
+    app.register_blueprint(sso_bp)  # SSO路由已包含前缀
     app.register_blueprint(upload_bp, url_prefix='/api')
+    app.register_blueprint(stop_words_bp)  # 停翻词路由
     app.register_blueprint(log_management_bp)
 
     # 创建数据库表

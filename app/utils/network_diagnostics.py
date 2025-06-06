@@ -203,7 +203,7 @@ class NetworkDiagnostics:
         # 测试结果
         report.append("=== 测试结果 ===")
         for test_name, test_result in diagnosis['tests'].items():
-            status = " " if test_result['success'] else "✗"
+            status = "✓" if test_result['success'] else "✗"
             report.append(f"{status} {test_name.upper()}: {test_result['message']}")
         
         # 代理设置

@@ -7,6 +7,7 @@ import os
 import logging
 from pptx import Presentation
 from pptx.enum.text import MSO_AUTO_SIZE
+from pptx.util import Pt
 
 # 配置日志记录器
 logger = logging.getLogger(__name__)
@@ -79,11 +80,11 @@ def preserve_textbox_size_with_autofit(presentation_path: str, verbose: bool = T
 
                             size_preserved_count += 1
                             if verbose:
-                                logger.debug(f"  已恢复文本框原始尺寸: 幻灯片{slide_index}-形状{shape_index+1}")
+                                logger.debug(f"✓ 已恢复文本框原始尺寸: 幻灯片{slide_index}-形状{shape_index+1}")
 
                         processed_textboxes += 1
                         if verbose:
-                            logger.debug(f"  幻灯片{slide_index}-形状{shape_index+1}: 已设置文本框自适应")
+                            logger.debug(f"✓ 幻灯片{slide_index}-形状{shape_index+1}: 已设置文本框自适应")
 
                     # 处理表格
                     elif shape.has_table:
@@ -107,7 +108,7 @@ def preserve_textbox_size_with_autofit(presentation_path: str, verbose: bool = T
 
                                 processed_textboxes += 1
                                 if verbose:
-                                    logger.debug(f"  幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自适应")
+                                    logger.debug(f"✓ 幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自适应")
 
                         # 确保表格整体尺寸不变
                         if (shape.width != table_original_width or
@@ -122,7 +123,7 @@ def preserve_textbox_size_with_autofit(presentation_path: str, verbose: bool = T
 
                             size_preserved_count += 1
                             if verbose:
-                                logger.debug(f"  已恢复表格原始尺寸: 幻灯片{slide_index}-表格")
+                                logger.debug(f"✓ 已恢复表格原始尺寸: 幻灯片{slide_index}-表格")
 
                 except Exception as shape_error:
                     logger.warning(f"处理幻灯片{slide_index}-形状{shape_index+1}时出错: {shape_error}")
@@ -294,7 +295,7 @@ if __name__ == "__main__":
     if action == "preserve":
         success = preserve_textbox_size_with_autofit(ppt_path)
         if success:
-            print("  文本框自适应设置成功（保持原始大小）")
+            print("✓ 文本框自适应设置成功（保持原始大小）")
         else:
             print("✗ 文本框自适应设置失败")
 

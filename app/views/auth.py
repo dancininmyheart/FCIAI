@@ -1,8 +1,12 @@
-from flask import Blueprint, render_template, redirect, url_for, request, flash, session
-from flask_login import login_user, logout_user, login_required
+from flask import Blueprint, render_template, redirect, url_for, request, flash, session, current_app, jsonify
+from flask_login import login_user, logout_user, login_required, current_user
 from ..models.user import User
 from ..models.user import Role
 from .. import db
+from ..services.sso_service import get_sso_service
+import logging
+
+logger = logging.getLogger(__name__)
 
 bp = Blueprint('auth', __name__)
 
@@ -75,7 +79,13 @@ def login():
             # 设置 session
             session['username'] = user.username
             session.permanent = True  # 启用永久 session
-            
+
+            # 更新最后登录时间
+            from datetime import datetime
+            import pytz
+            user.last_login = datetime.now(pytz.timezone('Asia/Shanghai'))
+            db.session.commit()
+
             flash('登录成功！')
             next_page = request.args.get('next')
             if next_page:
@@ -84,11 +94,123 @@ def login():
         else:
             flash('用户名或密码错误')
             
-    return render_template('auth/login.html')
+    # 获取SSO状态
+    try:
+        sso_service = get_sso_service()
+        sso_enabled = sso_service.is_enabled()
+        sso_provider = current_app.config.get('SSO_PROVIDER', 'oauth2')
+    except Exception:
+        sso_enabled = False
+        sso_provider = 'oauth2'
+
+    return render_template('auth/login.html',
+                         sso_enabled=sso_enabled,
+                         sso_provider=sso_provider)
 
 @bp.route('/logout')
 @login_required
 def logout():
+    # 检查是否为SSO用户
+    if current_user.is_sso_user():
+        # 重定向到SSO登出
+        return redirect(url_for('sso.sso_logout'))
+
     logout_user()
     flash('已退出登录')
-    return redirect(url_for('auth.login')) 
+    return redirect(url_for('auth.login'))
+
+
+@bp.route('/change-password', methods=['POST'])
+@login_required
+def change_password():
+    """修改密码API"""
+    try:
+        # 检查用户是否可以修改密码
+        if not current_user.can_change_password():
+            return jsonify({
+                'success': False,
+                'message': 'SSO用户无法修改密码'
+            }), 400
+
+        data = request.get_json()
+        if not data:
+            return jsonify({
+                'success': False,
+                'message': '请求数据格式错误'
+            }), 400
+
+        current_password = data.get('current_password')
+        new_password = data.get('new_password')
+
+        if not current_password or not new_password:
+            return jsonify({
+                'success': False,
+                'message': '当前密码和新密码不能为空'
+            }), 400
+
+        # 验证当前密码
+        if not current_user.check_password(current_password):
+            return jsonify({
+                'success': False,
+                'message': '当前密码错误'
+            }), 400
+
+        # 验证新密码长度
+        if len(new_password) < 6:
+            return jsonify({
+                'success': False,
+                'message': '新密码长度至少为6位'
+            }), 400
+
+        # 更新密码
+        current_user.set_password(new_password)
+        db.session.commit()
+
+        logger.info(f"用户 {current_user.username} 修改密码成功")
+
+        return jsonify({
+            'success': True,
+            'message': '密码修改成功'
+        })
+
+    except Exception as e:
+        logger.error(f"修改密码失败: {e}")
+        db.session.rollback()
+        return jsonify({
+            'success': False,
+            'message': '密码修改过程中发生错误'
+        }), 500
+
+
+@bp.route('/user-info')
+@login_required
+def user_info():
+    """获取当前用户信息API"""
+    try:
+        user_data = {
+            'id': current_user.id,
+            'username': current_user.username,
+            'email': current_user.email,
+            'display_name': current_user.get_display_name(),
+            'full_name': current_user.get_full_name(),
+            'role': current_user.role.name if current_user.role else None,
+            'is_sso_user': current_user.is_sso_user(),
+            'sso_provider': current_user.sso_provider,
+            'is_administrator': current_user.is_administrator(),
+            'can_change_password': current_user.can_change_password(),
+            'last_login': current_user.last_login.isoformat() if current_user.last_login else None,
+            'register_time': current_user.register_time.isoformat() if current_user.register_time else None,
+            'status': current_user.status
+        }
+
+        return jsonify({
+            'success': True,
+            'data': user_data
+        })
+
+    except Exception as e:
+        logger.error(f"获取用户信息失败: {e}")
+        return jsonify({
+            'success': False,
+            'message': '获取用户信息失败'
+        }), 500

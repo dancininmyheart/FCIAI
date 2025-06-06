@@ -11238,3 +11238,2321 @@ openai.InternalServerError: Error code: 503
 2025-06-03 00:40:37 - app - INFO - 任务处理器已启动
 2025-06-03 00:40:38 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
 2025-06-03 00:40:38 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 01:39:58 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 01:39:58 - app - INFO - 正在初始化应用...
+2025-06-03 01:39:58 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 01:39:58 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 01:39:58 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 01:39:58 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 01:39:58 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 01:40:01 - app - INFO - 数据库表已创建
+2025-06-03 01:40:01 - app - INFO - 任务处理器已启动
+2025-06-03 01:40:01 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 01:40:01 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 01:40:19 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 01:40:20 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=cf4e0bdcc8d848ca9d64b96952000ce2.pptx
+2025-06-03 01:40:20 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748886020_1, 用户: admin, 文件: cf4e0bdcc8d848ca9d64b96952000ce2.pptx
+2025-06-03 01:40:20 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748886020_1, 用户: admin
+2025-06-03 01:40:20 - app.utils.thread_pool_executor - ERROR - 调度器错误: cannot schedule new futures after interpreter shutdown
+2025-06-03 01:42:30 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 01:42:30 - app - INFO - 正在初始化应用...
+2025-06-03 01:42:30 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 01:42:30 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 01:42:30 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 01:42:30 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 01:42:30 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 01:42:32 - app - INFO - 数据库表已创建
+2025-06-03 01:42:32 - app - INFO - 任务处理器已启动
+2025-06-03 01:42:32 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 01:42:32 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 01:42:40 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 01:42:40 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=5342183266cc4badba9673c45d015815.pptx
+2025-06-03 01:42:40 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748886160_1, 用户: admin, 文件: 5342183266cc4badba9673c45d015815.pptx
+2025-06-03 01:42:40 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748886160_1, 用户: admin
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 5342183266cc4badba9673c45d015815.pptx
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 5342183266cc4badba9673c45d015815.pptx
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 01:42:40 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 01:42:41 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 01:42:41 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 01:42:41 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 01:42:41 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 01:42:41 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 01:42:46 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 01:42:46 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 01:42:47 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 01:42:47 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 5.16秒
+2025-06-03 01:42:47 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 01:42:47 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 01:42:47 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 01:43:31 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2714
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 01:43:31 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 44.23秒
+2025-06-03 01:43:31 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 01:43:31 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 01:43:42 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 1981
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 16 条翻译
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 精确匹配完成: 12 个段落
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 标准化匹配完成: 3 个段落
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO -   - 精确匹配: 12
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO -   - 标准化匹配: 3
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 01:43:42 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 16 个段落
+2025-06-03 01:43:42 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 16 个段落，耗时: 11.71秒
+2025-06-03 01:43:42 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 开始处理PPT: 5342183266cc4badba9673c45d015815.pptx
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 总共 3 张幻灯片
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - ==================================================
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 纯python-pptx自适应处理统计
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - ==================================================
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 总幻灯片数: 3
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 总文本框数: 52
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 已处理文本框: 45
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 字体调整次数: 43
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 布局优化次数: 45
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 边距调整次数: 45
+2025-06-03 01:43:43 - app.function.pure_pptx_autofit - INFO - 处理成功率: 86.5%
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO -   - 翻译了 38 个段落
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO -   - 总耗时: 63.35秒
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 21.12秒
+2025-06-03 01:43:43 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 5342183266cc4badba9673c45d015815.pptx
+2025-06-03 01:43:43 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748886160_1, 用户: admin, 文件: 5342183266cc4badba9673c45d015815.pptx
+2025-06-03 02:29:14 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 02:29:14 - app - INFO - 正在初始化应用...
+2025-06-03 02:29:14 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 02:29:14 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 02:29:14 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 02:29:14 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 02:29:14 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 02:32:44 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 02:32:44 - app - INFO - 正在初始化应用...
+2025-06-03 02:32:44 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 02:32:44 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 02:32:44 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 02:32:44 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 02:32:44 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 02:32:47 - app - INFO - 数据库表已创建
+2025-06-03 02:32:47 - app - INFO - 任务处理器已启动
+2025-06-03 02:32:47 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 02:32:47 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 02:33:03 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 02:33:03 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=6854948d66f847a6a21fb019f4d426ad.pptx
+2025-06-03 02:33:03 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748889183_1, 用户: admin, 文件: 6854948d66f847a6a21fb019f4d426ad.pptx
+2025-06-03 02:33:03 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748889183_1, 用户: admin
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 6854948d66f847a6a21fb019f4d426ad.pptx
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 6854948d66f847a6a21fb019f4d426ad.pptx
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 02:33:03 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 02:33:04 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 02:33:04 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 02:33:04 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 02:33:04 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 02:33:04 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 02:33:10 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 02:33:10 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 5.93秒
+2025-06-03 02:33:10 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 02:33:10 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 02:33:42 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2714
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 02:33:42 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 31.44秒
+2025-06-03 02:33:42 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 02:33:42 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 02:33:56 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2053
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 17 条翻译
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 17 条翻译
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 开始相似度匹配: 3 个剩余段落
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 相似度匹配完成: 3 个段落
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 精确匹配总结: 17/17 个段落成功匹配
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO -   - 相似度匹配: 3
+2025-06-03 02:33:56 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 17 个段落
+2025-06-03 02:33:56 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 17 个段落，耗时: 14.63秒
+2025-06-03 02:33:56 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 02:33:57 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 02:34:07 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO -   - 翻译了 39 个段落
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO -   - 总耗时: 67.85秒
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 22.62秒
+2025-06-03 02:34:10 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 6854948d66f847a6a21fb019f4d426ad.pptx
+2025-06-03 02:34:10 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748889183_1, 用户: admin, 文件: 6854948d66f847a6a21fb019f4d426ad.pptx
+2025-06-03 10:13:02 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:13:02 - app - INFO - 正在初始化应用...
+2025-06-03 10:13:02 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:13:02 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:13:02 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:13:02 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:13:02 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:13:06 - app - INFO - 数据库表已创建
+2025-06-03 10:13:06 - app - INFO - 任务处理器已启动
+2025-06-03 10:13:06 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:13:06 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:13:50 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 10:13:50 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=0dc031530a3b4d9089c37679615fd792.pptx
+2025-06-03 10:13:50 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748916830_1, 用户: admin, 文件: 0dc031530a3b4d9089c37679615fd792.pptx
+2025-06-03 10:13:50 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748916830_1, 用户: admin
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 0dc031530a3b4d9089c37679615fd792.pptx
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 0dc031530a3b4d9089c37679615fd792.pptx
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 10:13:50 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:13:52 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:13:52 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:13:52 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:13:52 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 10:13:52 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:13:58 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 706
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 10:13:58 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 6.50秒
+2025-06-03 10:13:58 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 10:13:58 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 10:14:34 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2716
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 精确匹配完成: 13 个段落
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 标准化匹配完成: 2 个段落
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO -   - 精确匹配: 13
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO -   - 标准化匹配: 2
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 跳过高相似度翻译: 'NEW/Update 06 '24...' -> 'NEW/Update 06 '24...'
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 15 个段落
+2025-06-03 10:14:34 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 15 个段落，耗时: 35.27秒
+2025-06-03 10:14:34 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 10:14:34 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 10:14:50 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 1981
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 16 条翻译
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 10:14:50 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 16 个段落
+2025-06-03 10:14:50 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 16 个段落，耗时: 16.74秒
+2025-06-03 10:14:50 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:14:51 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:15:01 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO -   - 翻译了 37 个段落
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO -   - 总耗时: 71.15秒
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 23.72秒
+2025-06-03 10:15:01 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 0dc031530a3b4d9089c37679615fd792.pptx
+2025-06-03 10:15:01 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748916830_1, 用户: admin, 文件: 0dc031530a3b4d9089c37679615fd792.pptx
+2025-06-03 10:21:24 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:21:24 - app - INFO - 正在初始化应用...
+2025-06-03 10:21:24 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:21:24 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:21:24 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:21:24 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:21:24 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:21:26 - app - INFO - 数据库表已创建
+2025-06-03 10:21:26 - app - INFO - 任务处理器已启动
+2025-06-03 10:21:26 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:21:26 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:21:38 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 10:21:38 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=0a18d09968754bce9a8eae0f0ad01f3d.pptx
+2025-06-03 10:21:38 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748917298_1, 用户: admin, 文件: 0a18d09968754bce9a8eae0f0ad01f3d.pptx
+2025-06-03 10:21:38 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748917298_1, 用户: admin
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 0a18d09968754bce9a8eae0f0ad01f3d.pptx
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 0a18d09968754bce9a8eae0f0ad01f3d.pptx
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 10:21:38 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:21:39 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:21:39 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:21:39 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:21:39 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 10:21:39 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:21:47 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 10:21:47 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 7.83秒
+2025-06-03 10:21:47 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 10:21:47 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 10:22:22 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2713
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 10:22:22 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 34.71秒
+2025-06-03 10:22:22 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 10:22:22 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 10:22:55 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2053
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 17 条翻译
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 17 条翻译
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 开始相似度匹配: 3 个剩余段落
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 相似度匹配完成: 3 个段落
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 精确匹配总结: 17/17 个段落成功匹配
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO -   - 相似度匹配: 3
+2025-06-03 10:22:55 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 17 个段落
+2025-06-03 10:22:55 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 17 个段落，耗时: 33.04秒
+2025-06-03 10:22:55 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:22:55 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:23:01 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO -   - 翻译了 39 个段落
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO -   - 总耗时: 83.34秒
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 27.78秒
+2025-06-03 10:23:01 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 0a18d09968754bce9a8eae0f0ad01f3d.pptx
+2025-06-03 10:23:01 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748917298_1, 用户: admin, 文件: 0a18d09968754bce9a8eae0f0ad01f3d.pptx
+2025-06-03 10:26:51 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:26:51 - app - INFO - 正在初始化应用...
+2025-06-03 10:26:51 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:26:51 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:26:51 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:26:51 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:26:51 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:26:53 - app - INFO - 数据库表已创建
+2025-06-03 10:26:53 - app - INFO - 任务处理器已启动
+2025-06-03 10:26:53 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:26:53 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:27:05 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 10:27:06 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=b8060ceb527f4d31b744b73b8c3b3665.pptx
+2025-06-03 10:27:06 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748917626_1, 用户: admin, 文件: b8060ceb527f4d31b744b73b8c3b3665.pptx
+2025-06-03 10:27:06 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748917626_1, 用户: admin
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: b8060ceb527f4d31b744b73b8c3b3665.pptx
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: b8060ceb527f4d31b744b73b8c3b3665.pptx
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 10:27:06 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:27:09 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:27:09 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:27:09 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:27:09 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 10:27:09 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:27:22 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 10:27:22 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 12.84秒
+2025-06-03 10:27:22 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 10:27:22 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 10:27:40 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2716
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 跳过高相似度翻译: 'NEW/Update 06 '24...' -> 'NEW/Update 06 '24...'
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 15 个段落
+2025-06-03 10:27:40 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 15 个段落，耗时: 18.20秒
+2025-06-03 10:27:40 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 10:27:40 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 10:28:16 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 1981
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 16 条翻译
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 10:28:16 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 16 个段落
+2025-06-03 10:28:16 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 16 个段落，耗时: 35.41秒
+2025-06-03 10:28:16 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:28:16 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:28:21 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO -   - 翻译了 37 个段落
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO -   - 总耗时: 76.06秒
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 25.35秒
+2025-06-03 10:28:22 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: b8060ceb527f4d31b744b73b8c3b3665.pptx
+2025-06-03 10:28:22 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748917626_1, 用户: admin, 文件: b8060ceb527f4d31b744b73b8c3b3665.pptx
+2025-06-03 10:29:49 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:29:49 - app - INFO - 正在初始化应用...
+2025-06-03 10:29:49 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:29:49 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:29:49 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:29:49 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:29:49 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:29:53 - app - INFO - 数据库表已创建
+2025-06-03 10:29:53 - app - INFO - 任务处理器已启动
+2025-06-03 10:29:53 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:29:53 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:30:07 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 10:30:07 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=fd571c8fad1e4b8dae1838e8bbd499e3.pptx
+2025-06-03 10:30:07 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748917807_1, 用户: admin, 文件: fd571c8fad1e4b8dae1838e8bbd499e3.pptx
+2025-06-03 10:30:07 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748917807_1, 用户: admin
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: fd571c8fad1e4b8dae1838e8bbd499e3.pptx
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: fd571c8fad1e4b8dae1838e8bbd499e3.pptx
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 10:30:07 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:30:09 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:30:09 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:30:09 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:30:09 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 10:30:09 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:30:18 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 10:30:18 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 9.50秒
+2025-06-03 10:30:18 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 10:30:18 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 10:30:45 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2711
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 10:30:45 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 27.13秒
+2025-06-03 10:30:45 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 10:30:45 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 10:31:00 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 1984
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 16 条翻译
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 精确匹配完成: 12 个段落
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 标准化匹配完成: 3 个段落
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO -   - 精确匹配: 12
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO -   - 标准化匹配: 3
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 10:31:00 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 16 个段落
+2025-06-03 10:31:00 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 16 个段落，耗时: 14.48秒
+2025-06-03 10:31:00 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:31:00 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:31:05 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO -   - 翻译了 38 个段落
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO -   - 总耗时: 58.67秒
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 19.56秒
+2025-06-03 10:31:06 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: fd571c8fad1e4b8dae1838e8bbd499e3.pptx
+2025-06-03 10:31:06 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748917807_1, 用户: admin, 文件: fd571c8fad1e4b8dae1838e8bbd499e3.pptx
+2025-06-03 10:33:31 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:33:31 - app - INFO - 正在初始化应用...
+2025-06-03 10:33:31 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:33:31 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:33:31 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:33:31 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:33:31 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:33:34 - app - INFO - 数据库表已创建
+2025-06-03 10:33:34 - app - INFO - 任务处理器已启动
+2025-06-03 10:33:34 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:33:34 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:33:51 - app.views.main - INFO -   用户选择的页面: [1]
+2025-06-03 10:33:51 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=0ff2a6622b0c4041818d503b53b748ed.pptx
+2025-06-03 10:33:51 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748918031_1, 用户: admin, 文件: 0ff2a6622b0c4041818d503b53b748ed.pptx
+2025-06-03 10:33:51 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748918031_1, 用户: admin
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 0ff2a6622b0c4041818d503b53b748ed.pptx
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 0ff2a6622b0c4041818d503b53b748ed.pptx
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO - 选中页面: [1]
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 1 张幻灯片
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1]
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1]
+2025-06-03 10:33:51 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:33:52 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:33:52 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:33:52 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:33:52 - app.function.page_based_translation - INFO - 准备翻译文本: 5 个段落，共 449 个字符
+2025-06-03 10:33:52 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:34:10 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 981
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 5 条翻译
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO - 开始精确匹配: 5 个段落 vs 5 条翻译
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO - 精确匹配完成: 4 个段落
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO - 精确匹配总结: 5/5 个段落成功匹配
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO -   - 精确匹配: 4
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:34:10 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 5 个段落
+2025-06-03 10:34:10 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 5 个段落，耗时: 17.86秒
+2025-06-03 10:34:10 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:34:10 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:34:15 - app.function.ppt_translate_async - ERROR - 调用set_textbox_autofit时出错: local variable 'result' referenced before assignment
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用失败，尝试基础布局调整
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO - 基础布局调整完成: 处理了 5/6 个文本框
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO -   - 处理了 1 张幻灯片
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO -   - 翻译了 5 个段落
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO -   - 总耗时: 24.81秒
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 24.81秒
+2025-06-03 10:34:15 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 0ff2a6622b0c4041818d503b53b748ed.pptx
+2025-06-03 10:34:15 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748918031_1, 用户: admin, 文件: 0ff2a6622b0c4041818d503b53b748ed.pptx
+2025-06-03 10:35:55 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:35:55 - app - INFO - 正在初始化应用...
+2025-06-03 10:35:55 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:35:55 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:35:55 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:35:55 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:35:55 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:35:57 - app - INFO - 数据库表已创建
+2025-06-03 10:35:57 - app - INFO - 任务处理器已启动
+2025-06-03 10:35:57 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:35:57 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:36:26 - app.views.main - INFO -   用户选择的页面: [1]
+2025-06-03 10:36:26 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=9d726e69a5654650bab6df70abb8990c.pptx
+2025-06-03 10:36:26 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748918186_1, 用户: admin, 文件: 9d726e69a5654650bab6df70abb8990c.pptx
+2025-06-03 10:36:26 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748918186_1, 用户: admin
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 9d726e69a5654650bab6df70abb8990c.pptx
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 9d726e69a5654650bab6df70abb8990c.pptx
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO - 选中页面: [1]
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 1 张幻灯片
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1]
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1]
+2025-06-03 10:36:26 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:36:28 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:36:28 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:36:28 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:36:28 - app.function.page_based_translation - INFO - 准备翻译文本: 5 个段落，共 449 个字符
+2025-06-03 10:36:28 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:36:47 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 985
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 5 条翻译
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO - 开始精确匹配: 5 个段落 vs 5 条翻译
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO - 精确匹配完成: 4 个段落
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO - 精确匹配总结: 5/5 个段落成功匹配
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO -   - 精确匹配: 4
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:36:47 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 5 个段落
+2025-06-03 10:36:47 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 5 个段落，耗时: 19.28秒
+2025-06-03 10:36:47 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:36:47 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:36:52 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO -   - 处理了 1 张幻灯片
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO -   - 翻译了 5 个段落
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO -   - 总耗时: 26.18秒
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 26.18秒
+2025-06-03 10:36:52 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 9d726e69a5654650bab6df70abb8990c.pptx
+2025-06-03 10:36:52 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748918186_1, 用户: admin, 文件: 9d726e69a5654650bab6df70abb8990c.pptx
+2025-06-03 10:39:54 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:39:54 - app - INFO - 正在初始化应用...
+2025-06-03 10:39:54 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:39:54 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:39:54 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:39:54 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:39:54 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:39:56 - app - INFO - 数据库表已创建
+2025-06-03 10:39:56 - app - INFO - 任务处理器已启动
+2025-06-03 10:39:56 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:39:56 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:40:06 - app.views.main - INFO -   用户选择的页面: [1]
+2025-06-03 10:40:06 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=3cc8a8a7ac5b439fb1baeddbadb09ec1.pptx
+2025-06-03 10:40:06 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748918406_1, 用户: admin, 文件: 3cc8a8a7ac5b439fb1baeddbadb09ec1.pptx
+2025-06-03 10:40:06 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748918406_1, 用户: admin
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 3cc8a8a7ac5b439fb1baeddbadb09ec1.pptx
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 3cc8a8a7ac5b439fb1baeddbadb09ec1.pptx
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO - 选中页面: [1]
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 1 张幻灯片
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1]
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1]
+2025-06-03 10:40:06 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:40:08 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:40:08 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:40:08 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:40:08 - app.function.page_based_translation - INFO - 准备翻译文本: 5 个段落，共 449 个字符
+2025-06-03 10:40:08 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:40:19 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 981
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 5 条翻译
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO - 开始精确匹配: 5 个段落 vs 5 条翻译
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO - 精确匹配完成: 4 个段落
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO - 精确匹配总结: 5/5 个段落成功匹配
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO -   - 精确匹配: 4
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:40:19 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 5 个段落
+2025-06-03 10:40:19 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 5 个段落，耗时: 10.86秒
+2025-06-03 10:40:19 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:40:19 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:40:24 - app.function.libreoffice_autofit - WARNING - 尝试执行 C:\Program Files\LibreOffice\program\soffice.exe 失败，异常类型: TimeoutExpired，详情: Command '['C:\\Program Files\\LibreOffice\\program\\soffice.exe', '--headless', '--version']' timed out after 5 seconds
+2025-06-03 10:40:24 - app.function.libreoffice_autofit - WARNING - 尝试执行 C:\Program Files (x86)\LibreOffice\program\soffice.exe 失败，异常类型: FileNotFoundError，详情: [WinError 2] 系统找不到指定的文件。
+2025-06-03 10:40:24 - app.function.libreoffice_autofit - WARNING - 尝试执行 soffice.exe 失败，异常类型: FileNotFoundError，详情: [WinError 2] 系统找不到指定的文件。
+2025-06-03 10:40:24 - app.function.libreoffice_autofit - WARNING - 尝试执行 libreoffice.exe 失败，异常类型: FileNotFoundError，详情: [WinError 2] 系统找不到指定的文件。
+2025-06-03 10:40:24 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO -   - 处理了 1 张幻灯片
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO -   - 翻译了 5 个段落
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO -   - 总耗时: 17.62秒
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 17.62秒
+2025-06-03 10:40:24 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 3cc8a8a7ac5b439fb1baeddbadb09ec1.pptx
+2025-06-03 10:40:24 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748918406_1, 用户: admin, 文件: 3cc8a8a7ac5b439fb1baeddbadb09ec1.pptx
+2025-06-03 10:44:13 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:44:13 - app - INFO - 正在初始化应用...
+2025-06-03 10:44:13 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:44:13 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:44:13 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:44:13 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:44:13 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:44:16 - app - INFO - 数据库表已创建
+2025-06-03 10:44:16 - app - INFO - 任务处理器已启动
+2025-06-03 10:44:16 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:44:16 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:44:22 - app.views.main - INFO -   用户选择的页面: [1]
+2025-06-03 10:44:23 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=75819a6e4ee342f495b51242ddbfdd80.pptx
+2025-06-03 10:44:23 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748918663_1, 用户: admin, 文件: 75819a6e4ee342f495b51242ddbfdd80.pptx
+2025-06-03 10:44:23 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748918663_1, 用户: admin
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 75819a6e4ee342f495b51242ddbfdd80.pptx
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 75819a6e4ee342f495b51242ddbfdd80.pptx
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO - 选中页面: [1]
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 1 张幻灯片
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1]
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1]
+2025-06-03 10:44:23 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:44:24 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:44:24 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:44:24 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:44:24 - app.function.page_based_translation - INFO - 准备翻译文本: 5 个段落，共 449 个字符
+2025-06-03 10:44:24 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:44:33 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 981
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 5 条翻译
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO - 开始精确匹配: 5 个段落 vs 5 条翻译
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO - 精确匹配完成: 4 个段落
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO - 精确匹配总结: 5/5 个段落成功匹配
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO -   - 精确匹配: 4
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:44:33 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 5 个段落
+2025-06-03 10:44:33 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 5 个段落，耗时: 8.65秒
+2025-06-03 10:44:33 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:44:33 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:44:33 - app.function.libreoffice_autofit - INFO - 开始处理PPT文本框自适应: 75819a6e4ee342f495b51242ddbfdd80.pptx
+2025-06-03 10:44:33 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 75819a6e4ee342f495b51242ddbfdd80.pptx
+2025-06-03 10:44:33 - app.function.libreoffice_autofit - INFO - 设置了 5 个文本框的自适应属性
+2025-06-03 10:44:33 - app.function.libreoffice_autofit - INFO - 使用LibreOffice转换PDF触发渲染...
+2025-06-03 10:44:36 - app.function.libreoffice_autofit - INFO - ✅ PDF转换成功: 75819a6e4ee342f495b51242ddbfdd80.pdf (259663 bytes)
+2025-06-03 10:44:36 - app.function.libreoffice_autofit - INFO - 🎯 PPT已被LibreOffice完整渲染，文本框自适应设置已生效
+2025-06-03 10:44:36 - app.function.libreoffice_autofit - INFO - 📄 临时PDF文件已自动删除
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO -   - 处理了 1 张幻灯片
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO -   - 翻译了 5 个段落
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO -   - 总耗时: 13.14秒
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 13.14秒
+2025-06-03 10:44:36 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 75819a6e4ee342f495b51242ddbfdd80.pptx
+2025-06-03 10:44:36 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748918663_1, 用户: admin, 文件: 75819a6e4ee342f495b51242ddbfdd80.pptx
+2025-06-03 10:52:45 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:52:45 - app - INFO - 正在初始化应用...
+2025-06-03 10:52:45 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:52:45 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:52:45 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:52:45 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:52:45 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:52:47 - app - INFO - 数据库表已创建
+2025-06-03 10:52:47 - app - INFO - 任务处理器已启动
+2025-06-03 10:52:47 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:52:47 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:52:56 - app.views.main - INFO -   用户选择的页面: [1]
+2025-06-03 10:52:56 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=e27163dcc8814abc8738e15fc02d62f9.pptx
+2025-06-03 10:52:56 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748919176_1, 用户: admin, 文件: e27163dcc8814abc8738e15fc02d62f9.pptx
+2025-06-03 10:52:56 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748919176_1, 用户: admin
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: e27163dcc8814abc8738e15fc02d62f9.pptx
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: e27163dcc8814abc8738e15fc02d62f9.pptx
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO - 选中页面: [1]
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 1 张幻灯片
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1]
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1]
+2025-06-03 10:52:56 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:52:58 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:52:58 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:52:58 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:52:58 - app.function.page_based_translation - INFO - 准备翻译文本: 5 个段落，共 449 个字符
+2025-06-03 10:52:58 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:53:13 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 983
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 5 条翻译
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO - 开始精确匹配: 5 个段落 vs 5 条翻译
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO - 精确匹配完成: 4 个段落
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO - 精确匹配总结: 5/5 个段落成功匹配
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO -   - 精确匹配: 4
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:53:13 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 5 个段落
+2025-06-03 10:53:13 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 5 个段落，耗时: 15.42秒
+2025-06-03 10:53:13 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:53:13 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:53:13 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: e27163dcc8814abc8738e15fc02d62f9.pptx
+2025-06-03 10:53:13 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: e27163dcc8814abc8738e15fc02d62f9.pptx
+2025-06-03 10:53:13 - app.function.libreoffice_autofit - INFO - 设置了 5 个文本框的自适应属性
+2025-06-03 10:53:13 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 10:53:16 - app.function.libreoffice_autofit - ERROR - 处理过程中出错: [WinError 17] 系统无法将文件移到不同的磁盘驱动器。: 'C:\\Users\\48846\\AppData\\Local\\Temp\\tmp_2sfjyfk\\e27163dcc8814abc8738e15fc02d62f9.pptx' -> 'D:\\project\\system\\uploads\\user_1\\e27163dcc8814abc8738e15fc02d62f9.pptx'
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO -   - 处理了 1 张幻灯片
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO -   - 翻译了 5 个段落
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO -   - 总耗时: 19.15秒
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 19.15秒
+2025-06-03 10:53:16 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: e27163dcc8814abc8738e15fc02d62f9.pptx
+2025-06-03 10:53:16 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748919176_1, 用户: admin, 文件: e27163dcc8814abc8738e15fc02d62f9.pptx
+2025-06-03 10:54:50 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 10:54:50 - app - INFO - 正在初始化应用...
+2025-06-03 10:54:50 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 10:54:50 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 10:54:50 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 10:54:50 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 10:54:50 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 10:54:52 - app - INFO - 数据库表已创建
+2025-06-03 10:54:52 - app - INFO - 任务处理器已启动
+2025-06-03 10:54:52 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 10:54:52 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 10:55:07 - app.views.main - INFO -   用户选择的页面: [1]
+2025-06-03 10:55:07 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:07 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748919307_1, 用户: admin, 文件: 72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:07 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748919307_1, 用户: admin
+2025-06-03 10:55:07 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:07 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 10:55:07 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:07 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 10:55:07 - app.function.ppt_translate_async - INFO - 选中页面: [1]
+2025-06-03 10:55:07 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 10:55:08 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 1 张幻灯片
+2025-06-03 10:55:08 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1]
+2025-06-03 10:55:08 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1]
+2025-06-03 10:55:08 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 10:55:09 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 10:55:09 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 10:55:09 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 10:55:09 - app.function.page_based_translation - INFO - 准备翻译文本: 5 个段落，共 449 个字符
+2025-06-03 10:55:09 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 10:55:19 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 981
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 5 条翻译
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO - 开始精确匹配: 5 个段落 vs 5 条翻译
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO - 精确匹配完成: 4 个段落
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO - 精确匹配总结: 5/5 个段落成功匹配
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO -   - 精确匹配: 4
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 10:55:19 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 5 个段落
+2025-06-03 10:55:19 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 5 个段落，耗时: 9.82秒
+2025-06-03 10:55:19 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 10:55:19 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 10:55:19 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: 72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:19 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:19 - app.function.libreoffice_autofit - INFO - 设置了 5 个文本框的自适应属性
+2025-06-03 10:55:19 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 10:55:21 - app.function.libreoffice_autofit - INFO - ✅ 渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:21 - app.function.libreoffice_autofit - INFO - ✅ 渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO -   - 处理了 1 张幻灯片
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO -   - 翻译了 5 个段落
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO -   - 总耗时: 13.96秒
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 13.96秒
+2025-06-03 10:55:21 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 10:55:21 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748919307_1, 用户: admin, 文件: 72e181729165469885798ac8e9faaf5d.pptx
+2025-06-03 12:57:02 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 12:57:02 - app - INFO - 正在初始化应用...
+2025-06-03 12:57:02 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 12:57:02 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 12:57:02 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 12:57:02 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 12:57:02 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 12:57:05 - app - INFO - 数据库表已创建
+2025-06-03 12:57:05 - app - INFO - 任务处理器已启动
+2025-06-03 12:57:05 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 12:57:05 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 12:57:25 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 12:57:25 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:57:25 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748926645_1, 用户: admin, 文件: b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:57:25 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748926645_1, 用户: admin
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 12:57:25 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 12:57:26 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 12:57:26 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 12:57:26 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 12:57:26 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 12:57:26 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 12:57:31 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 700
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 12:57:31 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 4.84秒
+2025-06-03 12:57:31 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 12:57:31 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 12:57:52 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2713
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 12:57:52 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 21.29秒
+2025-06-03 12:57:52 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 12:57:52 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 12:58:09 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 1982
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 16 条翻译
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 精确匹配完成: 12 个段落
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 标准化匹配完成: 3 个段落
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO -   - 精确匹配: 12
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO -   - 标准化匹配: 3
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 12:58:09 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 16 个段落
+2025-06-03 12:58:09 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 16 个段落，耗时: 16.60秒
+2025-06-03 12:58:09 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 12:58:09 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 12:58:09 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:58:09 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:58:10 - app.function.libreoffice_autofit - INFO - 设置了 45 个文本框的自适应属性
+2025-06-03 12:58:10 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 12:58:15 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:58:15 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO -   - 翻译了 38 个段落
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO -   - 总耗时: 50.33秒
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 16.78秒
+2025-06-03 12:58:15 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 12:58:15 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748926645_1, 用户: admin, 文件: b9b13308e9474402a15cd23451de709b.pptx
+2025-06-03 13:13:53 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 13:13:53 - app - INFO - 正在初始化应用...
+2025-06-03 13:13:53 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 13:13:53 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 13:13:53 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 13:13:53 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 13:13:53 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 13:13:56 - app - INFO - 数据库表已创建
+2025-06-03 13:13:56 - app - INFO - 任务处理器已启动
+2025-06-03 13:13:56 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 13:13:56 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 13:14:17 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 13:14:17 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:14:17 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748927657_1, 用户: admin, 文件: 6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:14:17 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748927657_1, 用户: admin
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 13:14:17 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 13:14:19 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 13:14:19 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 13:14:19 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 13:14:19 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 13:14:19 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 13:14:26 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 13:14:26 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 7.09秒
+2025-06-03 13:14:26 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 13:14:26 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 13:14:55 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2714
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 精确匹配完成: 13 个段落
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 标准化匹配完成: 2 个段落
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO -   - 精确匹配: 13
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO -   - 标准化匹配: 2
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 13:14:55 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 29.10秒
+2025-06-03 13:14:55 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 13:14:55 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 13:15:15 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2052
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 17 条翻译
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 17 条翻译
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 开始相似度匹配: 3 个剩余段落
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 相似度匹配完成: 3 个段落
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 精确匹配总结: 17/17 个段落成功匹配
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO -   - 相似度匹配: 3
+2025-06-03 13:15:15 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 17 个段落
+2025-06-03 13:15:15 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 17 个段落，耗时: 20.18秒
+2025-06-03 13:15:15 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 13:15:15 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 13:15:15 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: 6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:15:15 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:15:16 - app.function.libreoffice_autofit - INFO - 设置了 45 个文本框的自适应属性
+2025-06-03 13:15:16 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 13:15:19 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:15:19 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO -   - 翻译了 39 个段落
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO -   - 总耗时: 62.66秒
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 20.89秒
+2025-06-03 13:15:19 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:15:19 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748927657_1, 用户: admin, 文件: 6d3038aa079d4962a6f5a6755bcfc3e2.pptx
+2025-06-03 13:24:56 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 13:24:56 - app - INFO - 正在初始化应用...
+2025-06-03 13:24:56 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 13:24:56 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 13:24:56 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 13:24:56 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 13:24:56 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 13:25:00 - app - INFO - 数据库表已创建
+2025-06-03 13:25:00 - app - INFO - 任务处理器已启动
+2025-06-03 13:25:00 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 13:25:00 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 13:25:22 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 13:25:22 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:25:22 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748928322_1, 用户: admin, 文件: 93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:25:22 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748928322_1, 用户: admin
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 13:25:22 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 13:25:24 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 13:25:24 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 13:25:24 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 13:25:24 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 13:25:24 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 13:25:30 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 13:25:30 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 6.65秒
+2025-06-03 13:25:30 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 13:25:30 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 13:26:01 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2711
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 13:26:01 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 30.50秒
+2025-06-03 13:26:01 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 13:26:01 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 13:26:33 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2054
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 17 条翻译
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 17 条翻译
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 开始相似度匹配: 3 个剩余段落
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 相似度匹配完成: 3 个段落
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 精确匹配总结: 17/17 个段落成功匹配
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO -   - 相似度匹配: 3
+2025-06-03 13:26:33 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 17 个段落
+2025-06-03 13:26:33 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 17 个段落，耗时: 32.47秒
+2025-06-03 13:26:33 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 13:26:34 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 13:26:34 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: 93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:26:34 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:26:34 - app.function.libreoffice_autofit - INFO - 设置了 45 个文本框的自适应属性
+2025-06-03 13:26:34 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 13:26:38 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:26:38 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO -   - 翻译了 39 个段落
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO -   - 总耗时: 76.10秒
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 25.37秒
+2025-06-03 13:26:38 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:26:38 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748928322_1, 用户: admin, 文件: 93f7f68829c1419a94bfac8e1a5143e9.pptx
+2025-06-03 13:44:47 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 13:44:47 - app - INFO - 正在初始化应用...
+2025-06-03 13:44:47 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 13:44:47 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 13:44:47 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 13:44:47 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 13:44:47 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 13:44:50 - app - INFO - 数据库表已创建
+2025-06-03 13:44:50 - app - INFO - 任务处理器已启动
+2025-06-03 13:44:50 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 13:44:50 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 14:02:02 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 14:02:02 - app - INFO - 正在初始化应用...
+2025-06-03 14:02:02 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 14:02:02 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 14:02:02 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 14:02:02 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 14:02:02 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 14:02:05 - app - INFO - 数据库表已创建
+2025-06-03 14:02:05 - app - INFO - 任务处理器已启动
+2025-06-03 14:02:05 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 14:02:05 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 14:02:12 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 14:02:12 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:02:12 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748930532_1, 用户: admin, 文件: 70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:02:12 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748930532_1, 用户: admin
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 14:02:12 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 14:02:14 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 14:02:14 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 14:02:14 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 14:02:14 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 14:02:14 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 14:02:21 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 14:02:21 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 6.95秒
+2025-06-03 14:02:21 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 14:02:21 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 14:02:49 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2711
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 14:02:49 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 28.20秒
+2025-06-03 14:02:49 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 14:02:49 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 14:03:13 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 1980
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 16 条翻译
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 14:03:13 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 16 个段落
+2025-06-03 14:03:13 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 16 个段落，耗时: 23.81秒
+2025-06-03 14:03:13 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 14:03:14 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 14:03:14 - app.function.libreoffice_uno_color - WARNING - LibreOffice UNO接口不可用，请安装LibreOffice Python SDK
+2025-06-03 14:03:14 - app.function.libreoffice_uno_color - ERROR - UNO接口不可用
+2025-06-03 14:03:14 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: 70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:03:14 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:03:14 - app.function.libreoffice_autofit - INFO - 设置了 45 个文本框的自适应属性
+2025-06-03 14:03:14 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 14:03:18 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:03:18 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO -   - 翻译了 38 个段落
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO -   - 总耗时: 66.04秒
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 22.01秒
+2025-06-03 14:03:18 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:03:18 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748930532_1, 用户: admin, 文件: 70d851bc28c34315a975a353f2af836a.pptx
+2025-06-03 14:28:44 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 14:28:44 - app - INFO - 正在初始化应用...
+2025-06-03 14:28:44 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 14:28:44 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 14:28:44 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 14:28:44 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 14:28:44 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 14:28:48 - app - INFO - 数据库表已创建
+2025-06-03 14:28:48 - app - INFO - 任务处理器已启动
+2025-06-03 14:28:48 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 14:28:48 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 14:29:06 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 14:29:06 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:29:06 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748932146_1, 用户: admin, 文件: 707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:29:06 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748932146_1, 用户: admin
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 14:29:06 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 14:29:08 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 14:29:08 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 14:29:08 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 14:29:08 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 14:29:08 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 14:29:16 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 706
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 14:29:16 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 7.73秒
+2025-06-03 14:29:16 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 14:29:16 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 14:29:43 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2711
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 14:29:43 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 27.83秒
+2025-06-03 14:29:43 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 14:29:43 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 14:30:13 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2053
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 17 条翻译
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 17 条翻译
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 开始相似度匹配: 3 个剩余段落
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 相似度匹配完成: 3 个段落
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 精确匹配总结: 17/17 个段落成功匹配
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO -   - 相似度匹配: 3
+2025-06-03 14:30:13 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 17 个段落
+2025-06-03 14:30:13 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 17 个段落，耗时: 29.61秒
+2025-06-03 14:30:13 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 14:30:13 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 14:30:13 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: 707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:30:13 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:30:14 - app.function.libreoffice_autofit - INFO - 设置了 45 个文本框的自适应属性
+2025-06-03 14:30:14 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 14:30:18 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:30:18 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO -   - 翻译了 39 个段落
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO -   - 总耗时: 71.93秒
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 23.98秒
+2025-06-03 14:30:18 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:30:18 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748932146_1, 用户: admin, 文件: 707beab21ccf4aca826da61536470baf.pptx
+2025-06-03 14:32:51 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 14:32:51 - app - INFO - 正在初始化应用...
+2025-06-03 14:32:51 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 14:32:51 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 14:32:51 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 14:32:51 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 14:32:51 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 14:32:55 - app - INFO - 数据库表已创建
+2025-06-03 14:32:55 - app - INFO - 任务处理器已启动
+2025-06-03 14:32:55 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 14:32:55 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 14:33:05 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 14:33:05 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:33:05 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748932385_1, 用户: admin, 文件: b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:33:05 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748932385_1, 用户: admin
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 14:33:05 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 14:33:07 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 14:33:07 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 14:33:07 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 14:33:07 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 14:33:07 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 14:33:13 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 706
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 14:33:13 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 5.53秒
+2025-06-03 14:33:13 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 14:33:13 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 14:33:34 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2709
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 精确匹配完成: 13 个段落
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 标准化匹配完成: 2 个段落
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO -   - 精确匹配: 13
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO -   - 标准化匹配: 2
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 14:33:34 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 21.49秒
+2025-06-03 14:33:34 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 14:33:34 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 14:33:50 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 1983
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 16 条翻译
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 开始相似度匹配: 2 个剩余段落
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 相似度匹配完成: 1 个段落
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO -   - 相似度匹配: 1
+2025-06-03 14:33:50 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 16 个段落
+2025-06-03 14:33:50 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 16 个段落，耗时: 16.00秒
+2025-06-03 14:33:50 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 14:33:51 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 14:33:51 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:33:52 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:33:53 - app.function.libreoffice_autofit - INFO - 设置了 45 个文本框的自适应属性
+2025-06-03 14:33:53 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 14:34:05 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:34:05 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:34:05 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 14:34:05 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 14:34:05 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 14:34:05 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 14:34:05 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 14:34:06 - app.function.ppt_translate_async - INFO -   - 翻译了 38 个段落
+2025-06-03 14:34:06 - app.function.ppt_translate_async - INFO -   - 总耗时: 59.95秒
+2025-06-03 14:34:06 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 19.98秒
+2025-06-03 14:34:06 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:34:06 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748932385_1, 用户: admin, 文件: b4b31521e97b4afe9396d3a30dd63c6d.pptx
+2025-06-03 14:41:20 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 14:41:20 - app - INFO - 正在初始化应用...
+2025-06-03 14:41:20 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 14:41:20 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 14:41:20 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 14:41:20 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 14:41:20 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 14:41:22 - app - INFO - 数据库表已创建
+2025-06-03 14:41:22 - app - INFO - 任务处理器已启动
+2025-06-03 14:41:22 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 14:41:22 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 14:41:30 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 14:41:31 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=8601016af07347a0b2152459051b8321.pptx
+2025-06-03 14:41:31 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748932891_1, 用户: admin, 文件: 8601016af07347a0b2152459051b8321.pptx
+2025-06-03 14:41:31 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748932891_1, 用户: admin
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 8601016af07347a0b2152459051b8321.pptx
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 8601016af07347a0b2152459051b8321.pptx
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 14:41:31 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 14:41:32 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 14:41:32 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 14:41:32 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 14:41:32 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 14:41:32 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 14:41:45 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 14:41:45 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 12.13秒
+2025-06-03 14:41:45 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 14:41:45 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 14:42:20 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2713
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 14:42:20 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 35.86秒
+2025-06-03 14:42:20 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 14:42:20 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 14:42:39 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2052
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 17 条翻译
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 17 条翻译
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 开始相似度匹配: 3 个剩余段落
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 相似度匹配完成: 3 个段落
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 精确匹配总结: 17/17 个段落成功匹配
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO -   - 相似度匹配: 3
+2025-06-03 14:42:39 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 17 个段落
+2025-06-03 14:42:39 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 17 个段落，耗时: 18.48秒
+2025-06-03 14:42:39 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 14:42:39 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO -   - 翻译了 39 个段落
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO -   - 总耗时: 71.43秒
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 23.81秒
+2025-06-03 14:42:42 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 8601016af07347a0b2152459051b8321.pptx
+2025-06-03 14:42:42 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748932891_1, 用户: admin, 文件: 8601016af07347a0b2152459051b8321.pptx
+2025-06-03 15:42:38 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 15:42:38 - app - INFO - 正在初始化应用...
+2025-06-03 15:42:38 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 15:42:38 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 15:42:38 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 15:42:38 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 15:42:38 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 15:42:41 - app - INFO - 数据库表已创建
+2025-06-03 15:42:41 - app - INFO - 任务处理器已启动
+2025-06-03 15:42:41 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 15:42:41 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 15:42:50 - app.views.main - INFO -   用户选择的页面: [1, 2, 3]
+2025-06-03 15:42:50 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:42:50 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748936570_1, 用户: admin, 文件: 73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:42:50 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748936570_1, 用户: admin
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2, 3]
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 3 张幻灯片
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2, 3]
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2, 3]
+2025-06-03 15:42:50 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 15:42:51 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 15:42:51 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 15:42:51 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 15:42:51 - app.function.page_based_translation - INFO - 准备翻译文本: 6 个段落，共 188 个字符
+2025-06-03 15:42:51 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 15:43:04 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 707
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 6 条翻译
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 开始精确匹配: 6 个段落 vs 6 条翻译
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 精确匹配完成: 6 个段落
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 精确匹配总结: 6/6 个段落成功匹配
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO -   - 精确匹配: 6
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 6 个段落
+2025-06-03 15:43:04 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 6 个段落，耗时: 12.57秒
+2025-06-03 15:43:04 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 1087 个字符
+2025-06-03 15:43:04 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 15:43:27 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2714
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 16 条翻译
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 16 条翻译
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 精确匹配完成: 15 个段落
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 精确匹配总结: 16/17 个段落成功匹配
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO -   - 精确匹配: 15
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 16 个段落
+2025-06-03 15:43:27 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 16 个段落，耗时: 22.53秒
+2025-06-03 15:43:27 - app.function.ppt_translate_async - INFO - 开始处理第 3 张幻灯片...
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 准备翻译文本: 17 个段落，共 605 个字符
+2025-06-03 15:43:27 - app.function.page_based_translation - INFO - 开始翻译第 3 页内容...
+2025-06-03 15:43:42 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 2053
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 第 3 页翻译完成，获得 17 条翻译
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 开始精确匹配: 17 个段落 vs 17 条翻译
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 精确匹配完成: 14 个段落
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 开始相似度匹配: 3 个剩余段落
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 相似度匹配完成: 3 个段落
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 精确匹配总结: 17/17 个段落成功匹配
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO -   - 精确匹配: 14
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO -   - 相似度匹配: 3
+2025-06-03 15:43:42 - app.function.page_based_translation - INFO - 第 3 页翻译应用完成: 17 个段落
+2025-06-03 15:43:42 - app.function.ppt_translate_async - INFO - 第 3 张幻灯片处理完成，翻译了 17 个段落，耗时: 15.71秒
+2025-06-03 15:43:42 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 15:43:43 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 15:43:43 - app.function.color_backup_restore - INFO - 开始备份PPT颜色...
+2025-06-03 15:43:43 - app.function.color_backup_restore - INFO - 颜色备份完成: 3 张幻灯片
+2025-06-03 15:43:43 - app.function.color_backup_restore - INFO - 执行处理函数...
+2025-06-03 15:43:43 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: 73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:43:43 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:43:43 - app.function.libreoffice_autofit - INFO - 设置了 45 个文本框的自适应属性
+2025-06-03 15:43:43 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 15:43:48 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:43:48 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:43:48 - app.function.color_backup_restore - INFO - 恢复PPT颜色...
+2025-06-03 15:43:48 - app.function.color_backup_restore - INFO - 颜色恢复完成: 54 个元素
+2025-06-03 15:43:48 - app.function.color_backup_restore - INFO - ✅ 颜色恢复成功
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO -   - 处理了 3 张幻灯片
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO -   - 翻译了 39 个段落
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO -   - 总耗时: 58.09秒
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 19.36秒
+2025-06-03 15:43:48 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 15:43:48 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748936570_1, 用户: admin, 文件: 73eb478f74144db481d05bba5041127f.pptx
+2025-06-03 16:09:50 - app.views.main - INFO -   用户选择的页面: [1, 2]
+2025-06-03 16:09:50 - app.utils.enhanced_task_queue.task.1 - INFO - 创建新任务: 用户=admin, 文件=4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:09:50 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1748938190_1, 用户: admin, 文件: 4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:09:50 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1748938190_1, 用户: admin
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO - 选中页面: [1, 2]
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 2 张幻灯片
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1, 2]
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1, 2]
+2025-06-03 16:09:50 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-03 16:09:51 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-03 16:09:51 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-03 16:09:51 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-03 16:09:51 - app.function.page_based_translation - INFO - 准备翻译文本: 1 个段落，共 33 个字符
+2025-06-03 16:09:51 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-03 16:09:52 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 123
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 1 条翻译
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 开始精确匹配: 1 个段落 vs 1 条翻译
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 精确匹配完成: 1 个段落
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 标准化匹配完成: 0 个段落
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 精确匹配总结: 1/1 个段落成功匹配
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO -   - 精确匹配: 1
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO -   - 标准化匹配: 0
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 1 个段落
+2025-06-03 16:09:52 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 1 个段落，耗时: 1.14秒
+2025-06-03 16:09:52 - app.function.ppt_translate_async - INFO - 开始处理第 2 张幻灯片...
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 准备翻译文本: 4 个段落，共 165 个字符
+2025-06-03 16:09:52 - app.function.page_based_translation - INFO - 开始翻译第 2 页内容...
+2025-06-03 16:09:58 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 530
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO - 第 2 页翻译完成，获得 4 条翻译
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO - 开始精确匹配: 4 个段落 vs 4 条翻译
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO - 精确匹配完成: 1 个段落
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO - 标准化匹配完成: 3 个段落
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO - 精确匹配总结: 4/4 个段落成功匹配
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO -   - 精确匹配: 1
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO -   - 标准化匹配: 3
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-03 16:09:58 - app.function.page_based_translation - INFO - 第 2 页翻译应用完成: 4 个段落
+2025-06-03 16:09:58 - app.function.ppt_translate_async - INFO - 第 2 张幻灯片处理完成，翻译了 4 个段落，耗时: 5.54秒
+2025-06-03 16:09:58 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-03 16:09:58 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-03 16:09:58 - app.function.color_backup_restore - INFO - 开始备份PPT颜色...
+2025-06-03 16:09:58 - app.function.color_backup_restore - INFO - 颜色备份完成: 2 张幻灯片
+2025-06-03 16:09:58 - app.function.color_backup_restore - INFO - 执行处理函数...
+2025-06-03 16:09:58 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: 4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:09:58 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:09:58 - app.function.libreoffice_autofit - INFO - 设置了 5 个文本框的自适应属性
+2025-06-03 16:09:58 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-03 16:10:01 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_1\4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:10:01 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_1\4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:10:01 - app.function.color_backup_restore - INFO - 恢复PPT颜色...
+2025-06-03 16:10:01 - app.function.color_backup_restore - INFO - 颜色恢复完成: 4 个元素
+2025-06-03 16:10:01 - app.function.color_backup_restore - INFO - ✅ 颜色恢复成功
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO -   - 处理了 2 张幻灯片
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO -   - 翻译了 5 个段落
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO -   - 总耗时: 10.80秒
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 5.40秒
+2025-06-03 16:10:01 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 16:10:01 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1748938190_1, 用户: admin, 文件: 4abb72a511694a3b8d17c1982eddf76e.pptx
+2025-06-03 18:20:57 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 18:20:57 - app - INFO - 正在初始化应用...
+2025-06-03 18:20:57 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 18:20:57 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 18:20:57 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 18:20:57 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 18:20:57 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 18:35:04 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 18:35:04 - app - INFO - 正在初始化应用...
+2025-06-03 18:35:04 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 18:35:04 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 18:35:04 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 18:35:04 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 18:35:04 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 18:35:05 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 18:35:05 - app - INFO - 正在初始化应用...
+2025-06-03 18:35:05 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 18:35:05 - app.utils.thread_pool_executor - INFO - 线程池已关闭
+2025-06-03 18:35:05 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 18:35:05 - app.utils.enhanced_task_queue.queue - INFO - 正在停止任务处理器...
+2025-06-03 19:01:28 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-03 19:01:28 - app - INFO - 正在初始化应用...
+2025-06-03 19:01:28 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-03 19:01:28 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-03 19:01:28 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-03 19:01:28 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-03 19:01:28 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-03 19:01:30 - app - INFO - 数据库表已创建
+2025-06-03 19:01:30 - app - INFO - 任务处理器已启动
+2025-06-03 19:01:30 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-03 19:01:30 - app - INFO - 应用已初始化 - 环境: development
+2025-06-03 19:01:35 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'users.email' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\utils.py", line 270, in decorated_view
+    elif not current_user.is_authenticated:
+  File "D:\app\conda\envs\ppt\lib\site-packages\werkzeug\local.py", line 422, in __get__
+    obj = instance._get_current_object()
+  File "D:\app\conda\envs\ppt\lib\site-packages\werkzeug\local.py", line 544, in _get_current_object
+    return self.__local()  # type: ignore
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "D:\project\system\app\__init__.py", line 128, in load_user
+    return User.query.get(int(user_id))
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 1018, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return db_load_fn(self, primary_key_identity)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\loading.py", line 286, in load_on_pk_identity
+    return q.one()
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 3490, in one
+    ret = self.one_or_none()
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 3459, in one_or_none
+    ret = list(self)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1054, "Unknown column 'users.email' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.email AS users_email, users.first_name AS users_first_name, users.last_name AS users_last_name, users.display_name AS users_display_name, users.sso_provider AS users_sso_provider, users.sso_subject AS users_sso_subject, users.last_login AS users_last_login, users.role_id AS users_role_id, users.`status` AS users_status, users.register_time AS users_register_time, users.approve_time AS users_approve_time, users.approve_user_id AS users_approve_user_id 
+FROM users 
+WHERE users.id = %(param_1)s]
+[parameters: {'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-06-04 12:06:51 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 12:06:51 - app - INFO - 正在初始化应用...
+2025-06-04 12:06:51 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 12:06:51 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 12:06:51 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 12:06:51 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 12:06:51 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 12:06:54 - app - INFO - 数据库表已创建
+2025-06-04 12:06:54 - app - INFO - 任务处理器已启动
+2025-06-04 12:06:55 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 12:06:55 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 12:06:55 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 12:06:55 - app - INFO - 正在初始化应用...
+2025-06-04 12:06:55 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 12:06:55 - app.utils.thread_pool_executor - INFO - 线程池已关闭
+2025-06-04 12:06:55 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 12:06:55 - app.utils.enhanced_task_queue.queue - INFO - 正在停止任务处理器...
+2025-06-04 12:07:20 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 12:07:20 - app - INFO - 正在初始化应用...
+2025-06-04 12:07:20 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 12:07:20 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 12:07:20 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 12:07:20 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 12:07:20 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 12:15:43 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 12:15:43 - app - INFO - 正在初始化应用...
+2025-06-04 12:15:43 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 12:15:43 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 12:15:43 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 12:15:43 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 12:15:43 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 12:15:45 - app - INFO - 数据库表已创建
+2025-06-04 12:15:45 - app - INFO - 任务处理器已启动
+2025-06-04 12:15:45 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 12:15:45 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 12:15:55 - app.services.sso_service - INFO - SSO未启用
+2025-06-04 12:26:36 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 12:26:36 - app - INFO - 正在初始化应用...
+2025-06-04 12:26:36 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 12:26:36 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 12:26:36 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 12:26:36 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 12:26:36 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 12:26:38 - app - INFO - 数据库表已创建
+2025-06-04 12:26:38 - app - INFO - 任务处理器已启动
+2025-06-04 12:26:38 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 12:26:38 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 12:26:43 - app.services.sso_service - INFO - SSO未启用
+2025-06-04 12:44:36 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 12:44:36 - app - INFO - 正在初始化应用...
+2025-06-04 12:44:36 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 12:44:36 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 12:44:36 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 12:44:36 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 12:44:36 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 12:44:39 - app - INFO - 数据库表已创建
+2025-06-04 12:44:39 - app - INFO - 任务处理器已启动
+2025-06-04 12:44:39 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 12:44:39 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 12:59:31 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 12:59:31 - app - INFO - 正在初始化应用...
+2025-06-04 12:59:31 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 12:59:31 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 12:59:31 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 12:59:31 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 12:59:31 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 12:59:33 - app - INFO - 数据库表已创建
+2025-06-04 12:59:33 - app - INFO - 任务处理器已启动
+2025-06-04 12:59:33 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 12:59:33 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 12:59:41 - app.services.sso_service - INFO - SSO未启用
+2025-06-04 13:01:22 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:01:22 - app - INFO - 正在初始化应用...
+2025-06-04 13:01:22 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:01:22 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:01:22 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:01:22 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:01:22 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:01:24 - app - INFO - 数据库表已创建
+2025-06-04 13:01:24 - app - INFO - 任务处理器已启动
+2025-06-04 13:01:24 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:01:24 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:01:27 - app.services.sso_service - INFO - SSO未启用
+2025-06-04 13:19:37 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:19:37 - app - INFO - 正在初始化应用...
+2025-06-04 13:19:37 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:19:37 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:19:37 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:19:37 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:19:37 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:19:56 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:19:56 - app - INFO - 正在初始化应用...
+2025-06-04 13:19:56 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:19:56 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:19:56 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:19:56 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:19:56 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:19:58 - app - INFO - 数据库表已创建
+2025-06-04 13:19:58 - app - INFO - 任务处理器已启动
+2025-06-04 13:19:58 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:19:58 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:20:12 - app.services.sso_service - INFO - SSO未启用
+2025-06-04 13:20:57 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:20:57 - app - INFO - 正在初始化应用...
+2025-06-04 13:20:57 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:20:57 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:20:57 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:20:57 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:20:57 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:20:59 - app - INFO - 数据库表已创建
+2025-06-04 13:20:59 - app - INFO - 任务处理器已启动
+2025-06-04 13:20:59 - app.tasks.cleanup - ERROR - 调度清理任务失败: No module named 'apscheduler'
+2025-06-04 13:22:05 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:22:05 - app - INFO - 正在初始化应用...
+2025-06-04 13:22:05 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:22:05 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:22:05 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:22:05 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:22:05 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:22:07 - app - INFO - 数据库表已创建
+2025-06-04 13:22:07 - app - INFO - 任务处理器已启动
+2025-06-04 13:22:07 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:22:07 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:22:08 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:22:08 - app - INFO - 正在初始化应用...
+2025-06-04 13:22:08 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:22:08 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:22:08 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:22:08 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:22:08 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:22:10 - app - INFO - 数据库表已创建
+2025-06-04 13:22:10 - app - INFO - 任务处理器已启动
+2025-06-04 13:22:10 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:22:10 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:22:46 - app.services.sso_service - INFO - SSO未启用
+2025-06-04 13:26:23 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:26:23 - app - INFO - 正在初始化应用...
+2025-06-04 13:26:23 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:26:23 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:26:23 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:26:23 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:26:23 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:26:25 - app - INFO - 数据库表已创建
+2025-06-04 13:26:25 - app - INFO - 任务处理器已启动
+2025-06-04 13:26:25 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:26:25 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:26:25 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:26:25 - app - INFO - 正在初始化应用...
+2025-06-04 13:26:25 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:26:25 - app.utils.thread_pool_executor - INFO - 线程池已关闭
+2025-06-04 13:26:25 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:26:25 - app.utils.enhanced_task_queue.queue - INFO - 正在停止任务处理器...
+2025-06-04 13:29:21 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:29:21 - app - INFO - 正在初始化应用...
+2025-06-04 13:29:21 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:29:21 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:29:21 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:29:21 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:29:21 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:29:23 - app - INFO - 数据库表已创建
+2025-06-04 13:29:23 - app - INFO - 任务处理器已启动
+2025-06-04 13:29:23 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:29:23 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:29:24 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:29:24 - app - INFO - 正在初始化应用...
+2025-06-04 13:29:24 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:29:24 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:29:24 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:29:24 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:29:24 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:29:26 - app - INFO - 数据库表已创建
+2025-06-04 13:29:26 - app - INFO - 任务处理器已启动
+2025-06-04 13:29:26 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:29:26 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:31:02 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:31:02 - app - INFO - 正在初始化应用...
+2025-06-04 13:31:02 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:31:02 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:31:02 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:31:02 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:31:02 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:31:04 - app - INFO - 数据库表已创建
+2025-06-04 13:31:04 - app - INFO - 任务处理器已启动
+2025-06-04 13:31:04 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:31:04 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:31:04 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:31:04 - app - INFO - 正在初始化应用...
+2025-06-04 13:31:04 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:31:04 - app.utils.thread_pool_executor - INFO - 线程池已关闭
+2025-06-04 13:31:04 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:31:04 - app.utils.enhanced_task_queue.queue - INFO - 正在停止任务处理器...
+2025-06-04 13:32:07 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-04 13:32:07 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-04 13:36:49 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:36:49 - app - INFO - 正在初始化应用...
+2025-06-04 13:36:49 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:36:49 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:36:49 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:36:49 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:36:49 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:36:52 - app - INFO - 数据库表已创建
+2025-06-04 13:36:52 - app - INFO - 任务处理器已启动
+2025-06-04 13:36:52 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:36:52 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:37:50 - app.services.authing_provider - INFO - 生成Authing授权URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/auth?client_id=683ebc2889ae4d4c1ff7e706&response_type=code&scope=openid+profile+email+phone&redirect_uri=https%3A%2F%2Ffci-ai-agent-uat.rfc-friso.com%2Fauth%2Fsso%2Fcallback&state=VFY2CM7E0sYB_TsA1sKVME125wPW8lBc584vpRKS5_U&prompt=consent
+2025-06-04 13:37:50 - app.views.sso_auth - INFO - 重定向到SSO提供者进行认证
+2025-06-04 13:45:24 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:45:24 - app - INFO - 正在初始化应用...
+2025-06-04 13:45:24 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:45:24 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:45:24 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:45:24 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:45:24 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:45:26 - app - INFO - 数据库表已创建
+2025-06-04 13:45:26 - app - INFO - 任务处理器已启动
+2025-06-04 13:45:26 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:45:26 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:45:27 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:45:27 - app - INFO - 正在初始化应用...
+2025-06-04 13:45:27 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:45:27 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:45:27 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:45:27 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:45:27 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:45:30 - app - INFO - 数据库表已创建
+2025-06-04 13:45:30 - app - INFO - 任务处理器已启动
+2025-06-04 13:45:30 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:45:30 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:46:21 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-04 13:46:21 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-04 13:46:23 - app.services.authing_provider - INFO - 生成Authing授权URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/auth?client_id=683ebc2889ae4d4c1ff7e706&response_type=code&scope=openid+profile+email+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fsso%2Fcallback&state=NQPg4Xb4jQXf4d0DkhPZSVznebKO4IuPyGp4lZrbFVs&prompt=consent
+2025-06-04 13:46:23 - app.views.sso_auth - INFO - 重定向到SSO提供者进行认证
+2025-06-04 13:46:25 - app.services.authing_provider - ERROR - State参数验证失败
+2025-06-04 13:46:25 - app.views.sso_auth - ERROR - SSO回调处理失败: 状态验证失败，可能存在安全风险
+2025-06-04 13:46:29 - app.services.authing_provider - ERROR - State参数验证失败
+2025-06-04 13:46:29 - app.views.sso_auth - ERROR - SSO回调处理失败: 状态验证失败，可能存在安全风险
+2025-06-04 13:49:31 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:49:31 - app - INFO - 正在初始化应用...
+2025-06-04 13:49:31 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:49:31 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:49:31 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:49:31 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:49:31 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:49:33 - app - INFO - 数据库表已创建
+2025-06-04 13:49:33 - app - INFO - 任务处理器已启动
+2025-06-04 13:49:33 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:49:33 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:49:56 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-04 13:49:56 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-04 13:50:06 - app.services.authing_provider - INFO - 生成Authing授权URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/auth?client_id=683ebc2889ae4d4c1ff7e706&response_type=code&scope=openid+profile+email+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fsso%2Fcallback&state=wXN6TKcIJ4rJpmiqrppUwll8kUkS-3J07YV0JqnZ2eU&prompt=consent
+2025-06-04 13:50:06 - app.views.sso_auth - INFO - 重定向到SSO提供者进行认证
+2025-06-04 13:56:41 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 13:56:41 - app - INFO - 正在初始化应用...
+2025-06-04 13:56:41 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 13:56:41 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 13:56:41 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 13:56:41 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 13:56:41 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 13:56:44 - app - INFO - 数据库表已创建
+2025-06-04 13:56:44 - app - INFO - 任务处理器已启动
+2025-06-04 13:56:44 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 13:56:44 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 13:56:57 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-04 13:56:57 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-04 13:57:03 - app.services.authing_provider - INFO - 生成Authing授权URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/auth?client_id=683ebc2889ae4d4c1ff7e706&response_type=code&scope=openid+profile+email+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fsso%2Fcallback&state=Kk6hbGlhu3uopDCSqebchWAa2ojCWwMde6Zt_sGm-NU&prompt=consent
+2025-06-04 13:57:03 - app.views.sso_auth - INFO - 重定向到SSO提供者进行认证
+2025-06-04 13:57:07 - app.services.authing_provider - ERROR - State参数验证失败
+2025-06-04 13:57:07 - app.views.sso_auth - ERROR - SSO回调处理失败: 状态验证失败，可能存在安全风险
+2025-06-04 13:57:55 - app.services.authing_provider - INFO - 生成Authing授权URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/auth?client_id=683ebc2889ae4d4c1ff7e706&response_type=code&scope=openid+profile+email+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fsso%2Fcallback&state=meB__RdGdDUK9gP91_QpZX_8ngN0Ghdx--odx8Na1Cs&prompt=consent
+2025-06-04 13:57:55 - app.views.sso_auth - INFO - 重定向到SSO提供者进行认证
+2025-06-04 13:57:57 - app.services.authing_provider - ERROR - State参数验证失败
+2025-06-04 13:57:57 - app.views.sso_auth - ERROR - SSO回调处理失败: 状态验证失败，可能存在安全风险
+2025-06-04 14:06:10 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 14:06:10 - app - INFO - 正在初始化应用...
+2025-06-04 14:06:10 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 14:06:10 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 14:06:10 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 14:06:10 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 14:06:10 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 14:06:11 - app - INFO - 数据库表已创建
+2025-06-04 14:06:11 - app - INFO - 任务处理器已启动
+2025-06-04 14:06:11 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 14:06:11 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 14:06:12 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 14:06:12 - app - INFO - 正在初始化应用...
+2025-06-04 14:06:12 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 14:06:12 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 14:06:12 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 14:06:12 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 14:06:12 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 14:06:14 - app - INFO - 数据库表已创建
+2025-06-04 14:06:14 - app - INFO - 任务处理器已启动
+2025-06-04 14:06:14 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 14:06:14 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 14:06:52 - app.views.sso_auth - ERROR - 开发环境SSO测试页面异常: name 'render_template' is not defined
+2025-06-04 14:06:52 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-04 14:06:52 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-04 14:08:33 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 14:08:33 - app - INFO - 正在初始化应用...
+2025-06-04 14:08:33 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 14:08:33 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 14:08:33 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 14:08:33 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 14:08:33 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 14:08:35 - app - INFO - 数据库表已创建
+2025-06-04 14:08:35 - app - INFO - 任务处理器已启动
+2025-06-04 14:08:35 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 14:08:35 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 14:08:45 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-04 14:08:45 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-04 14:08:48 - app.services.authing_provider - INFO - 生成Authing授权URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/auth?client_id=683ebc2889ae4d4c1ff7e706&response_type=code&scope=openid+profile+email+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fsso%2Fcallback&state=FSgvcdPR_yOY4fVnm86UVPw8LK8YaTiBWYyW9j93d2k&prompt=consent
+2025-06-04 14:08:48 - app.views.sso_auth - INFO - 重定向到SSO提供者进行认证
+2025-06-04 14:09:44 - app.services.authing_provider - WARNING - 开发环境中State参数验证失败，但继续处理
+2025-06-04 14:09:44 - app.services.authing_provider - WARNING - 接收到的state: FSgvcdPR_yOY4fVnm86UVPw8LK8YaTiBWYyW9j93d2k
+2025-06-04 14:09:44 - app.services.authing_provider - WARNING - 存储的state: None
+2025-06-04 14:09:44 - app.services.authing_provider - INFO - 收到Authing授权码: UtBrdSSyyD...
+2025-06-04 14:09:44 - app.services.authing_provider - INFO - 向Authing请求访问令牌: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/token
+2025-06-04 14:09:45 - app.services.authing_provider - INFO - 成功获取Authing访问令牌
+2025-06-04 14:09:45 - app.services.authing_provider - INFO - 向Authing请求用户信息: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/me
+2025-06-04 14:09:46 - app.services.authing_provider - INFO - 成功获取Authing用户信息: 6825af9abc8437a9ad09f6ce
+2025-06-04 14:09:46 - app.services.sso_service - INFO - 用户属性映射完成: ch488460324@gmail.com
+2025-06-04 14:09:46 - app.services.user_service - INFO - 创建SSO用户成功: ch488460324@gmail.com (provider: authing)
+2025-06-04 14:09:46 - app.services.user_service - INFO - SSO用户登录成功: ch488460324@gmail.com
+2025-06-04 14:09:46 - app.views.sso_auth - INFO - SSO用户认证成功: ch488460324@gmail.com
+2025-06-04 14:40:14 - app.services.user_service - INFO - 处理SSO用户登出: ch488460324@gmail.com
+2025-06-04 14:40:14 - app.services.authing_provider - INFO - 生成Authing登出URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/session/end?post_logout_redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Flogin
+2025-06-04 14:59:46 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 14:59:46 - app - INFO - 正在初始化应用...
+2025-06-04 14:59:46 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 14:59:46 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 14:59:46 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 14:59:46 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 14:59:46 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 14:59:49 - app - INFO - 数据库表已创建
+2025-06-04 14:59:49 - app - INFO - 任务处理器已启动
+2025-06-04 14:59:49 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 14:59:49 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 15:00:02 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-04 15:00:02 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-04 15:00:13 - app.services.authing_provider - INFO - 生成Authing授权URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/auth?client_id=683ebc2889ae4d4c1ff7e706&response_type=code&scope=openid+profile+email+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fsso%2Fcallback&state=hRqRb-KubuhrgE6U1UPvfN3ZrXtBBCSdPlT8WvCEYXE&prompt=consent
+2025-06-04 15:00:13 - app.views.sso_auth - INFO - 重定向到SSO提供者进行认证
+2025-06-04 15:00:16 - app.services.authing_provider - INFO - 收到Authing授权码: 5rOvc69bMx...
+2025-06-04 15:00:16 - app.services.authing_provider - INFO - 向Authing请求访问令牌: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/token
+2025-06-04 15:00:17 - app.services.authing_provider - INFO - 成功获取Authing访问令牌
+2025-06-04 15:00:17 - app.services.authing_provider - INFO - 向Authing请求用户信息: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/me
+2025-06-04 15:00:18 - app.services.authing_provider - INFO - 成功获取Authing用户信息: 6825af9abc8437a9ad09f6ce
+2025-06-04 15:00:18 - app.services.sso_service - INFO - 用户属性映射完成: ch488460324@gmail.com
+2025-06-04 15:00:18 - app.services.user_service - INFO - 更新SSO用户信息: ch488460324@gmail.com
+2025-06-04 15:00:18 - app.services.user_service - INFO - SSO用户登录成功: ch488460324@gmail.com
+2025-06-04 15:00:18 - app.views.sso_auth - INFO - SSO用户认证成功: ch488460324@gmail.com
+2025-06-04 15:13:47 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 15:13:47 - app - INFO - 正在初始化应用...
+2025-06-04 15:13:47 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 15:13:47 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 15:13:47 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 15:13:47 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 15:13:47 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 15:13:51 - app - INFO - 数据库表已创建
+2025-06-04 15:13:51 - app - INFO - 任务处理器已启动
+2025-06-04 15:13:51 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 15:13:51 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 15:13:51 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 15:13:51 - app - INFO - 正在初始化应用...
+2025-06-04 15:13:51 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 15:13:51 - app.utils.thread_pool_executor - INFO - 线程池已关闭
+2025-06-04 15:13:51 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 15:13:51 - app.utils.enhanced_task_queue.queue - INFO - 正在停止任务处理器...
+2025-06-04 15:45:26 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 15:45:26 - app - INFO - 正在初始化应用...
+2025-06-04 15:45:26 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 15:45:26 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 15:45:26 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 15:45:26 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 15:45:26 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 15:45:28 - app - INFO - 数据库表已创建
+2025-06-04 15:45:28 - app - INFO - 任务处理器已启动
+2025-06-04 15:45:28 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 15:45:28 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 15:45:30 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 15:45:30 - app - INFO - 正在初始化应用...
+2025-06-04 15:45:30 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 15:45:30 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 15:45:30 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 15:45:30 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 15:45:30 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 15:45:31 - app - INFO - 数据库表已创建
+2025-06-04 15:45:31 - app - INFO - 任务处理器已启动
+2025-06-04 15:45:31 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 15:45:31 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 15:46:25 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-04 15:46:25 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-04 16:04:45 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 16:04:45 - app - INFO - 正在初始化应用...
+2025-06-04 16:04:45 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 16:04:45 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 16:04:45 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-04 16:04:45 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-04 16:04:45 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-04 16:04:46 - app - INFO - 数据库表已创建
+2025-06-04 16:04:46 - app - INFO - 任务处理器已启动
+2025-06-04 16:04:47 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-04 16:04:47 - app - INFO - 应用已初始化 - 环境: development
+2025-06-04 16:04:47 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-04 16:04:47 - app - INFO - 正在初始化应用...
+2025-06-04 16:04:47 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-04 16:04:47 - app.utils.thread_pool_executor - INFO - 线程池已关闭
+2025-06-04 16:04:47 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-04 16:04:47 - app.utils.enhanced_task_queue.queue - INFO - 正在停止任务处理器...
+2025-06-06 10:44:04 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-06 10:44:04 - app - INFO - 正在初始化应用...
+2025-06-06 10:44:04 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-06 10:44:04 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-06 10:44:04 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-06 10:44:04 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-06 10:44:04 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-06 10:44:07 - app - INFO - 数据库表已创建
+2025-06-06 10:44:07 - app - INFO - 任务处理器已启动
+2025-06-06 10:44:07 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-06 10:44:07 - app - INFO - 应用已初始化 - 环境: development
+2025-06-06 10:45:06 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-06 10:45:06 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-06 10:45:12 - app.services.authing_provider - INFO - 生成Authing授权URL: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/auth?client_id=683ebc2889ae4d4c1ff7e706&response_type=code&scope=openid+profile+email+phone&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2Fsso%2Fcallback&state=dkRoV_bmASTtnviY13bv77cWODUbfmuQY1PvFuXT3hg&prompt=consent
+2025-06-06 10:45:12 - app.views.sso_auth - INFO - 重定向到SSO提供者进行认证
+2025-06-06 10:45:16 - app.services.authing_provider - WARNING - 开发环境中State参数验证失败，但继续处理
+2025-06-06 10:45:16 - app.services.authing_provider - WARNING - 接收到的state: dkRoV_bmASTtnviY13bv77cWODUbfmuQY1PvFuXT3hg
+2025-06-06 10:45:16 - app.services.authing_provider - WARNING - 存储的state: None
+2025-06-06 10:45:16 - app.services.authing_provider - INFO - 收到Authing授权码: 6d63Xk9P1c...
+2025-06-06 10:45:16 - app.services.authing_provider - INFO - 向Authing请求访问令牌: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/token
+2025-06-06 10:45:17 - app.services.authing_provider - INFO - 成功获取Authing访问令牌
+2025-06-06 10:45:17 - app.services.authing_provider - INFO - 向Authing请求用户信息: https://sso.rfc-friso.com/683ebc2889ae4d4c1ff7e111/oidc/me
+2025-06-06 10:45:17 - app.services.authing_provider - INFO - 成功获取Authing用户信息: 6825af9abc8437a9ad09f6ce
+2025-06-06 10:45:17 - app.services.sso_service - INFO - 用户属性映射完成: ch488460324@gmail.com
+2025-06-06 10:45:17 - app.services.user_service - INFO - 更新SSO用户信息: ch488460324@gmail.com
+2025-06-06 10:45:18 - app.services.user_service - INFO - SSO用户登录成功: ch488460324@gmail.com
+2025-06-06 10:45:18 - app.views.sso_auth - INFO - SSO用户认证成功: ch488460324@gmail.com

@@ -1,18 +1,20 @@
-
+import json
+import sys
+import time
 import os
 
-
+# from mypy.messages import best_matches
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.text import MSO_AUTO_SIZE
 from pptx.util import Pt, Inches
-
+import re
 # English-to-Chinese
-
+# from LLa_translate import translate
 # 温馨提示: 使用pipeline推理及在线体验功能的时候，尽量输入单句文本，如果是多句长文本建议人工分句，否则可能出现漏译或未译等情况！！！
-
+# from modelscope.pipelines import pipeline
 import logging
-
+# from modelscope.utils.constant import Tasks
 import difflib
 import re
 
@@ -763,10 +765,11 @@ def process_presentation_add_annotations(path_to_presentation, annotations, stop
         else:
             text_frame.text = data[new_text]
 
-        # 设置文本框中文字的字体和颜色
+        # 设置文本框中文字的字体和颜色（保持注释功能的红色，但可配置）
         for p in text_frame.paragraphs:
             for run in p.runs:
                 run.font.size = Pt(14)  # 设置字体大小
+                # 注释功能使用红色字体以便区分，这是预期行为
                 run.font.color.rgb = RGBColor(255, 0, 0)  # 设置字体颜色为红色
     prs.save(path_to_presentation)
 

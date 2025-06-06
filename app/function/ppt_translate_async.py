@@ -4,15 +4,15 @@
 保持与原始功能的完全兼容性，包括表格处理、样式保持等
 """
 import os
-
+import sys
 import time
 import asyncio
 import logging
 import re
-
+import json
 import platform
-from typing import Dict, List
-
+from typing import Dict, List, Any, Optional, Union, Tuple
+import concurrent.futures
 from pptx import Presentation
 from pptx.enum.text import MSO_AUTO_SIZE
 from pptx.dml.color import RGBColor
@@ -20,15 +20,23 @@ from pptx.util import Pt, Inches
 import difflib
 
 # 导入异步API客户端
-from .local_qwen_async import  get_field_async
-
+from .local_qwen_async import translate_async, batch_translate_async, get_field_async
+from ..utils.thread_pool_executor import thread_pool, TaskType
+from ..utils.enhanced_task_queue import translation_queue
 
 # 导入基于页面的翻译机制
-from .page_based_translation import translate_slide_by_page
+from .page_based_translation import translate_slide_by_page, get_translation_statistics
 
 # 导入复杂形状处理函数和内容检测函数
 from .ppt_translate import (
-
+    detect_complex_shape_type,
+    save_complex_shape_properties,
+    restore_complex_shape_properties,
+    has_shape_deformed,
+    safe_set_autofit_with_size_preservation,
+    has_meaningful_text_content,
+    should_adjust_textbox_layout,
+    get_textbox_content_summary,
     safe_set_autofit_with_content_check
 )
 
@@ -271,7 +279,7 @@ async def ensure_all_textboxes_autofit_async(presentation_path: str) -> bool:
 
                                 if result['adjusted']:
                                     processed_textboxes += 1
-                                    logger.debug(f"  幻灯片{slide_index}-形状{shape_index+1}: 已设置文本框自动调整，内容: {result['content']}")
+                                    logger.debug(f"✓ 幻灯片{slide_index}-形状{shape_index+1}: 已设置文本框自动调整，内容: {result['content']}")
                                 else:
                                     logger.debug(f"跳过幻灯片{slide_index}-形状{shape_index+1}: {result['reason']}")
 
@@ -290,7 +298,7 @@ async def ensure_all_textboxes_autofit_async(presentation_path: str) -> bool:
                                         text_frame.word_wrap = True
 
                                         processed_textboxes += 1
-                                        logger.debug(f"  幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自动调整")
+                                        logger.debug(f"✓ 幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自动调整")
 
                             else:
                                 skipped_shapes += 1
@@ -384,10 +392,10 @@ async def _preserve_textbox_size_with_autofit_async(presentation_path: str) -> b
                                     shape.top = original_top
 
                                     size_preserved_count += 1
-                                    logger.debug(f"  已恢复文本框原始尺寸: 幻灯片{slide_index}-形状{shape_index+1}")
+                                    logger.debug(f"✓ 已恢复文本框原始尺寸: 幻灯片{slide_index}-形状{shape_index+1}")
 
                                 processed_textboxes += 1
-                                logger.debug(f"  幻灯片{slide_index}-形状{shape_index+1}: 已设置文本框自适应")
+                                logger.debug(f"✓ 幻灯片{slide_index}-形状{shape_index+1}: 已设置文本框自适应")
 
                             # 处理表格
                             elif shape.has_table:
@@ -409,7 +417,7 @@ async def _preserve_textbox_size_with_autofit_async(presentation_path: str) -> b
                                         text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
 
                                         processed_textboxes += 1
-                                        logger.debug(f"  幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自适应")
+                                        logger.debug(f"✓ 幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自适应")
 
                                 # 确保表格整体尺寸不变
                                 if (shape.width != table_original_width or
@@ -423,7 +431,7 @@ async def _preserve_textbox_size_with_autofit_async(presentation_path: str) -> b
                                     shape.top = table_original_top
 
                                     size_preserved_count += 1
-                                    logger.debug(f"  已恢复表格原始尺寸: 幻灯片{slide_index}-表格")
+                                    logger.debug(f"✓ 已恢复表格原始尺寸: 幻灯片{slide_index}-表格")
 
                         except Exception as shape_error:
                             logger.warning(f"处理幻灯片{slide_index}-形状{shape_index+1}时出错: {shape_error}")
@@ -506,7 +514,7 @@ async def _unified_shape_processing_async(presentation_path: str) -> bool:
                                 if result['adjusted']:
                                     if result.get('success', True):
                                         processed_textboxes += 1
-                                        logger.debug(f"  幻灯片{slide_index}-形状{shape_index+1}: 处理成功")
+                                        logger.debug(f"✓ 幻灯片{slide_index}-形状{shape_index+1}: 处理成功")
                                     else:
                                         protected_shapes += 1
                                         logger.debug(f"🛡️ 幻灯片{slide_index}-形状{shape_index+1}: 检测到变形，已保护")
@@ -526,7 +534,7 @@ async def _unified_shape_processing_async(presentation_path: str) -> bool:
                                         text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
 
                                         processed_textboxes += 1
-                                        logger.debug(f"  幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自适应")
+                                        logger.debug(f"✓ 幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自适应")
 
                         except Exception as shape_error:
                             logger.warning(f"处理幻灯片{slide_index}-形状{shape_index+1}时出错: {shape_error}")
@@ -834,7 +842,7 @@ async def process_presentation_add_annotations_async(presentation_path: str,
                             text_frame = textbox.text_frame
                             text_frame.text = translated_text
 
-                            # 设置字体为红色
+                            # 设置字体为红色（注释功能使用红色以便区分）
                             for paragraph in text_frame.paragraphs:
                                 for run in paragraph.runs:
                                     run.font.color.rgb = RGBColor(255, 0, 0)  # 红色
@@ -845,7 +853,7 @@ async def process_presentation_add_annotations_async(presentation_path: str,
                             text_frame.word_wrap = True
 
                             processed_count += 1
-                            logger.info(f"  第 {page} 页添加翻译注释: '{original_text[:30]}...' -> '{translated_text[:30]}...'")
+                            logger.info(f"✓ 第 {page} 页添加翻译注释: '{original_text[:30]}...' -> '{translated_text[:30]}...'")
                         else:
                             logger.warning(f"未找到匹配的翻译: {original_text[:30]}...")
 

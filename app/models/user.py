@@ -26,6 +26,16 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(120), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=True)
+    first_name = db.Column(db.String(50), nullable=True)
+    last_name = db.Column(db.String(50), nullable=True)
+    display_name = db.Column(db.String(100), nullable=True)
+
+    # SSO相关字段
+    sso_provider = db.Column(db.String(50), nullable=True)  # oauth2, saml, oidc
+    sso_subject = db.Column(db.String(255), nullable=True)  # SSO提供者的用户ID
+    last_login = db.Column(db.DateTime(timezone=True), nullable=True)
+
     role_id = db.Column(db.Integer, db.ForeignKey('role.id'))
     role = db.relationship('Role', backref='users')
     status = db.Column(db.String(20), default='pending')  # pending, approved, rejected
@@ -63,3 +73,26 @@ class User(UserMixin, db.Model):
             self.__class__._admin_role_id = admin_role.id if admin_role else None
 
         return self.role_id == self.__class__._admin_role_id
+
+    def is_sso_user(self):
+        """检查是否为SSO用户"""
+        return bool(self.sso_provider)
+
+    def can_change_password(self):
+        """检查用户是否可以修改密码（SSO用户不能修改密码）"""
+        return not self.is_sso_user()
+
+    def get_display_name(self):
+        """获取显示名称"""
+        if self.display_name:
+            return self.display_name
+        elif self.first_name and self.last_name:
+            return f"{self.first_name} {self.last_name}"
+        else:
+            return self.username
+
+    def get_full_name(self):
+        """获取全名"""
+        if self.first_name and self.last_name:
+            return f"{self.first_name} {self.last_name}"
+        return self.username

@@ -9,14 +9,15 @@ from flask import Blueprint, render_template, redirect, url_for, flash, request,
     jsonify, session, send_file
 from flask_login import login_required, current_user
 from werkzeug.utils import secure_filename
+from sqlalchemy.exc import SQLAlchemyError
 
-
-
+from config import data_file
 from ..Ingredient_Search.Flask_app import search, download_files
 from ..function.adjust_text_size import set_textbox_autofit
 from ..function.ppt_translate import process_presentation, process_presentation_add_annotations
-
+from config import base_model_file
 from ..models import User, UploadRecord, Translation, StopWord
+from ..services.sso_service import get_sso_service
 from .. import db
 import os
 import uuid
@@ -482,6 +483,16 @@ def registration_approval():
         flash('没有权限访问此页面')
         return redirect(url_for('main.index'))
     return render_template('main/registration_approval.html')
+
+
+@main.route('/sso_management')
+@login_required
+def sso_management():
+    """SSO管理页面"""
+    if not current_user.is_administrator():
+        flash('没有权限访问此页面')
+        return redirect(url_for('main.index'))
+    return render_template('main/sso_management.html')
 
 
 @main.route('/api/registrations')
@@ -1050,6 +1061,52 @@ def get_annotation_files():
     except Exception as e:
         print(f"Error getting annotation files: {str(e)}")
         return jsonify({'error': str(e)}), 500
+
+
+@main.route('/api/users/sso')
+@login_required
+def get_sso_users():
+    """获取SSO用户列表"""
+    if not current_user.is_administrator():
+        return jsonify({'error': '权限不足'}), 403
+
+    try:
+        # 查询所有SSO用户
+        sso_users = User.query.filter(User.sso_provider.isnot(None)).all()
+
+        beijing_tz = pytz.timezone('Asia/Shanghai')
+
+        users_data = []
+        for user in sso_users:
+            # 转换时间为北京时间
+            last_login = None
+            if user.last_login:
+                last_login = user.last_login.astimezone(beijing_tz).strftime('%Y-%m-%d %H:%M:%S')
+
+            register_time = None
+            if user.register_time:
+                register_time = user.register_time.astimezone(beijing_tz).strftime('%Y-%m-%d %H:%M:%S')
+
+            users_data.append({
+                'id': user.id,
+                'username': user.username,
+                'email': user.email or '',
+                'display_name': user.get_display_name(),
+                'first_name': user.first_name or '',
+                'last_name': user.last_name or '',
+                'sso_provider': user.sso_provider,
+                'sso_subject': user.sso_subject or '',
+                'status': user.status,
+                'role': user.role.name if user.role else 'unknown',
+                'last_login': last_login,
+                'register_time': register_time
+            })
+
+        return jsonify(users_data)
+
+    except Exception as e:
+        logger.error(f"获取SSO用户列表失败: {e}")
+        return jsonify({'error': f'获取用户列表失败: {str(e)}'}), 500
 
 
 

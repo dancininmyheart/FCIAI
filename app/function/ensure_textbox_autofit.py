@@ -7,6 +7,7 @@ import os
 import logging
 from pptx import Presentation
 from pptx.enum.text import MSO_AUTO_SIZE
+from pptx.util import Pt
 
 # 配置日志记录器
 logger = logging.getLogger(__name__)
@@ -58,7 +59,7 @@ def ensure_all_textboxes_autofit(presentation_path: str, verbose: bool = True) -
 
                         processed_textboxes += 1
                         if verbose:
-                            logger.debug(f"  幻灯片{slide_index}-形状{shape_index+1}: 已设置文本框自动调整")
+                            logger.debug(f"✓ 幻灯片{slide_index}-形状{shape_index+1}: 已设置文本框自动调整")
 
                     # 处理表格
                     elif shape.has_table:
@@ -76,7 +77,7 @@ def ensure_all_textboxes_autofit(presentation_path: str, verbose: bool = True) -
 
                                 processed_textboxes += 1
                                 if verbose:
-                                    logger.debug(f"  幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自动调整")
+                                    logger.debug(f"✓ 幻灯片{slide_index}-表格单元格({row_index+1},{col_index+1}): 已设置自动调整")
 
                     else:
                         skipped_shapes += 1
@@ -255,14 +256,14 @@ if __name__ == "__main__":
     elif action == "fix":
         success = fix_textbox_autofit_issues(ppt_path)
         if success:
-            print("  修复成功")
+            print("✓ 修复成功")
         else:
             print("✗ 修复失败")
 
     elif action == "ensure":
         success = ensure_all_textboxes_autofit(ppt_path)
         if success:
-            print("  确保设置成功")
+            print("✓ 确保设置成功")
         else:
             print("✗ 确保设置失败")
 

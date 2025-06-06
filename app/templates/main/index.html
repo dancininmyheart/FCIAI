@@ -981,7 +981,7 @@ async function startTranslation() {
             progressContainer.style.display = 'block';
             statusDiv.style.display = 'block';
 
-            //   清理之前的日志和状态
+            // 🔧 清理之前的日志和状态
             const translationLog = document.getElementById('translationLog');
             if (translationLog) {
                 translationLog.innerHTML = ''; // 清空之前的日志
@@ -1012,7 +1012,7 @@ async function startTranslation() {
             // 添加新任务开始的日志
             if (translationLog) {
                 addLogEntry(translationLog, "开始新的翻译任务...", "info");
-                //   显示选择的页面信息
+                // 🔧 显示选择的页面信息
                 const selectedPagesArray = Array.from(selectedPages).sort((a, b) => a - b);
                 addLogEntry(translationLog, `选择翻译页面: ${selectedPagesArray.join(', ')} (共${selectedPagesArray.length}页)`, "info");
             }

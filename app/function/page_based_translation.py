@@ -6,10 +6,10 @@
 import re
 import logging
 import difflib
-
+import asyncio
 from typing import Dict, List, Tuple, Optional, Any
 from dataclasses import dataclass
-
+from pptx import Presentation
 from pptx.enum.text import MSO_AUTO_SIZE
 
 logger = logging.getLogger(__name__)
@@ -208,7 +208,7 @@ class PageBasedTranslator:
                     matches[original_para_idx] = translation
                     used_translations.add(original_text)
                     exact_matches += 1
-                    logger.debug(f"  精确匹配: '{original_text[:30]}...' -> '{translation[:30]}...'")
+                    logger.debug(f"✓ 精确匹配: '{original_text[:30]}...' -> '{translation[:30]}...'")
 
         logger.info(f"精确匹配完成: {exact_matches} 个段落")
 
@@ -239,7 +239,7 @@ class PageBasedTranslator:
                         matches[original_para_idx] = translation
                         used_translations.add(orig_text)
                         normalized_matches += 1
-                        logger.debug(f"  标准化匹配: '{original_text[:30]}...' -> '{translation[:30]}...'")
+                        logger.debug(f"✓ 标准化匹配: '{original_text[:30]}...' -> '{translation[:30]}...'")
 
         logger.info(f"标准化匹配完成: {normalized_matches} 个段落")
 
@@ -280,7 +280,7 @@ class PageBasedTranslator:
                     matches[original_para_idx] = best_translation
                     used_translations.add(best_orig_text)
                     similarity_matches += 1
-                    logger.debug(f"  相似度匹配 (相似度: {best_score:.3f}): '{original_text[:30]}...' -> '{best_translation[:30]}...'")
+                    logger.debug(f"✓ 相似度匹配 (相似度: {best_score:.3f}): '{original_text[:30]}...' -> '{best_translation[:30]}...'")
 
         logger.info(f"相似度匹配完成: {similarity_matches} 个段落")
 
@@ -382,7 +382,7 @@ class PageBasedTranslator:
                         original_color = None
                         if paragraph.runs:
                             try:
-                                from .ppt_translate import get_font_color
+                                from ..utils.ppt_utils import get_font_color
                                 original_color = get_font_color(paragraph.runs[0])
                             except:
                                 original_color = None
@@ -393,28 +393,51 @@ class PageBasedTranslator:
                             logger.info(f"跳过高相似度翻译: '{para_info.text[:30]}...' -> '{translation[:30]}...'")
                             continue
 
-                        # 应用翻译
-                        if str(bilingual_translation) == "1":
-                            # 双语模式：原文 + 翻译
-                            paragraph.text = para_info.text + "\n" + translation
-                        else:
-                            # 仅翻译模式
-                            paragraph.text = translation
+                        # 应用翻译（使用安全的文本替换）
+                        try:
+                            from .color_protection import safe_replace_paragraph_text
 
-                        # 恢复字体颜色（简化版）
-                        if original_color and paragraph.runs:
-                            try:
-                                from .ppt_translate import apply_font_color
-                                for run in paragraph.runs:
-                                    apply_font_color(run, original_color)
-                            except Exception as color_error:
-                                logger.debug(f"恢复字体颜色失败: {color_error}")
+                            if str(bilingual_translation) == "1":
+                                # 双语模式：原文 + 翻译
+                                new_text = para_info.text + "\n" + translation
+                            else:
+                                # 仅翻译模式
+                                new_text = translation
+
+                            # 使用安全替换，保持所有格式
+                            success = safe_replace_paragraph_text(paragraph, new_text, preserve_formatting=True)
+                            if not success:
+                                # 如果安全替换失败，使用传统方法
+                                paragraph.text = new_text
+                                # 恢复字体颜色（简化版）
+                                if original_color and paragraph.runs:
+                                    try:
+                                        from ..utils.ppt_utils import apply_font_color
+                                        for run in paragraph.runs:
+                                            apply_font_color(run, original_color)
+                                    except Exception as color_error:
+                                        logger.debug(f"恢复字体颜色失败: {color_error}")
+                        except ImportError:
+                            # 如果颜色保护模块不可用，使用传统方法
+                            if str(bilingual_translation) == "1":
+                                paragraph.text = para_info.text + "\n" + translation
+                            else:
+                                paragraph.text = translation
+
+                            # 恢复字体颜色（简化版）
+                            if original_color and paragraph.runs:
+                                try:
+                                    from ..utils.ppt_utils import apply_font_color
+                                    for run in paragraph.runs:
+                                        apply_font_color(run, original_color)
+                                except Exception as color_error:
+                                    logger.debug(f"恢复字体颜色失败: {color_error}")
 
                         # 设置文字大小适应文本框大小
                         text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
 
                         applied_count += 1
-                        logger.debug(f"  应用文本框翻译: '{para_info.text[:30]}...' -> '{translation[:30]}...'")
+                        logger.debug(f"✓ 应用文本框翻译: '{para_info.text[:30]}...' -> '{translation[:30]}...'")
                         logger.debug(f"  自适应: 已设置为TEXT_TO_FIT_SHAPE")
 
                 elif para_info.shape_type == 'table' and para_info.table_position:
@@ -435,7 +458,7 @@ class PageBasedTranslator:
                             original_color = None
                             if paragraph.runs:
                                 try:
-                                    from .ppt_translate import get_font_color
+                                    from ..utils.ppt_utils import get_font_color
                                     original_color = get_font_color(paragraph.runs[0])
                                 except:
                                     original_color = None
@@ -446,28 +469,51 @@ class PageBasedTranslator:
                                 logger.info(f"跳过表格高相似度翻译: '{para_info.text[:30]}...' -> '{translation[:30]}...'")
                                 continue
 
-                            # 应用翻译
-                            if str(bilingual_translation) == "1":
-                                # 双语模式：原文 + 翻译
-                                paragraph.text = para_info.text + "\n" + translation
-                            else:
-                                # 仅翻译模式
-                                paragraph.text = translation
+                            # 应用翻译（使用安全的文本替换）
+                            try:
+                                from .color_protection import safe_replace_paragraph_text
 
-                            # 恢复字体颜色（简化版）
-                            if original_color and paragraph.runs:
-                                try:
-                                    from .ppt_translate import apply_font_color
-                                    for run in paragraph.runs:
-                                        apply_font_color(run, original_color)
-                                except Exception as color_error:
-                                    logger.debug(f"恢复表格字体颜色失败: {color_error}")
+                                if str(bilingual_translation) == "1":
+                                    # 双语模式：原文 + 翻译
+                                    new_text = para_info.text + "\n" + translation
+                                else:
+                                    # 仅翻译模式
+                                    new_text = translation
+
+                                # 使用安全替换，保持所有格式
+                                success = safe_replace_paragraph_text(paragraph, new_text, preserve_formatting=True)
+                                if not success:
+                                    # 如果安全替换失败，使用传统方法
+                                    paragraph.text = new_text
+                                    # 恢复字体颜色（简化版）
+                                    if original_color and paragraph.runs:
+                                        try:
+                                            from ..utils.ppt_utils import apply_font_color
+                                            for run in paragraph.runs:
+                                                apply_font_color(run, original_color)
+                                        except Exception as color_error:
+                                            logger.debug(f"恢复表格字体颜色失败: {color_error}")
+                            except ImportError:
+                                # 如果颜色保护模块不可用，使用传统方法
+                                if str(bilingual_translation) == "1":
+                                    paragraph.text = para_info.text + "\n" + translation
+                                else:
+                                    paragraph.text = translation
+
+                                # 恢复字体颜色（简化版）
+                                if original_color and paragraph.runs:
+                                    try:
+                                        from ..utils.ppt_utils import apply_font_color
+                                        for run in paragraph.runs:
+                                            apply_font_color(run, original_color)
+                                    except Exception as color_error:
+                                        logger.debug(f"恢复表格字体颜色失败: {color_error}")
 
                             # 设置文字大小适应文本框大小
                             text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
 
                             applied_count += 1
-                            logger.debug(f"  应用表格翻译: '{para_info.text[:30]}...' -> '{translation[:30]}...'")
+                            logger.debug(f"✓ 应用表格翻译: '{para_info.text[:30]}...' -> '{translation[:30]}...'")
                             logger.debug(f"  自适应: 已设置为TEXT_TO_FIT_SHAPE")
 
             except Exception as e:

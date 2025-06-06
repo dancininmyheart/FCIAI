@@ -2880,3 +2880,125 @@ openai.InternalServerError: Error code: 503
 
 2025-06-02 20:40:26 - app.utils.enhanced_task_queue.queue - ERROR - 执行任务时出错 - ID: task_1748868010_1, 错误: ppt_translate 处理失败
 2025-06-02 20:40:26 - app.utils.enhanced_task_queue.queue - ERROR - 任务失败 - ID: task_1748868010_1, 重试次数已达上限: 3
+2025-06-03 01:40:20 - app.utils.thread_pool_executor - ERROR - 调度器错误: cannot schedule new futures after interpreter shutdown
+2025-06-03 02:34:07 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:15:01 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:23:01 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:28:21 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:31:05 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:34:15 - app.function.ppt_translate_async - ERROR - 调用set_textbox_autofit时出错: local variable 'result' referenced before assignment
+2025-06-03 10:36:52 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:40:24 - app.function.libreoffice_autofit - ERROR - 未找到LibreOffice安装，请确保已正确安装LibreOffice
+2025-06-03 10:53:16 - app.function.libreoffice_autofit - ERROR - 处理过程中出错: [WinError 17] 系统无法将文件移到不同的磁盘驱动器。: 'C:\\Users\\48846\\AppData\\Local\\Temp\\tmp_2sfjyfk\\e27163dcc8814abc8738e15fc02d62f9.pptx' -> 'D:\\project\\system\\uploads\\user_1\\e27163dcc8814abc8738e15fc02d62f9.pptx'
+2025-06-03 14:03:14 - app.function.libreoffice_uno_color - ERROR - UNO接口不可用
+2025-06-03 19:01:35 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'users.email' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\utils.py", line 270, in decorated_view
+    elif not current_user.is_authenticated:
+  File "D:\app\conda\envs\ppt\lib\site-packages\werkzeug\local.py", line 422, in __get__
+    obj = instance._get_current_object()
+  File "D:\app\conda\envs\ppt\lib\site-packages\werkzeug\local.py", line 544, in _get_current_object
+    return self.__local()  # type: ignore
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "D:\app\conda\envs\ppt\lib\site-packages\flask_login\login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "D:\project\system\app\__init__.py", line 128, in load_user
+    return User.query.get(int(user_id))
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 1018, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return db_load_fn(self, primary_key_identity)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\loading.py", line 286, in load_on_pk_identity
+    return q.one()
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 3490, in one
+    ret = self.one_or_none()
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 3459, in one_or_none
+    ret = list(self)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "D:\app\conda\envs\ppt\lib\site-packages\sqlalchemy\engine\default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\app\conda\envs\ppt\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1054, "Unknown column 'users.email' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.email AS users_email, users.first_name AS users_first_name, users.last_name AS users_last_name, users.display_name AS users_display_name, users.sso_provider AS users_sso_provider, users.sso_subject AS users_sso_subject, users.last_login AS users_last_login, users.role_id AS users_role_id, users.`status` AS users_status, users.register_time AS users_register_time, users.approve_time AS users_approve_time, users.approve_user_id AS users_approve_user_id 
+FROM users 
+WHERE users.id = %(param_1)s]
+[parameters: {'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-06-04 13:20:59 - app.tasks.cleanup - ERROR - 调度清理任务失败: No module named 'apscheduler'
+2025-06-04 13:46:25 - app.services.authing_provider - ERROR - State参数验证失败
+2025-06-04 13:46:25 - app.views.sso_auth - ERROR - SSO回调处理失败: 状态验证失败，可能存在安全风险
+2025-06-04 13:46:29 - app.services.authing_provider - ERROR - State参数验证失败
+2025-06-04 13:46:29 - app.views.sso_auth - ERROR - SSO回调处理失败: 状态验证失败，可能存在安全风险
+2025-06-04 13:57:07 - app.services.authing_provider - ERROR - State参数验证失败
+2025-06-04 13:57:07 - app.views.sso_auth - ERROR - SSO回调处理失败: 状态验证失败，可能存在安全风险
+2025-06-04 13:57:57 - app.services.authing_provider - ERROR - State参数验证失败
+2025-06-04 13:57:57 - app.views.sso_auth - ERROR - SSO回调处理失败: 状态验证失败，可能存在安全风险
+2025-06-04 14:06:52 - app.views.sso_auth - ERROR - 开发环境SSO测试页面异常: name 'render_template' is not defined

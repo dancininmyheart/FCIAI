@@ -24,9 +24,32 @@
                 </button>
             </div>
             <div class="links">
-                <p>没有账号？<a href="{{ url_for('auth.register') }}">点击注册</a></p>
+                <p>没有账号？<a href="/register">点击注册</a></p>
             </div>
         </form>
+
+        <!-- SSO登录选项 -->
+        {% if sso_enabled %}
+        <div class="sso-section">
+            <div class="divider">
+                <span>或</span>
+            </div>
+            <div class="sso-login">
+                <a href="/auth/sso/login" class="sso-btn">
+                    <span class="sso-icon">
+                        {% if sso_provider == 'oauth2' %}
+                            <i class="fab fa-openid"></i>
+                        {% elif sso_provider == 'saml' %}
+                            <i class="fas fa-shield-alt"></i>
+                        {% else %}
+                            <i class="fas fa-sign-in-alt"></i>
+                        {% endif %}
+                    </span>
+                    <span class="sso-text">使用SSO登录</span>
+                </a>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
 
@@ -160,6 +183,73 @@
         transform: scale(4);
         opacity: 0;
     }
+}
+
+/* SSO登录样式 */
+.sso-section {
+    margin-top: 2rem;
+}
+
+.divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.divider span {
+    background: rgba(30, 39, 46, 0.95);
+    padding: 0 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.sso-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #4285f4, #34a853);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.sso-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.sso-btn:active {
+    transform: translateY(1px);
+}
+
+.sso-icon {
+    font-size: 18px;
+}
+
+.sso-text {
+    font-weight: 500;
 }
 </style>
 
