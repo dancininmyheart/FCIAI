@@ -8,7 +8,6 @@ import shutil
 import subprocess
 import tempfile
 import platform
-from subprocess import CREATE_NO_WINDOW  # Windows 下隐藏窗口
 try:
     from pptx import Presentation
     from pptx.enum.text import MSO_AUTO_SIZE
@@ -161,7 +160,6 @@ def trigger_ppt_render_with_libreoffice(ppt_path: str) -> bool:
                     "--outdir", temp_dir,
                     ppt_path_abs
                 ]
-                creation_flags = CREATE_NO_WINDOW
             else:
                 cmd = [
                     libreoffice_cmd,
