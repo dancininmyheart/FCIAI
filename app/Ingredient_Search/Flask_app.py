@@ -80,7 +80,9 @@ def download_files(request):
     file_path = file_path.replace('\\', '/')
     # Check if the file exists
     if os.path.exists(file_path):
-        return send_file(file_path, as_attachment=True)
+        # 获取文件名
+        filename = os.path.basename(file_path)
+        return send_file(file_path, as_attachment=True, download_name=filename)
     else:
         return jsonify({"error": "文件未找到"}), 404
 

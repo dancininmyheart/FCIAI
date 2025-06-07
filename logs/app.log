@@ -13619,3 +13619,106 @@ WHERE users.id = %(param_1)s]
 2025-06-06 20:44:35 - app - INFO - 任务处理器已启动
 2025-06-06 20:44:35 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
 2025-06-06 20:44:35 - app - INFO - 应用已初始化 - 环境: development
+2025-06-06 20:46:14 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-06 20:46:14 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-07 03:00:00 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-07 03:00:00 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-07 03:00:00 - app - INFO - 正在初始化应用...
+2025-06-07 03:00:00 - app - INFO - 正在初始化应用...
+2025-06-07 03:00:00 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-07 03:00:00 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-07 03:00:00 - app.utils.thread_pool_executor - INFO - 线程池已关闭
+2025-06-07 03:00:00 - app.utils.thread_pool_executor - INFO - 线程池已关闭
+2025-06-07 03:00:00 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-07 03:00:00 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-07 03:00:00 - app.utils.enhanced_task_queue.queue - INFO - 正在停止任务处理器...
+2025-06-07 03:00:00 - app.utils.enhanced_task_queue.queue - INFO - 正在停止任务处理器...
+2025-06-07 13:56:07 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-07 13:56:07 - app - INFO - 正在初始化应用...
+2025-06-07 13:56:07 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-07 13:56:07 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-07 13:56:07 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-07 13:56:07 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-07 13:56:07 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-07 13:56:48 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-07 13:56:48 - app - INFO - 正在初始化应用...
+2025-06-07 13:56:48 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-07 13:56:48 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-07 13:56:48 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-07 13:56:48 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-07 13:56:48 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-07 13:56:50 - app - INFO - 数据库表已创建
+2025-06-07 13:56:50 - app - INFO - 任务处理器已启动
+2025-06-07 13:56:50 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-07 13:56:50 - app - INFO - 应用已初始化 - 环境: development
+2025-06-07 13:56:57 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-07 13:56:57 - app.services.sso_service - INFO - Authing SSO提供者已初始化
+2025-06-07 13:57:18 - app.views.main - INFO -   用户选择的页面: [1]
+2025-06-07 13:57:18 - app.utils.enhanced_task_queue.task.2 - INFO - 创建新任务: 用户=ch488460324@gmail.com, 文件=85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:18 - app.utils.enhanced_task_queue.queue - INFO - 新任务已添加 - ID: task_1749275838_2, 用户: ch488460324@gmail.com, 文件: 85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:18 - app.utils.enhanced_task_queue.queue - INFO - 开始处理任务 - ID: task_1749275838_2, 用户: ch488460324@gmail.com
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO - 开始处理演示文稿: 85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO - 参数: 源语言=en, 目标语言=zh, 双语=1
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO - 开始异步处理演示文稿: 85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO - 源语言: en, 目标语言: zh, 双语翻译: 1
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO - 选中页面: [1]
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO - 正在加载演示文稿...
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO - 演示文稿加载成功，共 1 张幻灯片
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO -  选择的页面参数: [1]
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO -  将翻译指定页面: [1]
+2025-06-07 13:57:18 - app.function.ppt_translate_async - INFO - 正在分析文本领域...
+2025-06-07 13:57:19 - app.function.local_qwen_async - INFO - 成功获取领域信息: 医学
+2025-06-07 13:57:19 - app.function.ppt_translate_async - INFO - 文本领域分析结果: 医学
+2025-06-07 13:57:19 - app.function.ppt_translate_async - INFO - 开始处理第 1 张幻灯片...
+2025-06-07 13:57:19 - app.function.page_based_translation - INFO - 准备翻译文本: 5 个段落，共 449 个字符
+2025-06-07 13:57:19 - app.function.page_based_translation - INFO - 开始翻译第 1 页内容...
+2025-06-07 13:57:27 - app.function.local_qwen_async - INFO - 翻译成功，返回结果长度: 983
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO - 第 1 页翻译完成，获得 5 条翻译
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO - 开始精确匹配: 5 个段落 vs 5 条翻译
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO - 精确匹配完成: 4 个段落
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO - 开始标准化匹配...
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO - 标准化匹配完成: 1 个段落
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO - 相似度匹配完成: 0 个段落
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO - 精确匹配总结: 5/5 个段落成功匹配
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO -   - 精确匹配: 4
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO -   - 标准化匹配: 1
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO -   - 相似度匹配: 0
+2025-06-07 13:57:27 - app.function.page_based_translation - INFO - 第 1 页翻译应用完成: 5 个段落
+2025-06-07 13:57:27 - app.function.ppt_translate_async - INFO - 第 1 张幻灯片处理完成，翻译了 5 个段落，耗时: 7.67秒
+2025-06-07 13:57:27 - app.function.ppt_translate_async - INFO - 正在保存演示文稿...
+2025-06-07 13:57:27 - app.function.ppt_translate_async - INFO - 正在进行布局调整...
+2025-06-07 13:57:27 - app.function.color_backup_restore - INFO - 开始备份PPT颜色...
+2025-06-07 13:57:27 - app.function.color_backup_restore - INFO - 颜色备份完成: 1 张幻灯片
+2025-06-07 13:57:27 - app.function.color_backup_restore - INFO - 执行处理函数...
+2025-06-07 13:57:27 - app.function.libreoffice_autofit - INFO - 开始LibreOffice渲染PPTX: 85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:27 - app.function.libreoffice_autofit - INFO - 设置文本框自适应属性: 85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:27 - app.function.libreoffice_autofit - INFO - 设置了 5 个文本框的自适应属性
+2025-06-07 13:57:27 - app.function.libreoffice_autofit - INFO - 使用LibreOffice重新保存PPTX以触发文本框渲染...
+2025-06-07 13:57:32 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已复制并覆盖原文件: D:\project\system\uploads\user_2\85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:32 - app.function.libreoffice_autofit - INFO -  渲染后的PPTX已覆盖源文件: D:\project\system\uploads\user_2\85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:32 - app.function.color_backup_restore - INFO - 恢复PPT颜色...
+2025-06-07 13:57:32 - app.function.color_backup_restore - INFO - 颜色恢复完成: 5 个元素
+2025-06-07 13:57:32 - app.function.color_backup_restore - INFO - ✅ 颜色恢复成功
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO - set_textbox_autofit调用成功
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO - 布局调整完成
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO - 演示文稿处理完成:
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO -   - 处理了 1 张幻灯片
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO -   - 跳过了 0 张幻灯片
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO -   - 翻译了 5 个段落
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO -   - 总耗时: 14.40秒
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO -   - 平均每页耗时: 14.40秒
+2025-06-07 13:57:32 - app.function.ppt_translate_async - INFO - 演示文稿处理完成: 85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 13:57:32 - app.utils.enhanced_task_queue.queue - INFO - 任务完成 - ID: task_1749275838_2, 用户: ch488460324@gmail.com, 文件: 85ea4d784cb045798c50461b387960c8.pptx
+2025-06-07 14:11:19 - app - INFO - 日志管理器已配置 - 级别: INFO, 目录: D:\project\system\logs, 最大文件大小: 10.0MB
+2025-06-07 14:11:19 - app - INFO - 正在初始化应用...
+2025-06-07 14:11:19 - app - INFO - 已应用 development 环境的日志过滤器
+2025-06-07 14:11:19 - app.utils.thread_pool_executor - INFO - 线程池已创建 - IO线程: 24, CPU线程: 8
+2025-06-07 14:11:19 - app.utils.enhanced_task_queue.queue - INFO - 正在启动任务处理器...
+2025-06-07 14:11:19 - app.utils.enhanced_task_queue.queue - INFO - 任务处理器已启动 - 最大并发任务数: 5, 超时时间: 3600秒
+2025-06-07 14:11:19 - app.utils.lazy_http_client.lazy_client - INFO - 懒加载HTTP客户端已配置 - 最大连接数: 100, 超时: 60秒, 重试次数: 3
+2025-06-07 14:11:21 - app - INFO - 数据库表已创建
+2025-06-07 14:11:21 - app - INFO - 任务处理器已启动
+2025-06-07 14:11:21 - app.tasks.cleanup - INFO - 文件清理任务已调度，每天凌晨3点执行
+2025-06-07 14:11:21 - app - INFO - 应用已初始化 - 环境: development
+2025-06-07 14:11:29 - app.services.authing_provider - INFO - Authing OAuth2提供者已初始化 - App ID: 683ebc2889ae4d4c1ff7e706
+2025-06-07 14:11:29 - app.services.sso_service - INFO - Authing SSO提供者已初始化

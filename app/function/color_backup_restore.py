@@ -447,9 +447,9 @@ def backup_and_restore_workflow(ppt_path: str, process_func, *args, **kwargs) ->
             logger.info("恢复PPT颜色...")
             restore_success = backup_manager.restore_colors_to_ppt(ppt_path, backup_data)
             if restore_success:
-                logger.info("✅ 颜色恢复成功")
+                logger.info("颜色恢复成功")
             else:
-                logger.warning("⚠️ 颜色恢复失败")
+                logger.warning("⚠颜色恢复失败")
         
         return result
         
