@@ -232,7 +232,8 @@ def set_textbox_autofit(ppt_path):
             return True
         else:
             logging.warning("基础LibreOffice渲染触发失败，尝试其他方法")
-    except ImportError:
+    except ImportError as e:
+        logging.warning(e)
         logging.warning("LibreOffice渲染触发器不可用，尝试其他方法")
     except Exception as e:
         logging.warning(f"基础LibreOffice渲染触发出错: {e}，尝试其他方法")
