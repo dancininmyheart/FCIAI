@@ -105,11 +105,6 @@ async def _adjust_ppt_layout_async(presentation_path: str) -> bool:
         调整是否成功
     """
     try:
-        # 检查操作系统，只在Windows上执行COM操作
-        if platform.system() != "Windows":
-            logger.info("非Windows系统，跳过COM布局调整，使用基础布局调整")
-            return await _basic_layout_adjustment_async(presentation_path)
-
         # 在线程池中执行COM操作以避免阻塞
         loop = asyncio.get_event_loop()
 
