@@ -485,14 +485,14 @@ def registration_approval():
     return render_template('main/registration_approval.html')
 
 
-@main.route('/sso_management')
-@login_required
-def sso_management():
-    """SSO管理页面"""
-    if not current_user.is_administrator():
-        flash('没有权限访问此页面')
-        return redirect(url_for('main.index'))
-    return render_template('main/sso_management.html')
+# @main.route('/sso_management')
+# @login_required
+# def sso_management():
+#     """SSO管理页面"""
+#     if not current_user.is_administrator():
+#         flash('没有权限访问此页面')
+#         return redirect(url_for('main.index'))
+#     return render_template('main/sso_management.html')
 
 
 @main.route('/api/registrations')

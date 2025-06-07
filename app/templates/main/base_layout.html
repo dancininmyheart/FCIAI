@@ -45,10 +45,7 @@
                             <i class="bi bi-person-check"></i>
                             注册审批
                         </a>
-                        <a href="{{ url_for('main.sso_management') }}" class="nav-link {% if request.endpoint == 'main.sso_management' %}active{% endif %}">
-                            <i class="bi bi-shield-check"></i>
-                            SSO管理
-                        </a>
+
                         {# 监控页面暂未实现
                         <a href="{{ url_for('monitor.monitor_page') }}" class="nav-link {% if request.endpoint == 'monitor.monitor_page' %}active{% endif %}">
                             <i class="bi bi-speedometer2"></i>
