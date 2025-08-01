@@ -28,7 +28,7 @@ class TranslationTask:
                 source_language: str = 'en', target_language: str = 'zh-cn',
                 priority: int = 0, annotation_filename: str = None,
                 annotation_json: Dict = None, select_page: List[int] = None,
-                bilingual_translation: bool = False, **kwargs):
+                bilingual_translation: bool = False, translation_model: str = 'qwen', **kwargs):
         """
         初始化翻译任务
 
@@ -45,6 +45,7 @@ class TranslationTask:
             annotation_json: 注释数据（直接传递）
             select_page: 选择的页面列表
             bilingual_translation: 是否双语翻译
+            translation_model: 翻译模型 (qwen, deepseek, gpt-4o)
             **kwargs: 其他参数
         """
         self.task_id = task_id
@@ -59,6 +60,7 @@ class TranslationTask:
         self.annotation_json = annotation_json  # 添加注释数据字段
         self.select_page = select_page or []
         self.bilingual_translation = bilingual_translation
+        self.translation_model = translation_model  # 添加翻译模型字段
 
         # PDF注释相关参数
         self.annotations = kwargs.get('annotations', [])
@@ -99,7 +101,7 @@ class TranslationTask:
 
         # 获取任务专用的日志记录器
         self.logger = logging.getLogger(f"{__name__}.task.{user_id}")
-        self.logger.info(f"创建新任务: 用户={user_name}, 文件={os.path.basename(file_path)}")
+        self.logger.info(f"创建新任务: 用户={user_name}, 文件={os.path.basename(file_path)}, 模型={translation_model}")
 
 class EnhancedTranslationQueue:
     """增强版翻译任务队列，支持多线程并发处理"""
@@ -165,7 +167,8 @@ class EnhancedTranslationQueue:
                 task_type: str = 'ppt_translate', source_language: str = 'en',
                 target_language: str = 'zh-cn', priority: int = 0,
                 annotation_filename: str = None, annotation_json: Dict = None,
-                select_page: List[int] = None, bilingual_translation: bool = False, **kwargs) -> int:
+                select_page: List[int] = None, bilingual_translation: bool = False,
+                translation_model: str = 'qwen', **kwargs) -> int:
         """
         添加任务到队列
 
@@ -181,6 +184,7 @@ class EnhancedTranslationQueue:
             annotation_json: 注释数据（直接传递）
             select_page: 选择的页面列表
             bilingual_translation: 是否双语翻译
+            translation_model: 翻译模型 (qwen, deepseek, gpt-4o)
             **kwargs: 其他参数
 
         Returns:
@@ -219,6 +223,7 @@ class EnhancedTranslationQueue:
                 annotation_json=annotation_json,  # 添加注释数据
                 select_page=select_page,
                 bilingual_translation=bilingual_translation,
+                translation_model=translation_model,
                 **kwargs
             )
 
@@ -973,6 +978,7 @@ class EnhancedTranslationQueue:
                     source_language=task.source_language,
                     target_language=task.target_language,
                     bilingual_translation=str(int(task.bilingual_translation)),
+                    model_name=task.translation_model,
                     progress_callback=progress_callback
                 )
 

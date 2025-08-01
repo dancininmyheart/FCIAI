@@ -7,7 +7,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_caching import Cache
-from flask_mail import Mail
+
 
 from .config import config, app_config
 from .utils.logger import LogManager
@@ -20,7 +20,6 @@ from .utils.db_session_manager import setup_db_monitoring
 db = SQLAlchemy()
 login_manager = LoginManager()
 cache = Cache()
-mail = Mail()
 log_manager = LogManager()
 
 def create_app(config_name='development'):
@@ -95,7 +94,6 @@ def create_app(config_name='development'):
     login_manager.login_message_category = 'info'
 
     cache.init_app(app)
-    mail.init_app(app)
 
     # 配置线程池
     thread_pool.configure(

@@ -42,7 +42,7 @@ logger = logging.getLogger(__name__)
 # 模型配置
 MODEL_NAME = "qwen2.5-72b-instruct"
 API_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-API_KEY = os.environ.get("DASHSCOPE_API_KEY")
+API_KEY = os.environ.get("QWEN_API_KEY")
 
 # 备用API配置
 BACKUP_API_URLS = [
@@ -194,6 +194,8 @@ async def get_field_async(text: str) -> str:
     def _get_field():
         try:
             client = get_openai_client()
+            print(client.api_key)
+            print(client.base_url)
             response = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=[

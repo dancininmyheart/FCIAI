@@ -356,7 +356,7 @@ def protect_colors_during_processing(text_frame, processing_func, *args, **kwarg
         raise e
 
 
-def safe_replace_paragraph_text(paragraph, new_text: str, preserve_formatting: bool = True) -> bool:
+def safe_replace_paragraph_text(paragraph,bilingual_translation,  text, translation, preserve_formatting: bool = True) -> bool:
     """
     安全地替换段落文本，保持格式
 
@@ -401,30 +401,35 @@ def safe_replace_paragraph_text(paragraph, new_text: str, preserve_formatting: b
                         pass
 
                     # 保存高亮色
-                    try:
-                        highlight_attrs = ['highlight_color', 'highlight', 'background_color']
-                        for attr in highlight_attrs:
-                            if hasattr(run.font, attr):
-                                highlight = getattr(run.font, attr)
-                                if highlight and hasattr(highlight, 'type'):
-                                    if highlight.type == MSO_COLOR_TYPE.RGB:
-                                        rgb = highlight.rgb
-                                        run_format['highlight'] = ('rgb', (rgb.r, rgb.g, rgb.b))
-                                        break
-                                    elif highlight.type == MSO_COLOR_TYPE.THEME:
-                                        run_format['highlight'] = ('theme', highlight.theme_color)
-                                        break
-                    except:
-                        pass
+                    # try:
+                    #     highlight_attrs = ['highlight_color', 'highlight', 'background_color']
+                    #     for attr in highlight_attrs:
+                    #         if hasattr(run.font, attr):
+                    #             highlight = getattr(run.font, attr)
+                    #             if highlight and hasattr(highlight, 'type'):
+                    #                 if highlight.type == MSO_COLOR_TYPE.RGB:
+                    #                     rgb = highlight.rgb
+                    #                     run_format['highlight'] = ('rgb', (rgb.r, rgb.g, rgb.b))
+                    #                     break
+                    #                 elif highlight.type == MSO_COLOR_TYPE.THEME:
+                    #                     run_format['highlight'] = ('theme', highlight.theme_color)
+                    #                     break
+                    # except:
+                    #     pass
 
                     original_formats.append(run_format)
                     break  # 只取第一个有内容的run的格式
 
         # 清除段落并添加新文本
-        paragraph.clear()
-        run = paragraph.add_run()
-        run.text = new_text
-
+        # paragraph.clear()
+        # run = paragraph.add_run()
+        # run.text = new_text
+        if str(bilingual_translation) == "1":
+            # 双语模式：原文 + 翻译
+            paragraph.text(text+"\n"+translation)
+        else:
+            # 仅翻译模式
+            paragraph.text = translation
         # 恢复格式
         if preserve_formatting and original_formats:
             format_info = original_formats[0]  # 使用第一个格式
@@ -452,24 +457,7 @@ def safe_replace_paragraph_text(paragraph, new_text: str, preserve_formatting: b
                     elif color_type == 'auto':
                         run.font.color.type = MSO_COLOR_TYPE.AUTO
 
-                # 恢复高亮色
-                if format_info.get('highlight'):
-                    highlight_type, highlight_value = format_info['highlight']
-                    highlight_attrs = ['highlight_color', 'highlight', 'background_color']
-                    for attr in highlight_attrs:
-                        if hasattr(run.font, attr):
-                            highlight = getattr(run.font, attr)
-                            if highlight:
-                                try:
-                                    if highlight_type == 'rgb' and highlight_value:
-                                        r, g, b = highlight_value
-                                        highlight.rgb = RGBColor(r, g, b)
-                                        break
-                                    elif highlight_type == 'theme' and highlight_value:
-                                        highlight.theme_color = highlight_value
-                                        break
-                                except:
-                                    continue
+
 
             except Exception as e:
                 logger.debug(f"恢复段落格式失败: {e}")

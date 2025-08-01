@@ -21,6 +21,9 @@ import difflib
 
 # 导入异步API客户端
 from .local_qwen_async import translate_async, batch_translate_async, get_field_async
+# 导入其他翻译模型的异步客户端
+# from .translate_deepseek_async import translate_deepseek_async
+# from .translate_gpt4o_async import translate_gpt4o_async
 from ..utils.thread_pool_executor import thread_pool, TaskType
 from ..utils.enhanced_task_queue import translation_queue
 
@@ -559,6 +562,35 @@ async def _unified_shape_processing_async(presentation_path: str) -> bool:
         return False
 
 
+async def translate_text_async(text: str, field: str, stop_words: List[str], custom_words: Dict[str, str], 
+                              source_language: str, target_language: str, model_name: str = 'qwen') -> Dict[str, str]:
+    """
+    根据模型名称选择相应的异步翻译函数
+    
+    Args:
+        text: 要翻译的文本
+        field: 领域信息
+        stop_words: 停止词列表
+        custom_words: 自定义翻译词典
+        source_language: 源语言
+        target_language: 目标语言
+        model_name: 翻译模型名称 ('qwen', 'deepseek', 'gpt-4o')
+    
+    Returns:
+        翻译结果字典
+    """
+    if model_name == 'deepseek':
+        # TODO: 实现deepseek异步翻译逻辑
+        # return await translate_deepseek_async(text, field, stop_words, custom_words, source_language, target_language)
+        pass
+    elif model_name == 'gpt-4o':
+        # TODO: 实现gpt-4o异步翻译逻辑
+        # return await translate_gpt4o_async(text, field, stop_words, custom_words, source_language, target_language)
+        pass
+    else:  # 默认使用qwen模型
+        return await translate_async(text, field, stop_words, custom_words, source_language, target_language)
+
+
 async def process_presentation_async(presentation_path: str,
                                    stop_words_list: List[str],
                                    custom_translations: Dict[str, str],
@@ -566,6 +598,7 @@ async def process_presentation_async(presentation_path: str,
                                    source_language: str,
                                    target_language: str,
                                    bilingual_translation: str,
+                                   model_name: str = 'qwen',
                                    progress_callback=None) -> bool:
     """
     异步处理演示文稿（基于页面的翻译机制）
@@ -579,6 +612,7 @@ async def process_presentation_async(presentation_path: str,
         source_language: 源语言代码
         target_language: 目标语言代码
         bilingual_translation: 是否双语翻译
+        model_name: 翻译模型名称
         progress_callback: 进度回调函数，接收两个参数(current_slide, total_slides)
 
     Returns:
@@ -586,7 +620,7 @@ async def process_presentation_async(presentation_path: str,
     """
     start_time = time.time()
     logger.info(f"开始异步处理演示文稿: {os.path.basename(presentation_path)}")
-    logger.info(f"源语言: {source_language}, 目标语言: {target_language}, 双语翻译: {bilingual_translation}")
+    logger.info(f"源语言: {source_language}, 目标语言: {target_language}, 双语翻译: {bilingual_translation}, 模型: {model_name}")
     logger.info(f"选中页面: {select_page}")
 
     try:
@@ -646,7 +680,7 @@ async def process_presentation_async(presentation_path: str,
 
             translated_count = await translate_slide_by_page(
                 slide, current_slide_index - 1, source_language, target_language,
-                bilingual_translation, field
+                bilingual_translation, field, model_name
             )
 
             slide_elapsed = time.time() - slide_start_time
@@ -960,6 +994,7 @@ def process_presentation(presentation_path: str,
                        progress_callback=None,
                        # 兼容性参数
                        stop_words: List[str] = None,
+                        model_name: str = "qwen",
                        **kwargs) -> bool:
     """
     处理PPT翻译（同步包装函数）
@@ -1005,6 +1040,7 @@ def process_presentation(presentation_path: str,
             source_language,
             target_language,
             bilingual_translation,
+            model_name,
             progress_callback
         )
 

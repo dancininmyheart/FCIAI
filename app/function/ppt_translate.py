@@ -30,6 +30,9 @@ from ..utils.ppt_utils import (
 )
 from ..utils.translation_utils import build_map
 from .translate_by_qwen import translate_qwen, get_field
+# 导入其他翻译模型
+# from .translate_by_deepseek import translate_deepseek
+# from .translate_by_gpt4o import translate_gpt4o
 from colorama import init
 
 from ..utils.task_queue import translation_queue
