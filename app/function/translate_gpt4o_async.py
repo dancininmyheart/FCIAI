@@ -64,7 +64,7 @@ async def Translate_texts(field, text, stop_words, custom_translations, source_l
             result = response.json()
             
             # 处理响应
-            logger.info(result)
+            # logger.info(result)
             result=result["data"]["translated_json"]
             return str(result)
             

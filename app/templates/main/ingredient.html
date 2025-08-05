@@ -4,17 +4,28 @@
 
 {% block styles %}
 {{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/ingredient.css') }}">
 <style>
 /* 页面标题样式 */
 .page-title {
     color: #ffffff;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 /* 搜索容器样式 */
 .ingredient-container {
     color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 搜索框容器 */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
 }
 
 /* 搜索输入框样式 */
@@ -22,15 +33,224 @@
     color: #ffffff;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 12px 15px;
+    width: 400px;
+    font-size: 16px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .search-input::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* 搜索按钮样式 */
+.search-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #0088cc;
+}
+
 /* 搜索结果样式 */
 .search-results {
     color: #ffffff;
+}
+
+/* 结果列表样式 */
+.results-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* 单个结果项样式 */
+.result-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.result-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.result-item h3 {
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.result-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.result-item strong {
+    color: #ffffff;
+}
+
+/* 结果头部样式 */
+.results-header {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.results-header p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 下载按钮样式 */
+.download-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 0;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: #0088cc;
+}
+
+/* 产品图片容器样式 */
+.image-container {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 分页控件样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination .page-info {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.pagination .current-page {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* 加载状态样式 */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid var(--primary-color);
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 无结果提示样式 */
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+
+/* 错误提示样式 */
+.error {
+    text-align: center;
+    padding: 20px;
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-input {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .results-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .result-item {
+        padding: 15px;
+    }
 }
 </style>
 {% endblock %}
@@ -40,7 +260,7 @@
     <h1 class="page-title">保健食品成分搜索</h1>
     
     <div class="search-container">
-        <input type="text" id="searchInput" class="search-input" placeholder="请输入要查询的成分名称...">
+        <input type="text" id="searchInput" class="search-input" placeholder="请输入要查询的成分名称或产品名称...">
         <button type="button" class="search-btn" onclick="searchIngredient()">
             <i class="fas fa-search"></i> 查询
         </button>
@@ -48,11 +268,192 @@
 
     <div id="searchResults" class="search-results">
         <!-- 搜索结果将在这里动态显示 -->
+        <div class="no-results">
+            <p>请输入成分名称或产品名称进行搜索</p>
+        </div>
+    </div>
+    
+    <div id="pagination" class="pagination" style="display: none;">
+        <!-- 分页控件将在这里动态生成 -->
     </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
 {{ super() }}
-<script src="{{ url_for('static', filename='js/ingredient.js') }}"></script>
-{% endblock %} 
+<script>
+// 全局变量
+let currentKeyword = '';
+let currentPage = 1;
+const itemsPerPage = 12; // 每页显示12个结果
+
+// 监听搜索输入框的回车事件
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        searchIngredient();
+    }
+});
+
+// 搜索功能
+function searchIngredient(page = 1) {
+    const searchInput = document.getElementById('searchInput');
+    const searchTerm = searchInput.value.trim();
+    const resultsContainer = document.getElementById('searchResults');
+    const paginationContainer = document.getElementById('pagination');
+    
+    // 如果搜索词为空，显示提示信息
+    if (!searchTerm) {
+        resultsContainer.innerHTML = `
+            <div class="no-results">
+                <p>请输入成分名称或产品名称进行搜索</p>
+            </div>
+        `;
+        paginationContainer.style.display = 'none';
+        return;
+    }
+
+    // 更新当前搜索词和页码
+    currentKeyword = searchTerm;
+    currentPage = page;
+
+    // 显示加载状态
+    resultsContainer.innerHTML = `
+        <div class="loading">
+            <div class="loading-spinner"></div>
+            <p>正在搜索"${searchTerm}"...</p>
+        </div>
+    `;
+    paginationContainer.style.display = 'none';
+
+    // 调用新的搜索API
+    fetch(`/ingredient/api/ingredient/search?keyword=${encodeURIComponent(searchTerm)}&page=${page}&per_page=${itemsPerPage}`)
+    .then(response => response.json())
+    .then(data => {
+        if (!data.success) {
+            resultsContainer.innerHTML = `<div class="error">${data.message || '搜索失败'}</div>`;
+            return;
+        }
+        displayResults(data.data, data.pagination);
+    })
+    .catch(error => {
+        console.error('搜索出错:', error);
+        resultsContainer.innerHTML = '<div class="error">搜索时发生错误，请稍后重试</div>';
+    });
+}
+
+// 显示搜索结果
+function displayResults(results, pagination) {
+    const resultsContainer = document.getElementById('searchResults');
+    const paginationContainer = document.getElementById('pagination');
+    
+    // 如果没有结果，显示提示信息
+    if (!results || results.length === 0) {
+        resultsContainer.innerHTML = `
+            <div class="no-results">
+                <p>未找到包含"${currentKeyword}"的产品</p>
+            </div>
+        `;
+        paginationContainer.style.display = 'none';
+        return;
+    }
+
+    // 生成结果HTML，包含总数信息
+    let html = `<div class="results-header">
+        <p>共找到 ${pagination.total} 个包含"${currentKeyword}"的产品</p>
+    </div>`;
+    html += '<div class="results-list">';
+    results.forEach(item => {
+        // 生成下载链接
+        const downloadLink = item.截图路径 && item.截图路径 !== '无截图路径' ? 
+            `<button class="download-btn" onclick="downloadImage('${item.截图路径}', '${item.产品名称}')">下载图片</button>` : '';
+        
+        html += `
+            <div class="result-item">
+                <h3>${item.产品名称}</h3>
+                <p><strong>主要成分：</strong>${item.主要成分}</p>
+                ${item.图片URL ? `
+                <div class="image-container">
+                    <img src="${item.图片URL}" alt="${item.产品名称}" class="product-image" onerror="this.style.display='none'">
+                </div>` : ''}
+                ${downloadLink}
+                ${item.截图路径 && item.截图路径 !== '无截图路径' ? `
+                <p><strong>截图路径：</strong>${item.截图路径}</p>` : ''}
+            </div>
+        `;
+    });
+    html += '</div>';
+
+    resultsContainer.innerHTML = html;
+    
+    // 显示分页控件
+    displayPagination(pagination);
+}
+
+// 下载图片功能
+function downloadImage(imagePath, productName) {
+    // 构造下载URL
+    const downloadUrl = `/ingredient/api/ingredient/download/${encodeURIComponent(imagePath)}`;
+    
+    // 创建一个隐藏的iframe来触发下载
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = downloadUrl;
+    document.body.appendChild(iframe);
+    
+    // 一段时间后移除iframe
+    setTimeout(() => {
+        document.body.removeChild(iframe);
+    }, 1000);
+}
+
+// 显示分页控件
+function displayPagination(pagination) {
+    const paginationContainer = document.getElementById('pagination');
+    
+    // 如果只有一页，不显示分页控件
+    if (pagination.total_pages <= 1) {
+        paginationContainer.style.display = 'none';
+        return;
+    }
+    
+    let html = '';
+    
+    // 上一页按钮
+    if (pagination.current_page > 1) {
+        html += `<button onclick="searchIngredient(${pagination.current_page - 1})">上一页</button>`;
+    } else {
+        html += `<button disabled>上一页</button>`;
+    }
+    
+    // 页码按钮
+    const startPage = Math.max(1, pagination.current_page - 2);
+    const endPage = Math.min(pagination.total_pages, pagination.current_page + 2);
+    
+    for (let i = startPage; i <= endPage; i++) {
+        if (i === pagination.current_page) {
+            html += `<button class="current-page" disabled>${i}</button>`;
+        } else {
+            html += `<button onclick="searchIngredient(${i})">${i}</button>`;
+        }
+    }
+    
+    // 下一页按钮
+    if (pagination.current_page < pagination.total_pages) {
+        html += `<button onclick="searchIngredient(${pagination.current_page + 1})">下一页</button>`;
+    } else {
+        html += `<button disabled>下一页</button>`;
+    }
+    
+    // 页码信息
+    html += `
+        <div class="page-info">
+            第 ${pagination.current_page} 页，共 ${pagination.total_pages} 页
+            （共 ${pagination.total} 个结果）
+        </div>
+    `;
+    
+    paginationContainer.innerHTML = html;
+    paginationContainer.style.display = 'flex';
+}
+</script>
+{% endblock %}

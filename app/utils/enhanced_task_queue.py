@@ -1112,8 +1112,8 @@ class EnhancedTranslationQueue:
             # 如果我们创建了应用上下文，需要弹出它
             if app_context_created:
                 try:
-                    from flask import _app_ctx_stack
-                    _app_ctx_stack.pop()
+                    from flask import current_app
+                    current_app.app_context().pop()
                     self.logger.info(f"数据库更新 {task.task_id} 弹出了应用上下文")
                 except Exception as e:
                     self.logger.error(f"弹出应用上下文失败: {str(e)}")
@@ -1222,8 +1222,8 @@ class EnhancedTranslationQueue:
             # 如果我们创建了应用上下文，需要弹出它
             if app_context_created:
                 try:
-                    from flask import _app_ctx_stack
-                    _app_ctx_stack.pop()
+                    from flask import current_app
+                    current_app.app_context().pop()
                     self.logger.info(f"任务错误处理 {task.task_id} 弹出了应用上下文")
                 except Exception as e:
                     self.logger.error(f"弹出应用上下文失败: {str(e)}")
@@ -1503,8 +1503,8 @@ class EnhancedTranslationQueue:
             # 如果我们创建了应用上下文，需要弹出它
             if app_context_created:
                 try:
-                    from flask import _app_ctx_stack
-                    _app_ctx_stack.pop()
+                    from flask import current_app
+                    current_app.app_context().pop()
                     self.logger.info("回收连接弹出了应用上下文")
                 except Exception as e:
                     self.logger.error(f"弹出应用上下文失败: {str(e)}")
@@ -1586,8 +1586,8 @@ class EnhancedTranslationQueue:
             # 如果我们创建了应用上下文，需要弹出它
             if app_context_created:
                 try:
-                    from flask import _app_ctx_stack
-                    _app_ctx_stack.pop()
+                    from flask import current_app
+                    current_app.app_context().pop()
                     self.logger.info(f"资源清理 {task.task_id} 弹出了应用上下文")
                 except Exception as e:
                     self.logger.error(f"弹出应用上下文失败: {str(e)}")

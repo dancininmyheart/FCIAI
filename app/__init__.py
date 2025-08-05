@@ -123,6 +123,7 @@ def create_app(config_name='development'):
     from .views.auth import bp as auth_bp
     from .views.upload import bp as upload_bp
     from .views.sso_auth import sso_bp
+    from .views.ingredient import ingredient as ingredient_bp
     from .routes.log_management import router as log_management_bp
     from .routes.stop_words import bp as stop_words_bp
     from .routes.db_management import router as db_management_bp
@@ -131,6 +132,7 @@ def create_app(config_name='development'):
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(sso_bp)  # SSO路由已包含前缀
     app.register_blueprint(upload_bp, url_prefix='/api')
+    app.register_blueprint(ingredient_bp, url_prefix='/ingredient')  # 成分搜索路由
     app.register_blueprint(stop_words_bp)  # 停翻词路由
     app.register_blueprint(log_management_bp)
     app.register_blueprint(db_management_bp)  # 数据库管理路由

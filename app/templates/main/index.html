@@ -794,7 +794,12 @@
     </div>
 
     <div class="history-section">
-        <h3>历史记录</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3>历史记录</h3>
+            <button class="btn btn-secondary" onclick="loadHistory(true)" style="background: rgba(0, 168, 255, 0.2); border: 1px solid var(--primary-color); color: var(--text-color); padding: 0.2rem 0.5rem; border-radius: 4px; cursor: pointer;">
+                <i class="fas fa-sync-alt"></i> 刷新
+            </button>
+        </div>
         <div class="history-container" id="historyContainer">
             <!-- 历史记录将通过JavaScript动态加载 -->
         </div>
@@ -1402,6 +1407,13 @@ function checkTaskStatus() {
 
                 // 翻译完成后强制刷新历史记录
                 loadHistory(true);
+                
+                // 显示翻译完成的弹窗提示（只显示一次）
+                if (!window.translationCompletedAlertShown) {
+                    window.translationCompletedAlertShown = true;
+                    alert('翻译任务已完成');
+                }
+
                 setTimeout(function() {
                     statusDiv.style.display = 'none';
                     progressContainer.style.display = 'none';
@@ -1410,6 +1422,8 @@ function checkTaskStatus() {
                         clearInterval(window.statusCheckInterval);
                         window.statusCheckInterval = null;
                     }
+                    // 重置弹窗标志位，以便下次翻译任务可以正常显示弹窗
+                    window.translationCompletedAlertShown = false;
                 }, 5000);
             }
             else if (data.status === 'failed') {

@@ -11,7 +11,7 @@ from werkzeug.utils import secure_filename
 from sqlalchemy.exc import SQLAlchemyError
 
 from config import data_file
-from ..Ingredient_Search.Flask_app import search, download_files
+# from ..Ingredient_Search.Flask_app import search, download_files
 from ..function.adjust_text_size import set_textbox_autofit
 from ..function.ppt_translate import process_presentation, process_presentation_add_annotations
 from config import base_model_file
@@ -166,7 +166,23 @@ def upload_file():
 
         # 生成安全的文件名
         original_filename = custom_filename(file.filename)
-        stored_filename = get_unique_filename(original_filename)
+        
+        # 创建语言名称到语言代码的映射
+        language_map = {
+            'English': 'en',
+            'Chinese': 'zh',
+            'Dutch': 'nl'
+        }
+        
+        # 获取源语言和目标语言的代码
+        source_lang_code = language_map.get(user_language, user_language)
+        target_lang_code = language_map.get(target_language, target_language)
+        
+        # 生成新的文件名格式：源语言_目标语言_源文件名.pptx
+        name_without_ext, ext = os.path.splitext(original_filename)
+        new_filename = f"{source_lang_code}_{target_lang_code}_{name_without_ext}{ext}"
+        
+        stored_filename = get_unique_filename(new_filename)
         file_path = os.path.join(user_upload_dir, stored_filename)
 
         annotation_json = None
@@ -200,10 +216,10 @@ def upload_file():
                     os.remove(file_path)
                     return jsonify({'code': 400, 'msg': f'注释文件不存在: {annotation_filename}'}), 400
 
-            # 创建上传记录
+            # 创建上传记录，使用新的文件名
             record = UploadRecord(
                 user_id=current_user.id,
-                filename=original_filename,
+                filename=new_filename,  # 使用新的文件名格式
                 stored_filename=stored_filename,
                 file_path=user_upload_dir,
                 file_size=file_size,
@@ -399,8 +415,8 @@ def get_queue_status():
 @login_required
 def get_history():
     try:
-        # 直接使用 current_user 替代通过 session 获取用户
-        records = UploadRecord.query.filter_by(user_id=current_user.id) \
+        # 只返回状态为 completed 的记录
+        records = UploadRecord.query.filter_by(user_id=current_user.id, status='completed') \
             .order_by(UploadRecord.upload_time.desc()).all()
 
         history_records = []
@@ -410,9 +426,11 @@ def get_history():
 
             # 使用ISO格式返回时间，让前端正确处理时区
             upload_time = datetime_to_isoformat(record.upload_time)
+            
+            # 直接使用数据库中存储的文件名
             history_records.append({
                 'id': record.id,
-                'filename': record.filename,
+                'filename': record.filename,  # 使用数据库中存储的文件名
                 'file_size': record.file_size,
                 'upload_time': upload_time,
                 'status': record.status,
@@ -895,14 +913,16 @@ def clean_food_name(food_name):
 @login_required
 def search_ingredient():
     # print(request.form['query'])
-    return search(request.form['query'])
+    # 临时返回空结果，直到实现完整的搜索功能
+    return jsonify([])
 
 
 @main.route('/ingredient/download', methods=['POST'])
 @login_required
 def download_ingredient_file():
     # print(request.form['file_path'])
-    return download_files(request.form['file_path'])
+    # 临时返回错误，直到实现完整的下载功能
+    return jsonify({'error': '功能暂未实现'}), 500
 
 
 # 允许的PDF文件扩展名
