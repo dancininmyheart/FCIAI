@@ -231,6 +231,7 @@ def trigger_ppt_render_with_libreoffice(ppt_path: str) -> bool:
             if result_pptx.returncode == 0:
                 # 查找生成的PPTX文件
                 pptx_file = os.path.join(temp_dir, f"{ppt_name}.pptx")
+                # print(pptx_file)
                 if os.path.exists(pptx_file):
                     try:
                         shutil.copyfile(pptx_file, ppt_path)

@@ -356,7 +356,7 @@ def protect_colors_during_processing(text_frame, processing_func, *args, **kwarg
         raise e
 
 
-def safe_replace_paragraph_text(paragraph,bilingual_translation,  text, translation, preserve_formatting: bool = True) -> bool:
+def safe_replace_paragraph_text(paragraph,bilingual_translation, text,translation, preserve_formatting) -> bool:
     """
     安全地替换段落文本，保持格式
 

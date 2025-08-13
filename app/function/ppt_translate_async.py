@@ -122,8 +122,7 @@ async def _adjust_ppt_layout_async(presentation_path: str) -> bool:
                 logger.debug(f"调用set_textbox_autofit，文件路径: {abs_path}")
 
                 # 调用现有的布局调整函数
-                result = set_textbox_autofit(abs_path)
-
+                result = set_textbox_autofit(abs_path)   
                 if result:
                     logger.info("set_textbox_autofit调用成功")
                     return True
@@ -459,13 +458,6 @@ async def _preserve_textbox_size_with_autofit_async(presentation_path: str) -> b
 
 
 
-
-
-
-
-
-
-
 async def _unified_shape_processing_async(presentation_path: str) -> bool:
     """
     统一的形状处理函数（避免多重处理冲突）
@@ -708,7 +700,17 @@ async def process_presentation_async(presentation_path: str,
 
         save_result = await loop.run_in_executor(None, _save_presentation)
 
-        # 如果保存成功，进行简单的布局调整
+        # === 新增：使用OCR接口功能处理图片 ===
+        try:
+            from .image_ocr.ocr_controller import ocr_controller
+            # 注意：ocr_controller会直接修改原文件，不需要额外的重命名操作
+            ocr_ppt_path = ocr_controller(presentation_path,
+                                        selected_pages=select_page,
+                                        output_path=None)
+            logger.info(f"OCR处理完成: {ocr_ppt_path}")
+        except Exception as e:
+            logger.error(f"使用OCR接口功能时出错: {str(e)}")
+            # 即使OCR失败，也不影响翻译结果
         if save_result:
             logger.info("正在进行布局调整...")
 
@@ -718,7 +720,6 @@ async def process_presentation_async(presentation_path: str,
                 logger.info("布局调整完成")
             else:
                 logger.warning("布局调整失败，但翻译已完成")
-
         elapsed = time.time() - start_time
         logger.info(f"演示文稿处理完成:")
         logger.info(f"  - 处理了 {processed_slides} 张幻灯片")
@@ -731,7 +732,7 @@ async def process_presentation_async(presentation_path: str,
         if progress_callback:
             progress_callback(total_slides, total_slides)
 
-        return save_result
+        return True
     except Exception as e:
         logger.error(f"处理演示文稿时出错: {str(e)}")
         import traceback

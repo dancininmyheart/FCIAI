@@ -194,8 +194,6 @@ async def get_field_async(text: str) -> str:
     def _get_field():
         try:
             client = get_openai_client()
-            print(client.api_key)
-            print(client.base_url)
             response = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=[
@@ -321,8 +319,9 @@ async def translate_by_fields_async(field: str, text: str, stop_words: List[str]
     """},
                     {"role": "user", "content": text}
                 ],
-                temperature=0.3,
-                max_tokens=8000
+                temperature=0.7,
+                max_tokens=8000,
+                timeout=600
             )
             result = response.choices[0].message.content
             logger.info(f"翻译成功，返回结果长度: {len(result)}")
