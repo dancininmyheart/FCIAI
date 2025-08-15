@@ -3,4 +3,4 @@ __pycache__/
 *.log
 logs/
 .env
-D:/project/system/app/Ingredient_Search/data
+app/Ingredient_Search/data
