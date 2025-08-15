@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/toast.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/user-info.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/brand.css') }}">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     
@@ -350,8 +351,8 @@
     <nav class="nav-menu">
         <div class="nav-container">
             <a href="{{ url_for('main.index') }}" class="nav-brand">
-                <i class="bi bi-translate"></i>
-                翻译管理系统
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Logo" class="brand-logo">
+                <span style="display: none;">翻译管理系统</span>
             </a>
             <div class="nav-links">
                 <a href="{{ url_for('main.index') }}" class="nav-link {% if request.endpoint == 'main.index' %}active{% endif %}">
