@@ -35,21 +35,7 @@ def setup_logger(name: str, level: str = "INFO", log_to_file: bool = True, log_t
     
     formatter = logging.Formatter(DETAILED_FORMAT)
     
-    # 控制台处理器 - 确保总是添加
-    # 确保控制台输出能正确处理Unicode字符
-    try:
-        console_handler = logging.StreamHandler(sys.stdout)
-        # 尝试设置UTF-8编码以正确显示Unicode字符
-        if hasattr(sys.stdout, 'reconfigure'):
-            sys.stdout.reconfigure(encoding='utf-8')
-    except Exception:
-        # 如果无法重新配置stdout，使用默认的
-        console_handler = logging.StreamHandler()
-    
-    console_handler.setLevel(logging.INFO)
-    console_formatter = logging.Formatter(LOG_FORMAT)
-    console_handler.setFormatter(console_formatter)
-    logger.addHandler(console_handler)
+
     
     # 文件处理器 - 可选
     if log_to_file:

@@ -225,7 +225,7 @@ def download_ingredient_image(image_path):
     try:
         # 构造完整的图片路径
         # print(image_path)
-        image_path=image_path.replace("data","data\\")
+        image_path=image_path.replace("data","data/")
         full_image_path = os.path.join(current_app.root_path, 'Ingredient_Search', image_path)
         # print(full_image_path)
         full_image_path = os.path.abspath(full_image_path)
@@ -235,7 +235,7 @@ def download_ingredient_image(image_path):
             return jsonify({'error': '图片不存在'}), 404
         
         # 获取文件名
-        filename = os.path.basename(full_image_path)
+        filename = os.path.basename(full_image_path).replace("data","")
         
         # 返回图片文件供下载
         return send_file(full_image_path, as_attachment=True, download_name=filename)

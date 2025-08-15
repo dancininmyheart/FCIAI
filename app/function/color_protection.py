@@ -426,7 +426,7 @@ def safe_replace_paragraph_text(paragraph,bilingual_translation, text,translatio
         # run.text = new_text
         if str(bilingual_translation) == "1":
             # 双语模式：原文 + 翻译
-            paragraph.text(text+"\n"+translation)
+            paragraph.text=text+"\n"+translation
         else:
             # 仅翻译模式
             paragraph.text = translation
