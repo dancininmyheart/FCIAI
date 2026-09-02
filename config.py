@@ -133,5 +133,5 @@ config = {
 
 # 其他配置从环境变量获取
 base_model_file = os.environ.get('BASE_MODEL_FILE', r'D:\project\system\model')
-api_key = os.environ.get('API_KEY', 'sk-c0476848c5254df28acb4cd703beaa26')
+api_key = os.environ.get('API_KEY', '')
 data_file = os.environ.get('DATA_FILE', r'D:\project\system\app\pythonProjectnewman\data_3\bjsp_dict_merged.json')
